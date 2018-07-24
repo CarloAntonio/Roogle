@@ -63,7 +63,10 @@ The following keys and key discription pairs will be used in the app. Informatio
 
 ## Pen-Paper Wireframe
 Main Screen </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115351-69061068-8eb8-11e8-9aff-d805bef7846e.JPG" width="400">
+<img src="https://user-images.githubusercontent.com/25759516/43115809-e84b6ec6-8eb9-11e8-8b1c-4d400e5066fb.JPG" width="400">
+
+Main Screen + Modal</br>
+<img src="https://user-images.githubusercontent.com/25759516/43115810-e862951a-8eb9-11e8-913a-98be6e9ecd1f.JPG" width="400">
 
 ## Sketch Wireframe
 
