@@ -1,0 +1,43 @@
+
+header {
+    width: 250px;
+    margin: auto;
+
+    h1 {
+        color: $color-primary;
+        font-family: $font-stack-primary;
+        text-align: center;
+        margin-top: calc(15px);
+        margin-bottom: calc(5px);
+    }
+
+    input {
+        min-width: calc(250px);
+        min-height: calc(24px);
+        border: 2px solid $color-primary;
+        border-radius: 3px;
+        margin-bottom: calcRem(10px);
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        width: calcRem(91px);
+        height: calcRem(25px);
+        background-color: $color-primary;
+        color: $color-white;
+        font-family: $font-stack-secondary;
+        border-radius: $button-radius;
+    }
+
+    button:nth-of-type(1) {
+        margin-right: calcRem(10px); 
+    }
+
+    button:nth-of-type(2) {
+        margin-left: calcRem(10px); 
+    }
+}
