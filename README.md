@@ -62,28 +62,28 @@ The following keys and key discription pairs will be used in the app. Informatio
   * all 25 daily percent categories
 
 ## Pen-Paper Wireframe
-Main Screen </br>
+__**Main Screen**__ </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115809-e84b6ec6-8eb9-11e8-8b1c-4d400e5066fb.JPG" width="400">
 
-Main Screen + Modal</br>
+__**Main Screen + Modal**__ </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115810-e862951a-8eb9-11e8-913a-98be6e9ecd1f.JPG" width="400">
 
 ## Sketch Wireframe
-Desktop HD Main State: SearchLvl=0  </br>
+__**Desktop HD Main State: SearchLvl=0**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115961-715d92ca-8eba-11e8-8830-dc578e170c8e.png" width="700">
 
-Desktop HD Main State: SearchLvl=1  </br>
+__**Desktop HD Main State: SearchLvl=1**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115962-7176a71a-8eba-11e8-851e-21ad74ad8456.png" width="700">
 
-Desktop HD Main State: SearchLvl=2  </br>
+__**Desktop HD Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115963-718f33de-8eba-11e8-9434-8d842851d78b.png" width="700">
 
-Desktop HD Modal State: presentDetails=true, displayNutrients=false, displayDaily=false  </br>
+__**Desktop HD Modal State: presentDetails=true, displayNutrients=false, displayDaily=false**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115970-72344ed2-8eba-11e8-94f0-76b9f17d0eff.png" width="700">
 
-Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=false  </br>
+__**Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=false**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115969-721b28b2-8eba-11e8-9dd4-be7dff6df932.png" width="700">
 
-Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=true  </br>
+__**Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115968-7201390c-8eba-11e8-976b-124e5fb5d735.png" width="700">
 
