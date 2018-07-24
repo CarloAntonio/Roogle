@@ -69,4 +69,21 @@ Main Screen + Modal</br>
 <img src="https://user-images.githubusercontent.com/25759516/43115810-e862951a-8eb9-11e8-913a-98be6e9ecd1f.JPG" width="400">
 
 ## Sketch Wireframe
+Desktop HD Main State: SearchLvl=0  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115961-715d92ca-8eba-11e8-8830-dc578e170c8e.png" width="700">
+
+Desktop HD Main State: SearchLvl=1  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115962-7176a71a-8eba-11e8-851e-21ad74ad8456.png" width="700">
+
+Desktop HD Main State: SearchLvl=2  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115963-718f33de-8eba-11e8-9434-8d842851d78b.png" width="700">
+
+Desktop HD Modal State: presentDetails=true, displayNutrients=false, displayDaily=false  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115970-72344ed2-8eba-11e8-94f0-76b9f17d0eff.png" width="700">
+
+Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=false  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115969-721b28b2-8eba-11e8-9dd4-be7dff6df932.png" width="700">
+
+Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=true  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115968-7201390c-8eba-11e8-976b-124e5fb5d735.png" width="700">
 
