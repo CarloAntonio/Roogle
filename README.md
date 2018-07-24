@@ -8,7 +8,7 @@ The purpose of this project, aside from creating a recipe search application, is
 
 ### Skills used:
 * Technologies: React, Redux, HTML, CSS, JavaScript (ES6), SASS, Bootstrap, CSS Modules, Axios (ReST API Call, JSON parsing), Jest, Enzyme.
-* Tools: Sketch, Git, GitHub, VSCode, NPM, AWS (S3, Cloudfront, Route 53, Certificate Manager)
+* Tools: Sketch, Git, GitHub, VSCode, Grunt, NPM, AWS (S3, Cloudfront, Route 53, Certificate Manager)
 * Other: Test Driven Development (TDD), Pixel Perfect UIs via HTML/CSS, Component Modularity
 
 ### Workflow:
