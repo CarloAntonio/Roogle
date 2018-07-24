@@ -3,15 +3,15 @@ This application lets users interact with the [Edamam](https://www.edamam.com/) 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-###Purpose:
+### Purpose:
 The purpose of this project, aside from creating a recipe search application, is to highlight my web design and front end development skills. I will show my methodology for creating a web application from conception to production. To learn more about my work history and goals, feel free to visit my [linkedin](https://www.linkedin.com/in/carlo-bilbao/)
 
-###Skills used:
+### Skills used:
 * Technologies: React, Redux, HTML, CSS, JavaScript (ES6), SASS, Bootstrap, CSS Modules, Axios (ReST API Call, JSON parsing), Jest, Enzyme.
 * Tools: Sketch, Git, GitHub, VSCode, NPM, AWS (S3, Cloudfront, Route 53, Certificate Manager)
 * Other: Test Driven Development (TDD), Pixel Perfect UIs via HTML/CSS, Component Modularity
 
-###Workflow:
+### Workflow:
 1. Understand information to be presented
   * Where will information come from
   * What information needs to be presented
@@ -35,7 +35,7 @@ The purpose of this project, aside from creating a recipe search application, is
 7. Deployment
   * Use AWS for hosting responsibilites
 
-##Understanding the information
+## Understanding the information
 The information source will come from the [Edamam](https://www.edamam.com/) API. Sign up [here](https://developer.edamam.com/) for an api key, note: sign up for "Recipe Search". Here is a sample endpoint you can plug into your browser to see the general JSON structure: https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free
 
 The following keys and key discription pairs will be used in the app. Information will be generally divided up as follows:
@@ -61,8 +61,8 @@ The following keys and key discription pairs will be used in the app. Informatio
 4. Daily Percent
   * all 25 daily percent categories
 
-##Pen-Paper Wireframe
+## Pen-Paper Wireframe
 
 
-##Sketch Wireframe
+## Sketch Wireframe
 
