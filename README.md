@@ -70,10 +70,10 @@ __**Main Screen + Modal**__ </br>
 
 ## Sketch Wireframe
 __**Desktop HD Main State: SearchLvl=0**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115961-715d92ca-8eba-11e8-8830-dc578e170c8e.png" width="700">
+<img src="https://user-images.githubusercontent.com/25759516/43115965-71ad9dc4-8eba-11e8-94b0-6c138a974bb2.png" width="700">
 
 __**Desktop HD Main State: SearchLvl=1**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115962-7176a71a-8eba-11e8-851e-21ad74ad8456.png" width="700">
+<img src="https://user-images.githubusercontent.com/25759516/43115966-71c6c8a8-8eba-11e8-9845-a84bd7446c3a.png" width="700">
 
 __**Desktop HD Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115963-718f33de-8eba-11e8-9434-8d842851d78b.png" width="700">
@@ -104,7 +104,6 @@ __**Desktop Modal State: presentDetails=true, displayNutrients=true, displayDail
 
 __**Desktop Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115958-71132e2e-8eba-11e8-80b7-9defbea2c657.png" width="600">
-
 
 __**Tablet Main State: SearchLvl=0**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115989-73ed4990-8eba-11e8-8ed6-17a2420d41fd.png" width="500">
