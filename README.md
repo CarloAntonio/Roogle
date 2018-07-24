@@ -62,7 +62,8 @@ The following keys and key discription pairs will be used in the app. Informatio
   * all 25 daily percent categories
 
 ## Pen-Paper Wireframe
-
+Main Screen </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115351-69061068-8eb8-11e8-9aff-d805bef7846e.JPG" width="400">
 
 ## Sketch Wireframe
 
