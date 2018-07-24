@@ -76,7 +76,7 @@ __**Desktop HD Main State: SearchLvl=1**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115966-71c6c8a8-8eba-11e8-9845-a84bd7446c3a.png" width="700">
 
 __**Desktop HD Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115963-718f33de-8eba-11e8-9434-8d842851d78b.png" width="700">
+<img src="https://user-images.githubusercontent.com/25759516/43115967-71e68832-8eba-11e8-9555-467a092b594b.png" width="700">
 
 __**Desktop HD Modal State: presentDetails=true, displayNutrients=false, displayDaily=false**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115970-72344ed2-8eba-11e8-94f0-76b9f17d0eff.png" width="700">
@@ -122,3 +122,23 @@ __**Tablet Modal State: presentDetails=true, displayNutrients=true, displayDaily
 
 __**Tablet Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115986-738291b8-8eba-11e8-8298-dd2c941155ce.png" width="500">
+
+
+
+__**Phone Lg Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115982-7337cdc2-8eba-11e8-9e7a-3e161a44019f.png" width="300">
+
+__**Phone Lg Main State: SearchLvl=1**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115983-734e621c-8eba-11e8-983d-be6c642297b0.png" width="300">
+
+__**Phone Lg Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115984-73683bd8-8eba-11e8-9ac7-d051830377f5.png" width="300">
+
+__**Phone Lg Modal State: presentDetails=true, displayNutrients=false, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115980-73205a70-8eba-11e8-93de-72aa7902ac0b.png" width="300">
+
+__**Phone Lg Modal State: presentDetails=true, displayNutrients=true, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115979-73046eaa-8eba-11e8-9411-5817701cb9c5.png" width="300">
+
+__**Phone Lg Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115977-72e93b62-8eba-11e8-84c8-42383c8b355d.png" width="300">
