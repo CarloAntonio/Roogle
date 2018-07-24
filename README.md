@@ -104,3 +104,22 @@ __**Desktop Modal State: presentDetails=true, displayNutrients=true, displayDail
 
 __**Desktop Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115958-71132e2e-8eba-11e8-80b7-9defbea2c657.png" width="600">
+
+
+__**Tablet Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115989-73ed4990-8eba-11e8-8ed6-17a2420d41fd.png" width="500">
+
+__**Tablet Main State: SearchLvl=1**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115990-7405bad4-8eba-11e8-83ad-569257801f92.png" width="500">
+
+__**Tablet Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115991-7421f4d8-8eba-11e8-969b-21a15365beae.png" width="500">
+
+__**Tablet Modal State: presentDetails=true, displayNutrients=false, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115988-73d16982-8eba-11e8-993b-7d9a266c404c.png" width="500">
+
+__**Tablet Modal State: presentDetails=true, displayNutrients=true, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115987-73aad2ea-8eba-11e8-8b1d-fa44951c9220.png" width="500">
+
+__**Tablet Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115986-738291b8-8eba-11e8-8298-dd2c941155ce.png" width="500">
