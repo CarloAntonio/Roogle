@@ -87,3 +87,20 @@ __**Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayD
 __**Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115968-7201390c-8eba-11e8-976b-124e5fb5d735.png" width="700">
 
+__**Desktop Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115961-715d92ca-8eba-11e8-8830-dc578e170c8e.png" width="600">
+
+__**Desktop Main State: SearchLvl=1**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115962-7176a71a-8eba-11e8-851e-21ad74ad8456.png" width="600">
+
+__**Desktop Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115963-718f33de-8eba-11e8-9434-8d842851d78b.png" width="600">
+
+__**Desktop Modal State: presentDetails=true, displayNutrients=false, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115960-71455f02-8eba-11e8-8c41-6f7d0be87d8d.png" width="600">
+
+__**Desktop Modal State: presentDetails=true, displayNutrients=true, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115959-712f9f00-8eba-11e8-95bf-8dd8267735f6.png" width="600">
+
+__**Desktop Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115958-71132e2e-8eba-11e8-80b7-9defbea2c657.png" width="600">
