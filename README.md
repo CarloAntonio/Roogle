@@ -62,11 +62,6 @@ The following keys and key discription pairs will be used in the app. Informatio
   * all 25 daily percent categories
 
 ## Pen-Paper Wireframe
-Skip to Wireframe Images (Last Catergory)
-
-## HTML/CSS
-
-## Wireframe Images
 __**Main Screen**__ </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115809-e84b6ec6-8eb9-11e8-8b1c-4d400e5066fb.JPG" width="400">
 
@@ -74,6 +69,12 @@ __**Main Screen + Modal**__ </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115810-e862951a-8eb9-11e8-913a-98be6e9ecd1f.JPG" width="400">
 
 ## Sketch Wireframe
+Skip to Wireframe Images (Last Catergory)
+
+## HTML/CSS
+...
+
+## Sketch Wireframe Images
 __**Desktop HD Main State: SearchLvl=0**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115965-71ad9dc4-8eba-11e8-94b0-6c138a974bb2.png" width="700">
 
