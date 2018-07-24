@@ -123,8 +123,6 @@ __**Tablet Modal State: presentDetails=true, displayNutrients=true, displayDaily
 __**Tablet Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115986-738291b8-8eba-11e8-8298-dd2c941155ce.png" width="500">
 
-
-
 __**Phone Lg Main State: SearchLvl=0**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115982-7337cdc2-8eba-11e8-9e7a-3e161a44019f.png" width="300">
 
@@ -142,3 +140,21 @@ __**Phone Lg Modal State: presentDetails=true, displayNutrients=true, displayDai
 
 __**Phone Lg Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115977-72e93b62-8eba-11e8-84c8-42383c8b355d.png" width="300">
+
+__**Phone Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115974-7299f836-8eba-11e8-87e4-41969b4e775c.png" width="200">
+
+__**Phone Main State: SearchLvl=1**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115975-72b41856-8eba-11e8-8139-d5dcfadb2b78.png" width="200">
+
+__**Phone Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
+
+__**Phone Modal State: presentDetails=true, displayNutrients=false, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115973-72815650-8eba-11e8-840c-6b354c65e477.png" width="200">
+
+__**Phone Modal State: presentDetails=true, displayNutrients=true, displayDaily=false**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115972-72683742-8eba-11e8-804f-f2fe90bde7d8.png" width="200">
+
+__**Phone Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115971-724f1fbe-8eba-11e8-922c-abf79f77d5d7.png" width="200">
