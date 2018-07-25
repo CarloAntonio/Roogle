@@ -35,3 +35,72 @@
     }
 
 }
+
+.otherOptions {
+    margin: calcRem(15px) calcRem(20px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+
+    label {
+        font-family: $font-stack-secondary;
+        font-size: calcRem(14px);
+        font-weight: $font-regular;
+    }
+
+    input {
+        vertical-align: center;
+        position: relative;
+        bottom: 1px;
+    }
+}
+
+.diet {
+    h2 {
+        text-align: center;
+        color: $color-primary;
+        font-family: $font-stack-primary;
+        font-weight: $font-regular;
+        font-size: 1rem;
+        margin: 0px 0px calcRem(5px);
+        padding: 0px calcRem(20px) 5px;
+        border-bottom: 1px solid $color-primary;
+        display: inline-block; 
+    }
+}
+
+.subtitleDietHolder {
+    text-align: center;
+}
+
+.dropdownOptions {
+    h2 {
+        text-align: center;
+        color: $color-primary;
+        font-family: $font-stack-primary;
+        font-weight: $font-regular;
+        font-size: 1rem;
+        margin: 0px 0px calcRem(5px);
+        padding: 0px 0px 5px;
+        border-bottom: 1px solid $color-primary;
+        display: inline-block; 
+    }
+
+    select {
+        margin: 5px 0px 10px;
+    }
+
+    option[value="volvo"] {
+        font-family: $font-stack-secondary;
+        font-size: calcRem(14px);
+        font-weight: $font-regular;
+    }
+
+
+}
+
+#test {
+    font-family: $font-stack-secondary;
+    font-size: calcRem(14px);
+    font-weight: $font-regular;
+}

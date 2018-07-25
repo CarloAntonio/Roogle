@@ -8,8 +8,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Merienda:400,700|Roboto:400,500" rel="stylesheet">
 
+        <!-- Bootstrap 3 (Bootstrap Select only supports v3)-->
+        <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        
+        <!-- Bootstrap Select: https://silviomoreto.github.io/bootstrap-select/ -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"><!-- Latest compiled and minified CSS -->
+
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/application.css"/> 
 
         <!-- Title -->
@@ -28,9 +33,11 @@
         <hr class="divider" >
 
         <section class="advanceSearch">
+
             <div class="subtitleHolder">
                 <h2>Health</h2>
             </div>
+
             <div class="healthOptions">
                 <div>
                     <input type="checkbox" id="alcohol-free" name="feature" value="alchohol-free"/>
@@ -125,7 +132,74 @@
                     <label for="low-Potassium">Low-Potassium</label>
                 </div>
             </div>
+
+            <div class="otherOptions">
+                <div class="diet">
+                    <div class="subtitleDietHolder">
+                        <h2>Health</h2>
+                    </div>
+                    <div class="dietOptions">
+                        <div>
+                            <input type="checkbox" id="sugar-conscious" name="feature" value="sugar-conscious"/>
+                            <label for="sugar-conscious">Sugar-conscious</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="low-Potassium" name="feature" value="low-Potassium"/>
+                            <label for="low-Potassium">Low-Potassium</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="low-Potassium" name="feature" value="low-Potassium"/>
+                            <label for="low-Potassium">Low-Potassium</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sugar-conscious" name="feature" value="sugar-conscious"/>
+                            <label for="sugar-conscious">Sugar-conscious</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="low-Potassium" name="feature" value="low-Potassium"/>
+                            <label for="low-Potassium">Low-Potassium</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="low-Potassium" name="feature" value="low-Potassium"/>
+                            <label for="low-Potassium">Low-Potassium</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdownOptions">
+
+                    <div class="subtitleOptionHolder">
+                        <h2>Max Cook Time:</h2>
+                        <select class="selectpicker" data-width="fit">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="subtitleOptionHolder">
+                        <h2>Max Ingredients:</h2>
+                        <select>
+                            <option id="test" value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="subtitleOptionHolder">
+                        <h2>Max Calories:</h2>
+                        <select>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <hr class="divider" >
 
         <section class="recipeItemsContainer">
             <div>
@@ -170,9 +244,23 @@
                 <p>Calories: 45 minutes</p>
             </div>
         </section>
-        
+
         <footer>
             Copyright &copy; <a href="https://www.carlobilbao.com" target="_blank">Carlo Bilbao</a>
         </footer>
+
+        <!-- 
+            JavaScript 
+        -->
+        <!-- JQuery -->
+        <script data-require="jquery@2.2.4" data-semver="2.2.4" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- Bootstrap.js -->
+        <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- BootstrapSelect.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script><!-- Latest compiled and minified JavaScript -->
+        
+       
+
+       
     </body>
 </html>
