@@ -122,10 +122,13 @@ header button:nth-of-type(2) {
 
 .recipeItemsContainer {
   margin: 1.5625rem 0.625rem;
+  text-align: center;
 }
 .recipeItemsContainer div {
-  min-width: 12.5rem;
-  min-height: 6.25rem;
+  display: inline-block;
+  width: 85%;
+  min-width: 25rem;
+  min-height: 10rem;
   margin: 0.3125rem 0.5rem;
   border-radius: 0.3125rem;
   border: 2px solid #fff;
@@ -134,7 +137,7 @@ header button:nth-of-type(2) {
 }
 .recipeItemsContainer h2 {
   font-family: "Merienda", cursive;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   color: #AC645A;
@@ -144,7 +147,7 @@ header button:nth-of-type(2) {
   text-align: center;
   margin: 0px 0px 0.3125rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 

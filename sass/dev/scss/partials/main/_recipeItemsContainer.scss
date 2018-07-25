@@ -1,16 +1,18 @@
 
 .recipeItemsContainer {
     margin: calcRem(25px) calcRem(10px);
+    text-align: center;
 
     div {
-        min-width: calcRem(200px);
-        min-height: calcRem(100px);
+        display: inline-block;
+        width: 85%;
+        min-width: calcRem(400px);
+        min-height: calcRem(160px);
         margin: calcRem(5px) calcRem(8px);
         border-radius: $button-radius;
         border: 2px solid $color-white;
         background-color: $recipe-item-container-color;
         box-shadow: 0px calcRem(2px) calcRem(7px) #000;
-
     }
 
     h2 {
