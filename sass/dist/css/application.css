@@ -8,7 +8,7 @@ font styles
 general styles  
 ******/
 header {
-  width: 250px;
+  min-width: 200px;
   margin: auto;
 }
 header h1 {
@@ -19,11 +19,14 @@ header h1 {
   margin-bottom: calc(5px);
 }
 header input {
-  min-width: calc(250px);
+  width: 80%;
+  min-width: 12.5rem;
   min-height: calc(24px);
+  text-align: center;
+  display: block;
   border: 2px solid #00695C;
   border-radius: 3px;
-  margin-bottom: 0.625rem;
+  margin: 0px auto 0.625rem;
 }
 header .buttonContainer {
   display: flex;
