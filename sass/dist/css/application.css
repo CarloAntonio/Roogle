@@ -184,4 +184,19 @@ footer a:hover {
   margin: 1.5625rem 7.5% 0.625rem;
 }
 
+.bottomSearchButton {
+  width: 8.25rem;
+  height: 2.75rem;
+  background-color: #00695C;
+  color: #fff;
+  font-family: "Merienda", cursive;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
+
+.bottomButtonContainer {
+  text-align: center;
+  margin: 10px auto 20px;
+}
+
 /*# sourceMappingURL=application.css.map */

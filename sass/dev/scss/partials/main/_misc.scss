@@ -3,3 +3,18 @@
     color: #979797;
     margin: calcRem(25px) 7.5% calcRem(10px);
 }
+
+.bottomSearchButton {
+    width: calcRem(132px);
+    height: calcRem(44px);
+    background-color: $color-primary;
+    color: $color-white;
+    font-family: $font-stack-primary;
+    border-radius: $button-radius;
+    font-size: calcRem(16px);
+}
+
+.bottomButtonContainer {
+    text-align: center;
+    margin: 10px auto 20px;
+}
