@@ -1,3 +1,12 @@
+/****** 
+font styles  
+******/
+/****** 
+font styles  
+******/
+/****** 
+general styles  
+******/
 header {
   width: 250px;
   margin: auto;
@@ -25,14 +34,59 @@ header button {
   height: 1.5625rem;
   background-color: #00695C;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merienda", cursive;
   border-radius: 0.3125rem;
+  font-size: 0.75rem;
 }
 header button:nth-of-type(1) {
   margin-right: 0.625rem;
 }
 header button:nth-of-type(2) {
   margin-left: 0.625rem;
+}
+
+.recipeItemsContainer {
+  margin: 1.5625rem 0.625rem;
+}
+.recipeItemsContainer div {
+  min-width: 16.875rem;
+  min-height: 6.25rem;
+  margin: 0.3125rem 0.5rem;
+  border-radius: 0.3125rem;
+  border: 2px solid #fff;
+  background-color: #F8F8F8;
+  box-shadow: 0px 0.125rem 0.4375rem #000;
+}
+.recipeItemsContainer h2 {
+  font-family: "Merienda", cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #AC645A;
+  margin: 0.625rem 0px;
+}
+.recipeItemsContainer p {
+  text-align: center;
+  margin: 0px 0px 0.3125rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #00695C;
+  color: #fff;
+  font-family: "Merienda", cursive;
+  font-size: 0.875rem;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  color: #AC645A;
 }
 
 /*# sourceMappingURL=application.css.map */

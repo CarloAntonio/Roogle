@@ -1,0 +1,32 @@
+
+.recipeItemsContainer {
+    margin: calcRem(25px) calcRem(10px);
+
+    div {
+        min-width: calcRem(270px);
+        min-height: calcRem(100px);
+        margin: calcRem(5px) calcRem(8px);
+        border-radius: $button-radius;
+        border: 2px solid $color-white;
+        background-color: $recipe-item-container-color;
+        box-shadow: 0px calcRem(2px) calcRem(7px) #000;
+
+    }
+
+    h2 {
+        font-family: $font-stack-primary;
+        font-size: $recipe-title-font-size;
+        font-weight: $font-regular;
+        text-align: center;
+        color: $color-secondary;
+        margin: calcRem(10px) 0px;
+    }
+
+    p {
+        text-align: center;
+        margin: 0px 0px calcRem(5px);
+        font-family: $font-stack-secondary;
+        font-size: $recipe-body-font-size;
+        font-weight: $font-medium;
+    }
+}
