@@ -284,11 +284,22 @@ header button:nth-of-type(2) {
 
 @media (min-width: 380px) {
   .advanceSearchPlusHeaderContainer h2 {
+    margin-top: 1rem;
     font-size: 2rem;
   }
 
   .nutrientOptions input {
     height: 3.5rem;
+  }
+}
+@media (min-width: 560px) {
+  .nutrientOptions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .nutrientOptions {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .recipeItemsContainer {

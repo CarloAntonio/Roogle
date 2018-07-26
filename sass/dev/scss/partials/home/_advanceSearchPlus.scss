@@ -33,6 +33,7 @@
 @media (min-width: 380px) {
     .advanceSearchPlusHeaderContainer {
         h2 {
+            margin-top: calcRem(16px);
             font-size: calcRem(32px);
         }
     }
@@ -41,5 +42,17 @@
         input {
             height: calcRem(56px);
         }
+    }
+}
+
+@media (min-width: 560px) {
+    .nutrientOptions {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .nutrientOptions {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
