@@ -9,6 +9,7 @@
 # production
 /build
 /sass/dist/css
+/sass/dist/img
 
 # misc
 .DS_Store

@@ -294,15 +294,59 @@ footer a:hover {
   margin: 0px;
 }
 .nutrientsContainer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border: 1px solid #00695C;
   border-radius: 5px;
   padding: 8px;
 }
 .nutrientsContainer h3 {
-  margin-right: 16px;
+  align-self: center;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
+}
+.nutrientsContainer p {
+  justify-self: center;
+}
+
+.daily {
+  margin: 16px auto;
+}
+.daily h2 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: "Merienda", cursive;
+  font-size: 1.5rem;
+  color: #AC645A;
+}
+
+.dailyContainer {
+  margin: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+}
+.dailyContainer h3, .dailyContainer p {
+  display: inline-block;
+  margin: 0px;
+}
+.dailyContainer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #00695C;
+  border-radius: 5px;
+  padding: 8px;
+}
+.dailyContainer h3 {
+  align-self: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.dailyContainer p {
+  justify-self: center;
 }
 
 /*# sourceMappingURL=application.css.map */
