@@ -170,6 +170,7 @@ header button:nth-of-type(2) {
 .nutrientOptions input {
   width: 100%;
   text-align: center;
+  border: 1px solid #ccc;
 }
 
 .recipeItemsContainer {
