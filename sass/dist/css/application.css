@@ -48,12 +48,14 @@ general styles
 }
 
 header {
-  min-width: 200px;
-  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 16px;
 }
 header h1 {
   color: #00695C;
   font-family: "Merienda", cursive;
+  font-size: 3rem;
   text-align: center;
   margin-top: calc(15px);
   margin-bottom: calc(10px);
@@ -71,6 +73,7 @@ header input {
 header .buttonContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 header button {
   width: 8.25rem;
@@ -88,6 +91,16 @@ header button:nth-of-type(2) {
   margin-left: 0.625rem;
 }
 
+@media (min-width: 380px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
+  header button {
+    font-size: 1.125rem;
+    width: 10.125rem;
+    height: 3.375rem;
+  }
+}
 .advanceSearch {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

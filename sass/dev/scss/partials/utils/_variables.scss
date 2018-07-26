@@ -19,10 +19,23 @@ $font-stack-secondary: 'Roboto', sans-serif;
 //font size
 $font-subtitle2: calcRem(16px);
 
+//button size
+$font-button-sm-phone: calcRem(16px);
+$button-width-phone-sm: calcRem(132px);
+$button-height-phone-sm: calcRem(44px); 
+
+$font-button-lg-phone: calcRem(18px);
+$button-width-phone-lg: calcRem(162px);
+$button-height-phone-lg: calcRem(54px); 
+
 //small phone
+$font-small-phone-h1: calcRem(48px);
 $font-small-phone-h2: calcRem(24px);
 $font-small-phone-h3: calcRem(20px);
 $font-small-phone-body: calcRem(20px);
+
+//large phone
+$font-lg-phone-h1: calcRem(56px);
 
 //font weights
 $font-regular: 400;
