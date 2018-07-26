@@ -1,0 +1,20 @@
+
+.hero {
+    text-align: center;
+
+    h2 {
+        margin: 0px;
+        padding: calcRem(20px) 0px;
+        text-align: center;
+        font-family: $font-stack-primary;
+        font-size: $font-small-phone-h2;
+        color: $color-primary;
+    }
+
+    img {
+        width: calcRem(300px);
+        height: calcRem(300px);
+        border-radius: 5px;
+    }
+
+}

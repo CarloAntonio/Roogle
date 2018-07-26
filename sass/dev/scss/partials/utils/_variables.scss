@@ -5,6 +5,7 @@ font styles
 $color-primary: #00695C;
 $color-secondary: #AC645A;
 $color-white: #fff;
+$color-black: #000;
 
 /****** 
 font styles  
@@ -16,6 +17,11 @@ $font-stack-secondary: 'Roboto', sans-serif;
 
 //font size
 $font-subtitle2: calcRem(16px);
+
+//small phone
+$font-small-phone-h2: calcRem(24px);
+$font-small-phone-h3: calcRem(20px);
+$font-small-phone-body: calcRem(20px);
 
 //font weights
 $font-regular: 400;

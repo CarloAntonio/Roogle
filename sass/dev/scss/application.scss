@@ -3,10 +3,17 @@
 @import 'partials/utils/functions';
 @import 'partials/utils/variables';
 
-//main
-@import 'partials/main/header';
-@import 'partials/main/advanceSearch';
-@import 'partials/main/advanceSearchPlus';
-@import 'partials/main/recipeItemsContainer';
-@import 'partials/main/footer';
-@import 'partials/main/misc';
+//general
+@import 'partials/general/misc';
+
+//home
+@import 'partials/home/header';
+@import 'partials/home/advanceSearch';
+@import 'partials/home/advanceSearchPlus';
+@import 'partials/home/recipeItemsContainer';
+@import 'partials/home/footer';
+
+//modal
+@import 'partials/modalSection/modalGeneral';
+@import 'partials/modalSection/modalHero';
+@import 'partials/modalSection/modalDetails';
