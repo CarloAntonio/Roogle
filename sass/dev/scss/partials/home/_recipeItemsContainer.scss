@@ -1,9 +1,9 @@
 
 .recipeItemsContainer {
-    margin: calcRem(25px) calcRem(10px);
+    margin: calcRem(25px) calcRem(32px);
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: calcRem(8px);
+    grid-gap: calcRem(16px);
     justify-items: center;
 
     img {
@@ -12,7 +12,7 @@
 
     .recipeItem {
         display: block;
-        width: 85%;
+        width: 100%;
         min-width: calcRem(400px);
         min-height: calcRem(160px);
         border-radius: $button-radius;
@@ -40,7 +40,6 @@
 }
 
 @media (min-width: 414px) {
-    
     .recipeItem {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
@@ -52,5 +51,71 @@
             width: 100%;
             border-radius: 5px;
         }
+    }
+
+    .recipeItem {
+        div {
+            padding: 16px 8px;
+        }
+    }
+}
+
+@media (min-width: 460px) {
+    .recipeItemsContainer {
+        h2 {
+            margin: calcRem(10px) 0px calcRem(24px);
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    .recipeItemsContainer {
+        margin: calcRem(25px) calcRem(48px);
+        grid-gap: calcRem(32px);
+
+        h2 {
+            font-size: $font-recipe-lg-phone-title;
+        }
+    
+        p {
+            font-size: $font-recipe-lg-phone-body;
+        }
+    }
+} 
+
+@media (min-width: 500px) {
+    .recipeItemsContainer {
+        h2 {
+            margin: calcRem(10px) 0px calcRem(48px);
+        }
+    }
+}
+
+@media (min-width: 580px) {
+    .recipeItemsContainer {
+        margin: calcRem(25px) calcRem(96px);
+    }
+}
+
+@media (min-width: 680px) {
+    .recipeItemsContainer {
+        margin: calcRem(25px) calcRem(16px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: calcRem(16px);
+
+        h2 {
+            font-size: $recipe-title-font-size;
+            margin: calcRem(10px) 0px;
+        }
+    
+        p {
+            font-size: $recipe-body-font-size;
+        }
+    }
+}
+
+@media (min-width: 760px) {
+    .recipeItemsContainer {
+        margin: calcRem(25px) calcRem(32px);
     }
 }
