@@ -1,0 +1,39 @@
+
+.nutrients {
+    margin: 16px auto;
+    
+    h2 {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        font-family: $font-stack-primary;
+        font-size: $font-small-phone-h2;
+        color: $color-secondary;
+    }
+
+}
+
+.nutrientsContainer {
+    margin: calcRem(40px) calcRem(32px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+
+    h3, p {
+        display: inline-block;
+        margin: 0px;
+    }
+
+    div {
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+        padding: 8px;
+    }
+
+    h3 {
+        margin-right: 16px;
+        font-family: $font-stack-secondary;
+        font-weight: $font-bold;
+        font-size: $font-small-phone-h3;
+    }
+}
