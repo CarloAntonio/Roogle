@@ -219,6 +219,7 @@ header button:nth-of-type(2) {
   .recipeItem img {
     display: block;
     width: 100%;
+    border-radius: 5px;
   }
 }
 footer {
