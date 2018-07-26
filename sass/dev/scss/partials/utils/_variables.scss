@@ -1,6 +1,13 @@
 
 /****** 
-font styles  
+general styles  
+******/
+
+//radius
+$general-radius: calcRem(5px);
+
+/****** 
+color styles  
 ******/
 $color-primary: #00695C;
 $color-secondary: #AC645A;
@@ -16,8 +23,32 @@ font styles
 $font-stack-primary: 'Merienda', cursive;
 $font-stack-secondary: 'Roboto', sans-serif;
 
+//font weights
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700; 
+
 //font size
 $font-subtitle2: calcRem(16px);
+
+//font small phone 
+$font-small-phone-h1: calcRem(48px);
+$font-small-phone-h2: calcRem(24px);
+$font-small-phone-h3: calcRem(20px);
+$font-sm-phone-body: calcRem(20px);
+$font-sm-phone-body2: calcRem(16px);
+
+//font large phone
+$font-lg-phone-h1: calcRem(56px);
+$font-lg-phone-body: calcRem(22px);
+$font-lg-phone-body2: calcRem(18px);
+
+/****** 
+button styles  
+******/
+
+//button radius
+$button-radius: $general-radius;
 
 //button size
 $font-button-sm-phone: calcRem(16px);
@@ -28,26 +59,9 @@ $font-button-lg-phone: calcRem(18px);
 $button-width-phone-lg: calcRem(162px);
 $button-height-phone-lg: calcRem(54px); 
 
-//small phone
-$font-small-phone-h1: calcRem(48px);
-$font-small-phone-h2: calcRem(24px);
-$font-small-phone-h3: calcRem(20px);
-$font-small-phone-body: calcRem(20px);
-
-//large phone
-$font-lg-phone-h1: calcRem(56px);
-
-//font weights
-$font-regular: 400;
-$font-medium: 500;
-$font-bold: 700; 
-
 /****** 
-general styles  
+recipe item styles  
 ******/
-
-//buttons
-$button-radius: calcRem(5px);
 
 //recipe item
 $recipe-item-radius: calcRem(5px);
