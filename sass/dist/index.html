@@ -34,9 +34,10 @@
 
         <section class="advanceSearch">
 
-            <div class="subtitleHolder">
+            <div class="headerContainer">
                 <h2>Health</h2>
             </div>
+            
 
             <div class="healthOptions">
                 <div>
@@ -153,82 +154,80 @@
                 </div>
             </div>
 
-            <div class="otherOptions">
-                <div class="diet">
-                    <div class="subtitleDietHolder">
-                        <h2>Diet</h2>
-                    </div>
-                    <div class="dietOptions">
-                        <div>
-                            <input type="checkbox" id="balanced" name="feature" value="balanced"/>
-                            <label for="balanced">Balanced</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="high-fiber" name="feature" value="high-fiber"/>
-                            <label for="high-fiber">High-Fiber</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="high-protein" name="feature" value="high-protein"/>
-                            <label for="high-protein">High-Protein</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="low-carb" name="feature" value="low-carb"/>
-                            <label for="low-carb">Low-Carb</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="low-fat" name="feature" value="low-fat"/>
-                            <label for="low-fat">Low-Fat</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="low-sodium" name="feature" value="low-sodium"/>
-                            <label for="low-sodium">Low-Sodium</label>
-                        </div>
-                    </div>
+            <div class="dietOptions">
+                <div class="subtitleDietHolder">
+                    <h2>Diet</h2>
                 </div>
-
-                <div class="dropdownOptions">
-
-                    <div class="subtitleOptionHolder">
-                        <h2>Max Cook Time:</h2>
-                        <select class="selectpicker" data-width="auto">
-                            <option value="15">15 minutes</option>
-                            <option value="30">30 minutes</option>
-                            <option value="45">45 minutes</option>
-                            <option value="60">1 hr</option>
-                            <option value="90">1.5 hours</option>
-                            <option value="120">2 hours</option>
-                            <option value="150">2.5 hours</option>
-                            <option value="999">Anytime</option>
-                        </select>
+                <div class="dietOptions">
+                    <div>
+                        <input type="checkbox" id="balanced" name="feature" value="balanced"/>
+                        <label for="balanced">Balanced</label>
                     </div>
-                    <div class="subtitleOptionHolder">
-                        <h2>Max Ingredients:</h2>
-                        <select class="selectpicker" data-width="auto">
-                            <option value="6">6 items</option>
-                            <option value="8">8 items</option>
-                            <option value="10">10 items</option>
-                            <option value="12">12 items</option>
-                            <option value="6">14 items</option>
-                            <option value="8">16 items</option>
-                            <option value="10">18 items</option>
-                            <option value="99">Any number</option>
-                        </select>
+                    <div>
+                        <input type="checkbox" id="high-fiber" name="feature" value="high-fiber"/>
+                        <label for="high-fiber">High-Fiber</label>
                     </div>
-                    <div class="subtitleOptionHolder">
-                        <h2>Max Calories:</h2>
-                        <select class="selectpicker" data-width="auto">
-                            <option value="300">300 Cal</option>
-                            <option value="400">400 Cal</option>
-                            <option value="500">500 Cal</option>
-                            <option value="600">600 Cal</option>
-                            <option value="700">700 Cal</option>
-                            <option value="800">800 Cal</option>
-                            <option value="900">900 Cal</option>
-                            <option value="99999">Any</option>
-                        </select>
+                    <div>
+                        <input type="checkbox" id="high-protein" name="feature" value="high-protein"/>
+                        <label for="high-protein">High-Protein</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="low-carb" name="feature" value="low-carb"/>
+                        <label for="low-carb">Low-Carb</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="low-fat" name="feature" value="low-fat"/>
+                        <label for="low-fat">Low-Fat</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="low-sodium" name="feature" value="low-sodium"/>
+                        <label for="low-sodium">Low-Sodium</label>
                     </div>
                 </div>
             </div>
+
+            <div class="dropdownOptions">
+                <div class="subtitleOptionHolder">
+                    <h2>Max Cook Time:</h2>
+                    <select class="selectpicker" data-width="auto">
+                        <option value="15">15 minutes</option>
+                        <option value="30">30 minutes</option>
+                        <option value="45">45 minutes</option>
+                        <option value="60">1 hr</option>
+                        <option value="90">1.5 hours</option>
+                        <option value="120">2 hours</option>
+                        <option value="150">2.5 hours</option>
+                        <option value="999">Anytime</option>
+                    </select>
+                </div>
+                <div class="subtitleOptionHolder">
+                    <h2>Max Ingredients:</h2>
+                    <select class="selectpicker" data-width="auto">
+                        <option value="6">6 items</option>
+                        <option value="8">8 items</option>
+                        <option value="10">10 items</option>
+                        <option value="12">12 items</option>
+                        <option value="6">14 items</option>
+                        <option value="8">16 items</option>
+                        <option value="10">18 items</option>
+                        <option value="99">Any number</option>
+                    </select>
+                </div>
+                <div class="subtitleOptionHolder">
+                    <h2>Max Calories:</h2>
+                    <select class="selectpicker" data-width="auto">
+                        <option value="300">300 Cal</option>
+                        <option value="400">400 Cal</option>
+                        <option value="500">500 Cal</option>
+                        <option value="600">600 Cal</option>
+                        <option value="700">700 Cal</option>
+                        <option value="800">800 Cal</option>
+                        <option value="900">900 Cal</option>
+                        <option value="99999">Any</option>
+                    </select>
+                </div>
+            </div>
+
         </section>
 
         <hr class="divider" >
