@@ -124,3 +124,28 @@
         margin-left: calcRem(32px);
     }
 }
+
+@media (min-width: 800px) {
+    .recipeItemsContainer {
+        grid-gap: calcRem(32px);
+    }
+}
+
+@media (min-width: 900px) {
+
+    .recipeItem {
+        min-width: 188px !important;
+    }
+
+    .recipeItemsContainer {
+        grid-template-columns: repeat(4, 1fr);
+        margin-right: calcRem(64px);
+        margin-left: calcRem(64px);
+    }
+
+    .recipeItem {
+        grid-template-columns: 1fr;
+        grid-column-gap: calcRem(8px);
+        padding-right: 0px;
+    }
+}
