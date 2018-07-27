@@ -119,29 +119,7 @@ This section demonstrates my capacity to develop with the following technologies
 
 ### Design Note:
 1. Nutrient items on small screen sizes are double column instead of single column. Thought it looked cleaner this way and took up less vertical space (meaning less user scrolling), so I went with the two column approach.
-
-### Selection of comparisions:
-Comparison 1:
-__**Sketch Desktop HD Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115967-71e68832-8eba-11e8-9555-467a092b594b.png" width="700">
-
-__**HTML/SCSS Desktop HD Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43349431-924337f4-91b4-11e8-98f2-31c29c675668.png" width="700">
-
-Comparison 2:
-__**Sketch Tablet Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115991-7421f4d8-8eba-11e8-969b-21a15365beae.png" width="500">
-
-__**HTML/SCSS Tablet Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43349433-9287a588-91b4-11e8-99d3-dac5cbff1292.png" width="500">
-
-Comparison 3:
-__**Sketch Phone Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
-
-__**HTML/SCSS Phone Main State: SearchLvl=2**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43349487-f99dff6a-91b4-11e8-933b-e8403d03c78b.png" width="200">
-
+2. Floating action button was added to exit modal, not in original sketch design
 
 ## Pixel Perfect UI via HTML/Bootstrap
 
