@@ -17,6 +17,7 @@ header {
         width: 80%;
         min-width: calcRem(200px);
         min-height: calc(32px);
+        max-width: calcRem(800px);
         text-align: center;
         display: block;
         border: 2px solid $color-primary;
@@ -67,6 +68,14 @@ header {
     header {
         h1 {
             font-size: $font-tablet-h1;
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    header {
+        h1 {
+            font-size: $font-desktop-h1;
         }
     }
 }
