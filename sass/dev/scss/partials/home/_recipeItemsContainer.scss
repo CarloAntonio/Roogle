@@ -141,11 +141,26 @@
         grid-template-columns: repeat(4, 1fr);
         margin-right: calcRem(64px);
         margin-left: calcRem(64px);
+        max-width: 1020px;
     }
 
     .recipeItem {
         grid-template-columns: 1fr;
         grid-column-gap: calcRem(8px);
         padding-right: 0px;
+    }
+}
+
+@media (min-width: 1064px) {
+    .recipeItemsContainer {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1020px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .recipeItemsContainer {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
