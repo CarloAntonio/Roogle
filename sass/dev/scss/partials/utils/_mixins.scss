@@ -1,0 +1,66 @@
+
+/****
+Buttons
+****/
+
+// button style 1
+@mixin button1 {
+    background-color: $color-primary;
+    color: $color-white;
+    font-family: $font-stack-primary;
+    border-radius: $button-radius;
+}
+
+@mixin button1-sm-styles {
+    width: $button-width-sm-phone;
+    height: $button-height-sm-phone;
+    font-size: $font-button-sm-phone;
+}
+
+@mixin button1-lg-styles {
+    font-size: $font-button-lg-phone;
+    width: $button-width-lg-phone;
+    height: $button-height-lg-phone;
+}
+
+/****
+Grid
+****/
+
+//grid start
+@mixin grid-m-16 {
+    display: grid;
+    margin: 16px;
+}
+
+/****
+Text Titles
+****/
+
+//h2 styles
+@mixin h2-home-styles {
+    color: $color-primary;
+    font-family: $font-stack-primary;
+    font-weight: $font-regular;
+    text-align: center;
+    border-bottom: 1px solid $color-primary;
+    display: inline-block; 
+}
+
+@mixin h2-modal-styles {
+    text-align: center;
+    font-family: $font-stack-primary;
+    color: $color-secondary;
+}
+
+@mixin h3-modal-styles {
+    align-self: center;
+    font-family: $font-stack-secondary;
+    font-weight: $font-bold;
+}
+
+//label styles
+@mixin label-home-styles {
+    font-family: $font-stack-secondary;
+    font-weight: $font-regular;
+}

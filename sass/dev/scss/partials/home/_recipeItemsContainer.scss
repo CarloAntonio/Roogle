@@ -1,7 +1,8 @@
 
 .recipeItemsContainer {
-    margin: calcRem(96px) calcRem(32px);
-    display: grid;
+    @include grid-m-16;
+    margin-top: calcRem(96px);
+    margin-bottom: calcRem(96px);
     grid-template-columns: 1fr;
     grid-gap: calcRem(16px);
     justify-items: center;
@@ -50,7 +51,7 @@
         img {
             display: block;
             width: 100%;
-            border-radius: 5px;
+            border-radius: $general-radius;
         }
     }
 

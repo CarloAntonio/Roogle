@@ -5,13 +5,8 @@
 }
 
 .bottomSearchButton {
-    width: $button-width-phone-sm;
-    height: $button-height-phone-sm;
-    background-color: $color-primary;
-    color: $color-white;
-    font-family: $font-stack-primary;
-    border-radius: $button-radius;
-    font-size: $font-button-sm-phone;
+    @include button1;
+    @include button1-sm-styles;
 }
 
 .bottomButtonContainer {
@@ -43,8 +38,6 @@
 
  @media (min-width: 380px) {
     .bottomSearchButton {
-        font-size: $font-button-lg-phone;
-        width: $button-width-phone-lg;
-        height: $button-height-phone-lg;
+        @include button1-sm-styles;
     }
 }

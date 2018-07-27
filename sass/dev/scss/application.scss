@@ -2,6 +2,7 @@
 //utilities
 @import 'partials/utils/functions';
 @import 'partials/utils/variables';
+@import 'partials/utils/mixins';
 
 //general
 @import 'partials/general/misc';
@@ -16,5 +17,4 @@
 //modal
 @import 'partials/modalSection/modalGeneral';
 @import 'partials/modalSection/modalDetails';
-@import 'partials/modalSection/modalNutrients';
-@import 'partials/modalSection/modalDaily';
+@import 'partials/modalSection/modalAdvance';

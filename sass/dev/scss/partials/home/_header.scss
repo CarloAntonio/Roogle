@@ -1,8 +1,7 @@
 
 header {
-    display: grid;
+    @include grid-m-16;
     grid-template-columns: 1fr;
-    margin: 16px;
 
     h1 {
         color: $color-primary;
@@ -32,13 +31,8 @@ header {
     }
 
     button {
-        width: $button-width-phone-sm;
-        height: $button-height-phone-sm;
-        background-color: $color-primary;
-        color: $color-white;
-        font-family: $font-stack-primary;
-        border-radius: $button-radius;
-        font-size: $font-button-sm-phone;
+        @include button1;
+        @include button1-sm-styles;
     }
 
     button:nth-of-type(1) {
@@ -57,9 +51,7 @@ header {
         }
 
         button {
-            font-size: $font-button-lg-phone;
-            width: $button-width-phone-lg;
-            height: $button-height-phone-lg;
+            @include button1-lg-styles;
         }
     }
 }
