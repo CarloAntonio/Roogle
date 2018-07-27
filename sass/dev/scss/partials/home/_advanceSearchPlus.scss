@@ -62,3 +62,11 @@
         grid-template-columns: repeat(5, 1fr);
     }
 }
+
+@media (min-width: 1064px) {
+    .nutrientOptions {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1020px;
+    }
+}
