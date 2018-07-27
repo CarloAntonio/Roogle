@@ -10,6 +10,7 @@
 /build
 /sass/dist/css
 /sass/dist/img
+.sass-cache
 
 # misc
 .DS_Store
