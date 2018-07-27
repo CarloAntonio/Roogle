@@ -14,8 +14,9 @@
 
 .showMore {
     margin: calcRem(40px) calcRem(32px);
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     
     button {
         width: calcRem(132px);
@@ -25,15 +26,5 @@
         font-family: $font-stack-primary;
         border-radius: $button-radius;
         font-size: calcRem(16px);
-
-        &:first-child {
-            margin-right: calcRem(10px);
-        }
-
-        &:last-child {
-            margin-left: calcRem(10px);
-        }
-
     }
-
 }
