@@ -277,6 +277,10 @@ header button:nth-of-type(2) {
   }
 }
 @media (min-width: 1020px) {
+  .dropdownOptions h2 {
+    font-size: 1.5rem;
+  }
+
   .advanceSearch {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -356,6 +360,11 @@ header button:nth-of-type(2) {
 @media (min-width: 768px) {
   .nutrientOptions {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1020px) {
+  .nutrientOptions {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 .recipeItemsContainer {

@@ -182,6 +182,13 @@
 }
 
 @media (min-width: 1020px) {
+
+    .dropdownOptions {
+        h2 {
+            font-size: calcRem(24px);
+        }
+    }
+
     .advanceSearch {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
