@@ -30,6 +30,22 @@
     }
 }
 
+@media (min-width: 510px) {
+    .showMore {
+        button {
+            width: calcRem(198px);
+        }
+    }
+}
+
+@media (min-width: 510px) {
+    .showMore {
+        button {
+            width: calcRem(264px);
+        }
+    }
+}
+
 @media (min-width: 720px) {
     .modalBg {
         margin: calcRem(128px) auto 2rem ;
