@@ -29,15 +29,22 @@
     position: fixed;
     left: 10px;
     bottom: 80px;
- }
+}
   
- .fab:hover {
+.fab:hover {
     box-shadow: 0 6px 14px 0 #666;
     transform: scale(1.05);
- }
+}
 
- @media (min-width: 380px) {
+@media (min-width: 380px) {
     .bottomSearchButton {
         @include button1-sm-styles;
     }
 }
+
+@media (min-width: 900px) {
+    .fab {
+        display: none;
+    }
+}
+
