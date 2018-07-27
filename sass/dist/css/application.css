@@ -319,6 +319,13 @@ header button:nth-of-type(2) {
     justify-self: center;
   }
 }
+@media (min-width: 1064px) {
+  .advanceSearch {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1020px;
+  }
+}
 .advanceSearchPlusHeaderContainer {
   text-align: center;
 }

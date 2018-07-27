@@ -221,3 +221,11 @@
         justify-self: center;
     }
 }
+
+@media (min-width: 1064px) {
+    .advanceSearch {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1020px;
+    }
+}
