@@ -117,9 +117,10 @@ This section demonstrates my capacity to develop with the following technologies
 ### General Notes:
 * If you have any feedback to improve my code, feel free to drop me a line on my [linkedin](https://www.linkedin.com/in/carlo-bilbao/), I'm always interested in learning a better way!
 
-### Design Note:
+### Design Notes:
 1. Nutrient items on small screen sizes are double column instead of single column. Thought it looked cleaner this way and took up less vertical space (meaning less user scrolling), so I went with the two column approach.
 2. Floating action button was added to exit modal, not in original sketch design
+3. Spaced and sized input elements further apart (used 44px minimum apple recommendation) so users on hand held devices can easily choose the right element 
 
 ## Pixel Perfect UI via HTML/Bootstrap
 
