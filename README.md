@@ -25,7 +25,7 @@ The purpose of this project, aside from creating a recipe search application, is
   * UI for different screen sizes: Desktop HD, Desktop, Tablet, Phone Lg, Phone
 4. Create Pixel Perfect UI using HTML/CSS
   * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, a folder with html/css files will be included in this project to show my ability to develop in that capacity as well.
-  * Pixel Perfect UIs via HTML/CSS, preprocesor SCSS/SASS, CSS Grids (for xy content positioning), CSS flex-box (for x content positioning), bootstrap for a components, Grunt (task runner - SCSS to CSS)
+  * Pixel Perfect UIs via HTML/CSS, preprocesor SCSS/SASS, CSS Grids (for x & y content positioning), CSS flex-box (for x or y content positioning), bootstrap for a components, Grunt (task runner - SCSS to CSS)
     * Can be found in the "sass" folder, section "Pixel Perfect UI via HTML/SCSS" provides instructions for running code on your machine
   * Pixel Perfect UIs via HTML/Bootstrap
     * Can be found in the "bootstrap" folder, section "Pixel Perfect UI via HTML/Bootstrap" provides instructions for running code on your machine
@@ -99,8 +99,8 @@ __**Phone Main State: SearchLvl=2**__  </br>
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS 
 * SCSS/SASS 
-* CSS Grids (for xy content positioning)
-* CSS flex-box (for x content positioning)
+* CSS Grids (for x & y content positioning)
+* CSS flex-box (for x or y content positioning)
 * Bootstrap (for components)  
 * Grunt (task runner - SCSS to CSS)
 
@@ -121,28 +121,27 @@ This section demonstrates my capacity to develop with the following technologies
 1. Nutrient items on small screen sizes are double column instead of single column. Thought it looked cleaner this way and took up less vertical space (meaning less user scrolling), so I went with the two column approach.
 
 ### Selection of comparisions:
-
+Comparison 1:
 __**Sketch Desktop HD Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115967-71e68832-8eba-11e8-9555-467a092b594b.png" width="700">
 
+__**HTML/SCSS Desktop HD Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43349431-924337f4-91b4-11e8-98f2-31c29c675668.png" width="700">
 
-__**Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115968-7201390c-8eba-11e8-976b-124e5fb5d735.png" width="700">
-
-__**Tablet Main State: SearchLvl=0**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115989-73ed4990-8eba-11e8-8ed6-17a2420d41fd.png" width="500">
-
-__**Tablet Main State: SearchLvl=2**__  </br>
+Comparison 2:
+__**Sketch Tablet Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115991-7421f4d8-8eba-11e8-969b-21a15365beae.png" width="500">
 
-__**Phone Lg Main State: SearchLvl=0**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115982-7337cdc2-8eba-11e8-9e7a-3e161a44019f.png" width="300">
+__**HTML/SCSS Tablet Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43349433-9287a588-91b4-11e8-99d3-dac5cbff1292.png" width="500">
 
-__**Phone Main State: SearchLvl=0**__  </br>
-<img src="https://user-images.githubusercontent.com/25759516/43115974-7299f836-8eba-11e8-87e4-41969b4e775c.png" width="200">
-
-__**Phone Main State: SearchLvl=2**__  </br>
+Comparison 3:
+__**Sketch Phone Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
+
+__**HTML/SCSS Phone Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43349487-f99dff6a-91b4-11e8-933b-e8403d03c78b.png" width="200">
+
 
 ## Pixel Perfect UI via HTML/Bootstrap
 
