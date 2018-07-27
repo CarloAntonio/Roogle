@@ -1,7 +1,7 @@
 .advanceSearch {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: calcRem(15px) calcRem(32px);
+    margin: 16px;
     grid-gap: calcRem(16px);
 
     .headerContainer, .healthOptions {
@@ -19,7 +19,7 @@
         font-family: $font-stack-primary;
         font-weight: $font-regular;
         font-size: calcRem(24px);
-        margin: 0px;
+        margin: 0px 0px 16px;
         padding: 0px calcRem(50px) 5px;
         border-bottom: 1px solid $color-primary;
         display: inline-block;
@@ -89,9 +89,15 @@
     }
 }
 
+@media (min-width: 300px) {
+    .advanceSearch {
+        margin: 24px !important;
+    }
+}
+
 @media (min-width: 330px) {
     .advanceSearch {
-        margin: calcRem(15px) calcRem(64px);
+        margin: 32px !important;
     }
 }
 
@@ -110,16 +116,24 @@
 }
 
 @media (min-width: 410px) {
+    .headerContainer, .dietHeaderContainer, .dropdownOptions {
+        h2 {
+            font-size: calcRem(24px);
+        }
+    }
+
+    .healthOptions, .dietOptions {
+        label {
+            font-size: calcRem(20px);
+        }
+    }
+
     .advanceSearch {
         margin: calcRem(15px) calcRem(96px);
     }
 }
 
 @media (min-width: 440px) {
-    .advanceSearch {
-        margin: calcRem(15px) calcRem(16px);
-    }
-
     .healthOptions {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -138,9 +152,16 @@
 }
 
 @media (min-width: 500px) {
+
+    .headerContainer, .dietHeaderContainer, .dropdownOptions {
+        h2 {
+            font-size: calcRem(32px);
+        }
+    }
+
     .healthOptions, .dietOptions {
         label {
-            font-size: calcRem(28px);
+            font-size: calcRem(24px);
         }
     }
 }
@@ -148,6 +169,12 @@
 @media (min-width: 540px) {
     .advanceSearch {
         margin: calcRem(15px) calcRem(48px);
+    }
+
+    .healthOptions, .dietOptions {
+        label {
+            font-size: calcRem(28px);
+        }
     }
 }
 
@@ -181,7 +208,15 @@
     }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 830px) {
+    .advanceSearch {
+        max-width: 730px;
+        width: 100%;
+        margin: calcRem(15px) auto !important;
+    }
+}
+
+@media (min-width: 1065px) {
 
     .dropdownOptions {
         h2 {
