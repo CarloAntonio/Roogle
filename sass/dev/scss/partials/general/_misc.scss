@@ -5,25 +5,19 @@
 }
 
 .bottomSearchButton {
-    width: calcRem(132px);
-    height: calcRem(44px);
+    width: $button-width-phone-sm;
+    height: $button-height-phone-sm;
     background-color: $color-primary;
     color: $color-white;
     font-family: $font-stack-primary;
     border-radius: $button-radius;
-    font-size: calcRem(16px);
+    font-size: $font-button-sm-phone;
 }
 
 .bottomButtonContainer {
     text-align: center;
     margin: 10px auto 20px;
 }
-
-// .fab {
-//     position: relative;
-//     top: 100px;
-//     margin-left: 50px;
-// }
 
 .fab {
     width: 45px;
@@ -46,3 +40,11 @@
     box-shadow: 0 6px 14px 0 #666;
     transform: scale(1.05);
  }
+
+ @media (min-width: 380px) {
+    .bottomSearchButton {
+        font-size: $font-button-lg-phone;
+        width: $button-width-phone-lg;
+        height: $button-height-phone-lg;
+    }
+}

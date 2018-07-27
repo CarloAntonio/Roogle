@@ -1,6 +1,6 @@
 
 .recipeItemsContainer {
-    margin: calcRem(25px) calcRem(32px);
+    margin: calcRem(96px) calcRem(32px);
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: calcRem(16px);
@@ -40,6 +40,7 @@
 }
 
 @media (min-width: 414px) {
+
     .recipeItem {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
@@ -70,7 +71,8 @@
 
 @media (min-width: 480px) {
     .recipeItemsContainer {
-        margin: calcRem(25px) calcRem(48px);
+        margin-right: calcRem(48px);
+        margin-left: calcRem(48px);
         grid-gap: calcRem(32px);
 
         h2 {
@@ -93,13 +95,15 @@
 
 @media (min-width: 580px) {
     .recipeItemsContainer {
-        margin: calcRem(25px) calcRem(96px);
+        margin-right: calcRem(96px);
+        margin-left: calcRem(96px);
     }
 }
 
 @media (min-width: 680px) {
     .recipeItemsContainer {
-        margin: calcRem(25px) calcRem(16px);
+        margin-right: calcRem(16px);
+        margin-left: calcRem(16px);
         grid-template-columns: repeat(2, 1fr);
         grid-gap: calcRem(16px);
 
@@ -116,6 +120,7 @@
 
 @media (min-width: 760px) {
     .recipeItemsContainer {
-        margin: calcRem(25px) calcRem(32px);
+        margin-right: calcRem(32px);
+        margin-left: calcRem(32px);
     }
 }
