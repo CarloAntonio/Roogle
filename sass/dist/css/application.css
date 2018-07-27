@@ -626,44 +626,54 @@ footer a:hover {
   }
 }
 .nutrients {
-  margin: 16px auto;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
 }
 .nutrients h2 {
-  margin: 0px;
-  padding: 0px;
   text-align: center;
   font-family: "Merienda", cursive;
   font-size: 1.5rem;
   color: #AC645A;
 }
-
-.nutrientsContainer {
-  margin: 2.5rem 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 1rem;
-}
-.nutrientsContainer h3, .nutrientsContainer p {
+.nutrients h3, .nutrients p {
   display: inline-block;
   margin: 0px;
 }
-.nutrientsContainer div {
+.nutrients div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid #00695C;
   border-radius: 5px;
   padding: 8px;
 }
-.nutrientsContainer h3 {
+.nutrients h3 {
   align-self: center;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
 }
-.nutrientsContainer p {
+.nutrients p {
   justify-self: center;
 }
 
+@media (min-width: 360px) {
+  .nutrients {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+  }
+  .nutrients h2 {
+    grid-column: 1/3;
+  }
+  .nutrients div {
+    display: flex;
+    flex-direction: column;
+  }
+  .nutrients p {
+    align-self: center;
+  }
+}
 .daily {
   margin: 16px auto;
 }
