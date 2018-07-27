@@ -69,12 +69,34 @@ __**Main Screen + Modal**__ </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115810-e862951a-8eb9-11e8-913a-98be6e9ecd1f.JPG" width="400">
 
 ## Sketch Wireframe
-Skip to Wireframe Images (Last Catergory)
+
+Selection slice follows, complete wireframe images can be found further below
+
+__**Desktop HD Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115967-71e68832-8eba-11e8-9555-467a092b594b.png" width="700">
+
+__**Desktop HD Modal State: presentDetails=true, displayNutrients=true, displayDaily=true**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115968-7201390c-8eba-11e8-976b-124e5fb5d735.png" width="700">
+
+__**Tablet Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115989-73ed4990-8eba-11e8-8ed6-17a2420d41fd.png" width="500">
+
+__**Tablet Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115991-7421f4d8-8eba-11e8-969b-21a15365beae.png" width="500">
+
+__**Phone Lg Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115982-7337cdc2-8eba-11e8-9e7a-3e161a44019f.png" width="300">
+
+__**Phone Main State: SearchLvl=0**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115974-7299f836-8eba-11e8-87e4-41969b4e775c.png" width="200">
+
+__**Phone Main State: SearchLvl=2**__  </br>
+<img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
 
 ## HTML/CSS
 ...
 
-## Sketch Wireframe Images
+## Complete Sketch Wireframe Images
 __**Desktop HD Main State: SearchLvl=0**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115965-71ad9dc4-8eba-11e8-94b0-6c138a974bb2.png" width="700">
 
