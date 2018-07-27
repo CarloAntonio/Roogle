@@ -114,6 +114,11 @@ header button:nth-of-type(2) {
     height: 3.375rem;
   }
 }
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 4.5rem;
+  }
+}
 .advanceSearch {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
