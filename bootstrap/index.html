@@ -21,7 +21,7 @@
     <body>
         <header class="container mt-3">
             <div class="row">
-                <h1 class="title col-12 text-center display-4">Roogle</h1>
+                <h1 class="col-12 text-center display-4 text-stack-one text-color-primary">Roogle</h1>
                 <input class="search-input col-8 mx-auto p-1 text-center rounded" type="text" class="form-control" placeholder="Chicken Adobo" aria-label="Search Input"/>
                 <div class="mt-2 col-6 mx-auto d-flex justify-content-center">
                     <button type="button" class="btn search-button mr-2 rounded">Search</button>
@@ -35,7 +35,10 @@
         <section class="container mx-auto">
 
             <div class="row">
-                <h3 class="col-12 text-center">Health</h3>
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 class="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Health</h4>
+                </div>
+
                 <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                     <input type="checkbox" id="alcohol-free" name="feature" value="alchohol-free"/>
                     <label for="alcohol-free">Alcohol-Free</label>
@@ -153,7 +156,9 @@
             <div class="row">
 
                 <div class="col-6 col-md-4 col-lg-3 ml-auto">
-                    <h3>Diet</h3>
+                    <div class="d-flex justify-content-start">
+                        <h4 class="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Diet</h4>
+                    </div>
                     <div>
                         <input type="checkbox" id="balanced" name="feature" value="balanced"/>
                         <label for="balanced">Balanced</label>
@@ -182,7 +187,10 @@
 
                 <div class="dropdownOptions col-6 col-md-4 col-lg-3 mr-auto">
 
-                    <h3>Max Time:</h3>
+                    <div class="d-flex justify-content-start">
+                        <h4 class="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Max Time:</h4>
+                    </div>
+
                     <div class="input-group mb-3">
                         <select class="custom-select" id="inputGroupSelect01">
                             <option value="15">15 minutes</option>
@@ -196,7 +204,9 @@
                         </select>
                     </div>
 
-                    <h3>Max Produce:</h3>
+                    <div class="d-flex justify-content-start">
+                        <h4 class="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Max Produce:</h4>
+                    </div>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="inputGroupSelect02">
                                 <option value="6">6 items</option>
@@ -210,7 +220,9 @@
                         </select>
                     </div>
 
-                    <h3>Max Cal:</h3>
+                    <div class="d-flex justify-content-start">
+                        <h4 class="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Max Cal:</h4>
+                    </div>
                     <div class="input-group mb-3">
                         <select class="custom-select" id="inputGroupSelect01">
                                 <option value="300">300 Cal</option>

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA;;OAEO;AAOP;;OAEO;ACVP,MAAO;EACH,WAAW,EDYM,mBAAmB;ECXpC,KAAK,EDAO,OAAO;;;ACGvB,aAAc;EACV,MAAM,EAAE,iBAAwB;;;AAGpC,cAAe;EACX,WAAW,EDGM,mBAAmB;ECFpC,gBAAgB,EDTJ,OAAO;ECUnB,KAAK,EDRK,IAAI;;;AELlB,aAAc;EACV,KAAK,EAAE,IAAI;;;AAGf,WAAY;EACR,KAAK,EAAE,KAAK;;;AAGhB,yBAA0B;EACtB,aAAc;IACV,KAAK,EAAE,KAAK;;;EAGhB,WAAY;IACR,KAAK,EAAE,KAAK",
-"sources": ["../scss/partials/utils/_variables.scss","../scss/partials/home/_search.scss","../scss/partials/home/_recipeItem.scss"],
+"mappings": "AAAA;;OAEO;AAOP;;OAEO;ACTP,oBAAqB;EACjB,YAAY,EAAE,kBAAyB;;;AAI3C,mBAAoB;EAChB,KAAK,EDLO,OAAO;;;ACQvB,qBAAsB;EAClB,KAAK,EDRS,OAAO;;;ACWzB,eAAgB;EACZ,WAAW,EDFM,mBAAmB;;;ACKxC,eAAgB;EACZ,WAAW,EDLQ,oBAAoB;;;AEd3C,aAAc;EACV,MAAM,EAAE,iBAAwB;;;AAGpC,cAAe;EACX,WAAW,EFQM,mBAAmB;EEPpC,gBAAgB,EFJJ,OAAO;EEKnB,KAAK,EFHK,IAAI;;;AGLlB,aAAc;EACV,KAAK,EAAE,IAAI;;;AAGf,WAAY;EACR,KAAK,EAAE,KAAK;;;AAGhB,yBAA0B;EACtB,aAAc;IACV,KAAK,EAAE,KAAK;;;EAGhB,WAAY;IACR,KAAK,EAAE,KAAK",
+"sources": ["../scss/partials/utils/_variables.scss","../scss/partials/utils/_customStrap.scss","../scss/partials/home/_search.scss","../scss/partials/home/_recipeItem.scss"],
 "names": [],
 "file": "application.css"
 }

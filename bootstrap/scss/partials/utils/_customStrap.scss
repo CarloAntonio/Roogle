@@ -1,0 +1,22 @@
+
+//borders
+.border-custom-color {
+    border-color: $color-primary !important;
+}
+
+//text
+.text-color-primary {
+    color: $color-primary;
+}
+
+.text-color-secondary {
+    color: $color-secondary;
+}
+
+.text-stack-one {
+    font-family: $font-stack-primary;
+}
+
+.text-stack-two {
+    font-family: $font-stack-secondary;
+}
