@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;OAEO;AAOP;;OAEO;ACTP,oBAAqB;EACjB,YAAY,EAAE,kBAAyB;;;AAI3C,mBAAoB;EAChB,KAAK,EDLO,OAAO;;;ACQvB,qBAAsB;EAClB,KAAK,EDRS,OAAO;;;ACWzB,iBAAkB;EACd,KAAK,EDXK,IAAI;;;ACclB,eAAgB;EACZ,WAAW,EDNM,mBAAmB;;;ACSxC,eAAgB;EACZ,WAAW,EDTQ,oBAAoB;;;ACa3C,aAAc;EACV,gBAAgB,ED1BJ,OAAO;;;AEFvB,aAAc;EACV,MAAM,EAAE,iBAAwB;;;ACFpC,aAAc;EACV,KAAK,EAAE,IAAI;;;AAGf,WAAY;EACR,KAAK,EAAE,KAAK;;;AAGhB,yBAA0B;EACtB,aAAc;IACV,KAAK,EAAE,KAAK;;;EAGhB,WAAY;IACR,KAAK,EAAE,KAAK",
-"sources": ["../scss/partials/utils/_variables.scss","../scss/partials/utils/_customStrap.scss","../scss/partials/home/_search.scss","../scss/partials/home/_recipeItem.scss"],
-"names": [],
-"file": "application.css"
-}
