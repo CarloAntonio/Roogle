@@ -13,6 +13,15 @@ module.exports = function(grunt) {
                 files: {
                     'sass/dist/css/application.css' : 'sass/dev/scss/application.scss'
                 }
+            },
+
+            dev2: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'bootstrap/css/application.css' : 'bootstrap/scss/application.scss'
+                }
             }
         },
 
@@ -21,9 +30,13 @@ module.exports = function(grunt) {
             css: {
                 files: ['sass/dev/scss/**/*.scss'],
                 tasks: ['sass:dev']
-            }
-        }
+            },
 
+            css2: {
+                files: ['bootstrap/scss/**/*.scss'],
+                tasks: ['sass:dev2']
+            }
+        },
     });
  
     //load the plugins

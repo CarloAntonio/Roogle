@@ -1,0 +1,25 @@
+/****** 
+color styles  
+******/
+/****** 
+font styles  
+******/
+.nutrientItem {
+  width: 8rem;
+}
+
+.recipeItem {
+  width: 12rem;
+}
+
+@media (min-width: 768px) {
+  .nutrientItem {
+    width: 12rem;
+  }
+
+  .recipeItem {
+    width: 15rem;
+  }
+}
+
+/*# sourceMappingURL=application.css.map */
