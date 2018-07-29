@@ -13,6 +13,10 @@
     color: $color-secondary;
 }
 
+.text-color-white {
+    color: $color-white;
+}
+
 .text-stack-one {
     font-family: $font-stack-primary;
 }
@@ -20,3 +24,9 @@
 .text-stack-two {
     font-family: $font-stack-secondary;
 }
+
+//background
+.c-bg-primary {
+    background-color: $color-primary;
+}
+

@@ -16,6 +16,10 @@ font styles
   color: #AC645A;
 }
 
+.text-color-white {
+  color: #fff;
+}
+
 .text-stack-one {
   font-family: "Merienda", cursive;
 }
@@ -24,14 +28,12 @@ font styles
   font-family: "Roboto", sans-serif;
 }
 
-.search-input {
-  border: 2px solid #00695C;
+.c-bg-primary {
+  background-color: #00695C;
 }
 
-.search-button {
-  font-family: "Merienda", cursive;
-  background-color: #00695C;
-  color: #fff;
+.search-input {
+  border: 2px solid #00695C;
 }
 
 .nutrientItem {

@@ -8,9 +8,12 @@
 
 # production
 /build
+.sass-cache
+
 /sass/dist/css
 /sass/dist/img
-.sass-cache
+
+/bootstrap/css
 
 # misc
 .DS_Store
