@@ -4,6 +4,21 @@ color styles
 /****** 
 font styles  
 ******/
+.title {
+  font-family: "Merienda", cursive;
+  color: #00695C;
+}
+
+.search-input {
+  border: 2px solid #00695C;
+}
+
+.search-button {
+  font-family: "Merienda", cursive;
+  background-color: #00695C;
+  color: #fff;
+}
+
 .nutrientItem {
   width: 8rem;
 }
