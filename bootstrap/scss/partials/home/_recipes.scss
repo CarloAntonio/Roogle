@@ -9,6 +9,10 @@
     h6 {
         margin-top: 0.25rem;
     }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 400px) {
