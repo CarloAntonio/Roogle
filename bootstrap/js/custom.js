@@ -2,7 +2,9 @@
 $(document).ready((() => {
     
     $('.recipeItem').click(() => {
-        $('#exampleModalLong').modal('show');
+        $('#details').modal('show');
     });
+
+    $('#details').attr('style', "padding-left: 15px !important");
 
 }));
