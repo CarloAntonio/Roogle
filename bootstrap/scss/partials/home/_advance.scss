@@ -1,0 +1,10 @@
+
+.search-label {
+    font-size: $text-sm;
+}
+
+@media (min-width: 360px) {
+    .search-label {
+        font-size: $text-md;
+    }
+}

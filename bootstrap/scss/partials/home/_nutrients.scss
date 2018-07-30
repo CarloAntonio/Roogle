@@ -1,0 +1,22 @@
+
+.nutrientItem {
+    width: 80%;
+}
+
+@media (min-width: 330px) {
+    .nutrientItem {
+        width: 47%;
+    }
+}
+
+@media (min-width: 576px) {
+    .nutrientItem {
+        width: 10rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .nutrientItem {
+        width: 12rem;
+    }
+}

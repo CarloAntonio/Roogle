@@ -4,6 +4,14 @@
     border-color: $color-primary !important;
 }
 
+.thick-border-primary {
+    border: 2px solid $color-primary;
+}
+
+.thin-border-primary {
+    border: 1px solid $color-primary;
+}
+
 //text
 .text-color-primary {
     color: $color-primary;
@@ -25,8 +33,31 @@
     font-family: $font-stack-secondary;
 }
 
+.weight-regular {
+    font-weight: $weight-regular;
+}
+
+.weight-medium {
+    font-weight: $weight-medium;
+}
+
+.weight-bold {
+    font-weight: $weight-bold;
+}
+
 //background
 .c-bg-primary {
     background-color: $color-primary;
 }
 
+//clean link
+.clean-link {
+    &:hover {
+        color:inherit;
+    }
+}
+
+//sizing
+.width-100 {
+    width: 100%;
+}

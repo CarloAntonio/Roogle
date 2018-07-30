@@ -1,0 +1,30 @@
+
+.recipeItem {
+    width: 85%;
+
+    img {
+        display: none;
+    }
+}
+
+@media (min-width: 400px) {
+    .recipeItem {
+        width: 10rem;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .recipeItem {
+        width: 12rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .recipeItem {
+        width: 15rem;
+    }
+}
