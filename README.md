@@ -27,11 +27,11 @@ The purpose of this project, aside from creating a recipe search application, is
   * UI for different states: searchLevel, presentDetails, displayNutrients, displayDaily
   * UI for different screen sizes: Desktop HD, Desktop, Tablet, Phone Lg, Phone
 4. Create UI using HTML/SCSS->CSS
-  * Pixel Perfect UIs via HTML/CSS, SCSS/SASS, CSS Grids (for x & y content positioning), CSS flex-box (for x or y content positioning), bootstrap for components, Grunt (as a task runner - SCSS to CSS)
+  * UIs via HTML/CSS, SCSS/SASS, CSS Grids (for x & y content positioning), CSS flex-box (for x or y content positioning), bootstrap for components, Grunt (as a task runner - SCSS to CSS)
   * Can be found in the "sass" folder, section "UI via HTML/SCSS" provides instructions for running code on your machine
   * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, I included this folder, called 'sass' located in the root directory, in this project to show my ability to develop in this capacity as well.
 5. Create UI with HTML/Bootstrap
-  * Pixel Perfect UIs via HTML/Bootstrap, Bootstrap Grids, jQuery, SCSS/SASS -> CSS for custom design changes, Grunt (as a task runner - SCSS to CSS)
+  * UIs via HTML/Bootstrap, Bootstrap Grids, jQuery, SCSS/SASS -> CSS for custom design changes, Grunt (as a task runner - SCSS to CSS)
   * Can be found in the "bootstrap" folder, section "UI via HTML/Bootstrap" provides instructions for running code on your machine
   * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, I included this folder, called 'bootstrap' located in the root directory, in this project to show my ability to develop in this capacity as well.
 6. Create UI using HTML/CSS Modules
@@ -146,6 +146,9 @@ Note: The purpose of creating this seperate folder is to highlight the aformenti
 6. Run "grunt sass", this preprocesses the SCSS file into CSS
 7. Go to "bootstrap" folder
 8. Open "index.html"
+
+## Complete Application via React
+....
 
 ## Complete Sketch Wireframe Images
 __**Desktop HD Main State: SearchLvl=0**__  </br>
