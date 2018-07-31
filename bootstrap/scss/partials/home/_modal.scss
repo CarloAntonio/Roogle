@@ -2,3 +2,14 @@
 .modal-dialog {
     max-width: 900px;
 }
+
+.modal-nutrient {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 360px) {
+    .modal-nutrient {
+        flex-direction: row;
+    }
+}

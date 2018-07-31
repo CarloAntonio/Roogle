@@ -54,10 +54,22 @@
     background-color: $color-secondary;
 }
 
-//clean link
+.c-bg-grey {
+    background-color: $color-grey;
+}
+
+//link
 .clean-link {
     &:hover {
-        color:inherit;
+        color: inherit;
+    }
+}
+
+.primary-link {
+    color: $color-primary;
+    &:hover, &:link, &:visited {
+        color: $color-secondary;
+        text-decoration: none;
     }
 }
 
