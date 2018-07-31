@@ -109,6 +109,11 @@ This section demonstrates my capacity to develop with the following technologies
 * Bootstrap (for components)  
 * Grunt (task runner - SCSS to CSS)
 
+### Context
+The UI is coded mostly in HTML and SCSS converted into CSS via Grunt. The layout uses CSS Grids for laying content in both x and y directions while flex-box was used for laying content in x or y directions. I also used a jQuery plugin that uses (bootstrap 3) to add a more elegent looking select menu.
+
+Note: The purpose of creating this seperate folder is to highlight the aformentioned skills, so no event listeners, states, or api calls were implemented. The data is manually entered to show my design choices on where I wanted to display information, spacing, information blocking, text sizing, etc. The complete functioning application will be developed via the React framework and Redux for state management. I'm considering using jQuery, to implement functionality, but only after completing this project as a react application.
+
 ### How to use
 1. [Download the project](https://help.github.com/articles/cloning-a-repository/)
 2. [Install Grunt](https://gruntjs.com/installing-grunt)
@@ -119,11 +124,6 @@ This section demonstrates my capacity to develop with the following technologies
 7. Go to "sass" folder -> "dist" folder
 8. Open either "index.html" or "modal.html"
 
-### Design Notes:
-1. Nutrient items on small screen sizes are double column instead of single column. Thought it looked cleaner this way and took up less vertical space (meaning less user scrolling), so I went with the two column approach.
-2. Floating action button was added to exit modal, not in original sketch design
-3. Spaced and sized input elements further apart (used 44px minimum apple recommendation) so users on hand held devices can easily choose the right element 
-
 ## UI via HTML/Bootstrap
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS
@@ -131,6 +131,11 @@ This section demonstrates my capacity to develop with the following technologies
 * JQuery
 * SCSS/SASS 
 * Grunt (task runner - SCSS to CSS)
+
+### Context
+The UI is coded mostly in HTML and uses the Bootstrap 4 framework for styles, layouts (bootstrap grid system), and components (modal and select menu). Some custom SCSS converted to CSS via grunt was used to add some customization to stick to the sketch design guidelines. jQuery (limited), was used for click listeners to open the modal. I might return to this section to add jQuery to make an api call and add other features, but wanted to highlight those skills as part of the react section.
+
+Note: The purpose of creating this seperate folder is to highlight the aformentioned skills, so no event listeners, states, or api calls were implemented. The data is manually entered to show my design choices on where I wanted to display information, spacing, information blocking, text sizing, etc. The complete functioning application will be developed via the React framework and Redux for state management. I'm considering using jQuery, to implement functionality, but only after completing this project as a react application.
 
 ### How to use
 1. [Download the project](https://help.github.com/articles/cloning-a-repository/)
