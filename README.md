@@ -6,6 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Purpose:
 The purpose of this project, aside from creating a recipe search application, is to highlight my web design and front end development skills. I will show my methodology for creating a web application from conception to production. To learn more about my work history and goals, feel free to visit my [linkedin](https://www.linkedin.com/in/carlo-bilbao/)
 
+### General Notes:
+* If you have any feedback to improve my code, feel free to drop me a line on my [linkedin](https://www.linkedin.com/in/carlo-bilbao/), I'm always interested in learning a better way!
+
 ### Skills used:
 * Technologies: React, Redux, HTML, CSS, JavaScript (ES6), SASS, Bootstrap, CSS Modules, Axios (ReST API Call, JSON parsing), Jest, Enzyme.
 * Tools: Sketch, Git, GitHub, VSCode, Grunt, NPM, AWS (S3, Cloudfront, Route 53, Certificate Manager)
@@ -23,18 +26,20 @@ The purpose of this project, aside from creating a recipe search application, is
 3. Create a Sketch wireframe
   * UI for different states: searchLevel, presentDetails, displayNutrients, displayDaily
   * UI for different screen sizes: Desktop HD, Desktop, Tablet, Phone Lg, Phone
-4. Create Pixel Perfect UI using HTML/CSS
-  * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, a folder with html/css files will be included in this project to show my ability to develop in that capacity as well.
-  * Pixel Perfect UIs via HTML/CSS, preprocesor SCSS/SASS, CSS Grids (for x & y content positioning), CSS flex-box (for x or y content positioning), bootstrap for a components, Grunt (task runner - SCSS to CSS)
-    * Can be found in the "sass" folder, section "Pixel Perfect UI via HTML/SCSS" provides instructions for running code on your machine
-  * Pixel Perfect UIs via HTML/Bootstrap
-    * Can be found in the "bootstrap" folder, section "Pixel Perfect UI via HTML/Bootstrap" provides instructions for running code on your machine
-  * Note: Two copies to highlight ability to develop UIs at both capacities.
-5. Test Driven Development (TDD)
+4. Create UI using HTML/SCSS->CSS
+  * Pixel Perfect UIs via HTML/CSS, SCSS/SASS, CSS Grids (for x & y content positioning), CSS flex-box (for x or y content positioning), bootstrap for components, Grunt (as a task runner - SCSS to CSS)
+  * Can be found in the "sass" folder, section "UI via HTML/SCSS" provides instructions for running code on your machine
+  * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, I included this folder, called 'sass' located in the root directory, in this project to show my ability to develop in this capacity as well.
+5. Create UI with HTML/Bootstrap
+  * Pixel Perfect UIs via HTML/Bootstrap, Bootstrap Grids, jQuery, SCSS/SASS -> CSS for custom design changes, Grunt (as a task runner - SCSS to CSS)
+  * Can be found in the "bootstrap" folder, section "UI via HTML/Bootstrap" provides instructions for running code on your machine
+  * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, I included this folder, called 'bootstrap' located in the root directory, in this project to show my ability to develop in this capacity as well.
+6. Create UI using HTML/CSS Modules
+7. Test Driven Development (TDD)
   * Use Jest and Enzyme to perform tdd
-6. React
+8. React
   * Use React as a front-end frameword and Redux for state management
-7. Deployment
+9. Deployment
   * Use AWS for hosting responsibilites
 
 ## Understanding the information
@@ -95,7 +100,7 @@ __**Phone Main State: SearchLvl=0**__  </br>
 __**Phone Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
 
-## Pixel Perfect UI via HTML/SCSS
+## UI via HTML/SCSS
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS 
 * SCSS/SASS 
@@ -114,15 +119,28 @@ This section demonstrates my capacity to develop with the following technologies
 7. Go to "sass" folder -> "dist" folder
 8. Open either "index.html" or "modal.html"
 
-### General Notes:
-* If you have any feedback to improve my code, feel free to drop me a line on my [linkedin](https://www.linkedin.com/in/carlo-bilbao/), I'm always interested in learning a better way!
-
 ### Design Notes:
 1. Nutrient items on small screen sizes are double column instead of single column. Thought it looked cleaner this way and took up less vertical space (meaning less user scrolling), so I went with the two column approach.
 2. Floating action button was added to exit modal, not in original sketch design
 3. Spaced and sized input elements further apart (used 44px minimum apple recommendation) so users on hand held devices can easily choose the right element 
 
-## Pixel Perfect UI via HTML/Bootstrap
+## UI via HTML/Bootstrap
+This section demonstrates my capacity to develop with the following technologies:
+* HTML/CSS
+* Bootstrap 4
+* JQuery
+* SCSS/SASS 
+* Grunt (task runner - SCSS to CSS)
+
+### How to use
+1. [Download the project](https://help.github.com/articles/cloning-a-repository/)
+2. [Install Grunt](https://gruntjs.com/installing-grunt)
+3. [Intall Npm](https://www.npmjs.com/get-npm)
+4. Open terminal, [go to the root project folder](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+5. Run "npm install", this installs the necessary dependencies
+6. Run "grunt sass", this preprocesses the SCSS file into CSS
+7. Go to "bootstrap" folder
+8. Open "index.html"
 
 ## Complete Sketch Wireframe Images
 __**Desktop HD Main State: SearchLvl=0**__  </br>
