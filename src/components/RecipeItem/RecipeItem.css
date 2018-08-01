@@ -1,0 +1,53 @@
+
+.cardStyles {
+    background-color: #F8F8F8;
+    width: 85%;
+}
+
+.cardStyles img {
+    display: none;
+}
+
+.cardStyles h6 {
+    margin-top: 0.25rem;
+}
+
+.cardStyles:hover {
+    cursor: pointer;
+}
+
+.subtitleStyles {
+    font-family: 'Merienda', cursive;
+    color: #AC645A;
+}
+
+.pStyles {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+@media (min-width: 400px) {
+    .cardStyles {
+        width: 10rem;
+    }
+    
+    .cardStyles img {
+        display: block;
+    }
+    
+    .cardStyles h6 {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .cardStyles {
+        width: 12rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .cardStyles {
+        width: 15rem;
+    }
+}

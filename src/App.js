@@ -13,6 +13,9 @@ class App extends Component {
         <AdvanceSection />
         <hr className="mx-5"/>
         <NutrientSection />
+        <hr className="mx-5"/>
+        <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
+
       </div>
     );
   }
