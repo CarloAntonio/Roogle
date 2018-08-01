@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <MainSearch />
-        <hr class="mx-5"/>
+        <hr className="mx-5"/>
         <AdvanceSection />
       </div>
     );

@@ -7,7 +7,7 @@ const DietSelection = (props) => {
     return (
         <div data-test="component-diet-selection">
             <input type="checkbox" id={props.value} name="feature" value={props.value}/>
-            <label class={classes.label} for="{props.value}">{props.label}</label>
+            <label className={classes.label} htmlFor="{props.value}">{props.label}</label>
         </div>
     );
 }

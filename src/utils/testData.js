@@ -19,7 +19,7 @@ export const healthOptions = [
     {value: "paleo", label: "Paleo" },
     {value: "shellfish-free", label: "Shellfish-Free" },
     {value: "peanut-free", label: "Peanut-Free" },
-    {value: "soy-free", label: "Celery-Free" },
+    {value: "soy-free", label: "Soy-Free" },
     {value: "pescatarian", label: "Pescatarian" },
     {value: "sugar-conscious", label: "Sugar-Conscious" },
     {value: "pork-free", label: "Pork-Free" },
@@ -27,4 +27,13 @@ export const healthOptions = [
     {value: "vegan", label: "Vegan" },
     {value: "wheat-free", label: "Wheat-Free" },
     {value: "vegetarian", label: "Vegetarian" },
+];
+
+export const dietOptions = [
+    {value: "balanced", label: "Balanced" },
+    {value: "high-fiber", label: "High-Fiber" },
+    {value: "high-protein", label: "High-Protein" },
+    {value: "low-carb", label: "Low-Carb" },
+    {value: "low-fat", label: "Low-Fat" },
+    {value: "low-sodium", label: "Low-Sodium" },
 ];
