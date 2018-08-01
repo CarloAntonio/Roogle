@@ -1,0 +1,23 @@
+
+.input {
+    border: 1px solid #00695C;
+    width: 80%;
+}
+
+@media (min-width: 330px) {
+    .input {
+        width: 47%;
+    }
+}
+
+@media (min-width: 576px) {
+    .input {
+        width: 10rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .input {
+        width: 12rem;
+    }
+}
