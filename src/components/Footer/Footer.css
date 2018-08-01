@@ -1,0 +1,13 @@
+
+.styles {
+    background-color: #00695C;
+    color: #fff;
+}
+
+.styles a {
+    color: #fff;
+}
+
+.styles a:hover {
+    color: inherit;
+}
