@@ -67,5 +67,49 @@ export const nutrientOptions = [
     { placeholder: "Vitamin B12 (ug)" },
     { placeholder: "Vitamin D (ug)" },
     { placeholder: "Vitamin K (ug)" },
-]
+];
+
+export const recipeItems = [
+    { 
+        title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+    { 
+        title: "Lorem ipsum dolor sit amet dsfasfs sffsfef.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+    { 
+        title: "Lorem ipsum dolor sit amet dsfasfs sffefes.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+    { 
+        title: "Lorem ipsum dolor sit amet dsfasfs sffwefs.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+    { 
+        title: "Lorem ipsum dolor sit amet dsfasfs wefsffs.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+    { 
+        title: "Lorem ipsum dolor sit amet dsfaswffs sffs.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+    { 
+        title: "Lorem ipsum dolor sit amet dsfwefasfs sffs.", 
+        serving: "360/Serving", 
+        time: "45 minutes"
+    },
+];
+
+
+
+
+
+
 
