@@ -36,7 +36,7 @@ describe('component', () => {
     test('does not throw warning with expected props', () => {
         const expectedProps = {
             name: "Search",
-            extraStyles: "mx-1"
+            extraStrap: "mx-1"
         }
 
         checkProps(PrimaryButton, expectedProps);

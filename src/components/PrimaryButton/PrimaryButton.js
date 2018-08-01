@@ -2,11 +2,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+import classes from './PrimaryButton.css';
+
 const PrimaryButton = (props) => {
     return (
         <button 
             type="button" 
-            className={`btn rounded text-stack-one c-bg-primary text-color-white ${props.extraStyles}`}
+            className={classes.custom + ` btn rounded ${props.extraStrap}`}
             data-test="component-primary-button">
                 {props.name}
         </button>
@@ -15,7 +17,7 @@ const PrimaryButton = (props) => {
 
 PrimaryButton.propTypes = {
     name: propTypes.string.isRequired,
-    extraStyles: propTypes.string
+    extraStrap: propTypes.string
 }
 
 export default PrimaryButton;
