@@ -1,5 +1,6 @@
 
 import React from 'react';
+import propTypes from 'prop-types';
 
 const PrimaryButton = (props) => {
     return (
@@ -10,6 +11,11 @@ const PrimaryButton = (props) => {
                 {props.name}
         </button>
     );
+}
+
+PrimaryButton.propTypes = {
+    name: propTypes.string.isRequired,
+    extraStyles: propTypes.string
 }
 
 export default PrimaryButton;
