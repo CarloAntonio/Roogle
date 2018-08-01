@@ -1,13 +1,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import classes from './DietSelection';
+import classes from './DietSelection.css';
 
 const DietSelection = (props) => {
     return (
         <div data-test="component-diet-selection">
-            <input type="checkbox" id={props.value} name="feature" value={props.value}/>
-            <label className={classes.label} htmlFor="{props.value}">{props.label}</label>
+            <input className={classes.input} type="checkbox" id={props.value} name="feature" value={props.value}/>
+            <label className={classes.label + " ml-1 my-1"} htmlFor="{props.value}">{props.label}</label>
         </div>
     );
 }

@@ -6,8 +6,8 @@ import classes from './HealthSelection.css';
 const HealthSelection = (props) => {
     return (
         <div className="col-6 col-md-4 col-lg-3 col-xl-2" data-test="component-health-selection">
-            <input type="checkbox" id={props.value} name="feature" value={props.value}/>
-            <label className={classes.label} htmlFor={props.value}>{props.label}</label>
+            <input className={classes.input} type="checkbox" id={props.value} name="feature" value={props.value}/>
+            <label className={classes.label + " ml-1 my-1"} htmlFor={props.value}>{props.label}</label>
         </div>
     );
 }

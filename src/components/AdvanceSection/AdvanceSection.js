@@ -8,12 +8,14 @@ import { healthOptions, dietOptions } from '../../utils/testData';
 
 import dropdownData from '../../data/dropdownData';
 
+import classes from './AdvanceSection.css';
+
 const AdvanceSection = () => {
     return (
         <section className="container mx-auto">
             <div className="row">
                 <div className="col-12 d-flex justify-content-center">
-                    <h4 className="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Health</h4>
+                    <h4 className={classes.subtitle + " px-4 border-bottom"}>Health</h4>
                 </div>
 
                 {healthOptions.map(healthOption => {
@@ -25,11 +27,11 @@ const AdvanceSection = () => {
                 
             </div>
 
-            <div className="row">
+            <div className="row pt-4">
 
                 <div className="col-6 col-md-4 col-lg-3 ml-auto">
                     <div className="d-flex justify-content-start">
-                        <h4 className="px-4 border-bottom border-custom-color text-color-primary text-stack-one">Diet</h4>
+                        <h4 className={classes.subtitle + " px-4 border-bottom"}>Diet</h4>
                     </div>
                     
                     {dietOptions.map(dietOption => {
