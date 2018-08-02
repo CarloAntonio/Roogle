@@ -2,14 +2,12 @@ import React from 'react';
 
 import RecipeItem from '../RecipeItem/RecipeItem';
 
-import { recipeItems } from '../../utils/testData';
-
-const RecipeSection = () => {
+const RecipeSection = (props) => {
     return (
         <section className="container my-5">
             <div className="row justify-content-center">
 
-                {recipeItems.map(item => {
+                {props.recipeItems.map(item => {
                     return <RecipeItem 
                                 key={item.title}
                                 title={item.title} 

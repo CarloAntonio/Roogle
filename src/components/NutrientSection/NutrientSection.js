@@ -3,8 +3,6 @@ import React from 'react';
 import NutrientItem from '../NutrientItem/NutrientItem';
 import classes from '../NutrientSection/NutrientSection.css';
 
-import { nutrientOptions } from '../../utils/testData'
-
 const NutrientSection = (props) => {
     return (
         <section className="container">
@@ -15,7 +13,7 @@ const NutrientSection = (props) => {
 
             <div className="row mx-auto d-flex justify-content-center">
 
-                {nutrientOptions.map(option => {
+                {props.nutrientOptions.map(option => {
                     return <NutrientItem 
                         key={option.placeholder}
                         placeholder={option.placeholder}/>

@@ -6,8 +6,6 @@ import NutrientSection from './NutrientSection/NutrientSection';
 import DailySection from './Daily/DailySection';
 import Aux from '../../utils/Aux';
 
-import classes from './Recipe.css';
-
 class Recipe extends Component {
     render () {
         return (

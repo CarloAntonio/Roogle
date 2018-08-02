@@ -10,10 +10,12 @@ import Recipe from './components/Recipe/Recipe';
 
 import Aux from './utils/Aux';
 
+import { recipeItems, nutrientOptions, healthOptions, dietOptions } from './utils/testData';
+
 class App extends Component {
 
   state = {
-    modal: true
+    modal: true,
   };
   
   toggle = () => {
@@ -28,12 +30,12 @@ class App extends Component {
         </Modal>
         <MainSearch />
         <hr className="mx-5"/>
-        <AdvanceSection />
+        <AdvanceSection healthOptions={healthOptions} dietOptions={dietOptions} />
         <hr className="mx-5"/>
-        <NutrientSection />
+        <NutrientSection nutrientOptions={nutrientOptions}/>
         <hr className="mx-5"/>
         <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
-        <RecipeSection />
+        <RecipeSection recipeItems={recipeItems}/>
         <Footer />
       </Aux>
     );
