@@ -8,8 +8,8 @@ import Footer from './Footer/Footer';
 
 import Aux from '../../utils/Aux';
 
-import { recipeItems, nutrientOptions, healthOptions, dietOptions } from '../../utils/testData';
-import dropdownData from '../../data/dropdownData';
+import { recipeItems } from '../../data/MockData'
+import { nutrientOptions, healthOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
 
 class Main extends Component {
     render() {
@@ -17,7 +17,7 @@ class Main extends Component {
             <Aux>
                 <MainSearch />
                 <hr className="mx-5"/>
-                <AdvanceSection healthOptions={healthOptions} dietOptions={dietOptions} dropdownData={dropdownData}/>
+                <AdvanceSection healthOptions={healthOptions} dietOptions={dietOptions} dropdownOptions={dropdownOptions}/>
                 <hr className="mx-5"/>
                 <NutrientSection nutrientOptions={nutrientOptions}/>
                 <hr className="mx-5"/>

@@ -16,7 +16,7 @@ Enzyme.configure({
 const defaultProps = {
     healthOptions: [],
     dietOptions: [],
-    dropdownData: []
+    dropdownOptions: []
 }
 
 const setup = (props={}) => {
@@ -60,7 +60,7 @@ describe("component's subcomponents", () => {
                 {value: "high-fiber", label: "High-Fiber" },
                 {value: "high-protein", label: "High-Protein" },
             ],
-            dropdownData: [
+            dropdownOptions: [
                 {
                     title: "Max Time:",
                     options: [

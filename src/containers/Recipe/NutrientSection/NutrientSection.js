@@ -2,7 +2,7 @@ import React from 'react';
 
 import BreakdownItem from '../BreakdownItem/BreakdownItem';
 
-import { nutrientData } from '../../../utils/testData';
+import { nutrientData } from '../../../data/MockData';
 import classes from './NutrientSection.css';
 
 const NutrientSection = () => {

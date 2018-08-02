@@ -69,80 +69,51 @@ export const nutrientOptions = [
     { placeholder: "Vitamin K (ug)" },
 ];
 
-export const recipeItems = [
-    { 
-        title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
+export const dropdownOptions = [
+    {
+        title: "Max Time:",
+        options: [
+            {value: "15", display: "15 minutes"},
+            {value: "30", display: "30 minutes"},
+            {value: "45", display: "45 minutes"},
+            {value: "60", display: "1 hour"},
+            {value: "90", display: "1.5 hours"},
+            {value: "120", display: "2 hours"},
+            {value: "150", display: "2.5 hours"},
+            {value: "999", display: "Any"},
+        ],
+        id: "inputGroupSelect01",
+        selected: 3
     },
-    { 
-        title: "Lorem ipsum dolor sit amet dsfasfs sffsfef.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
+    {
+        title: "Max Produce:",
+        options: [
+            {value: "6", display: "6 items"},
+            {value: "8", display: "8 items"},
+            {value: "10", display: "10 items"},
+            {value: "12", display: "12 items"},
+            {value: "14", display: "14 items"},
+            {value: "16", display: "16 items"},
+            {value: "18", display: "18 items"},
+            {value: "99", display: "Any"},
+        ],
+        id: "inputGroupSelect02",
+        selected: 2
     },
-    { 
-        title: "Lorem ipsum dolor sit amet dsfasfs sffefes.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
+    {
+        title: "Max Cal:",
+        options: [
+            {value: "300", display: "300 Cal"},
+            {value: "400", display: "400 Cal"},
+            {value: "500", display: "500 Cal"},
+            {value: "600", display: "600 Cal"},
+            {value: "700", display: "700 Cal"},
+            {value: "800", display: "800 Cal"},
+            {value: "900", display: "900 Cal"},
+            {value: "99999", display: "Any"},
+        ],
+        id: "inputGroupSelect03",
+        selected: 2
     },
-    { 
-        title: "Lorem ipsum dolor sit amet dsfasfs sffwefs.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
-    },
-    { 
-        title: "Lorem ipsum dolor sit amet dsfasfs wefsffs.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
-    },
-    { 
-        title: "Lorem ipsum dolor sit amet dsfaswffs sffs.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
-    },
-    { 
-        title: "Lorem ipsum dolor sit amet dsfwefasfs sffs.", 
-        serving: "360/Serving", 
-        time: "45 minutes"
-    },
-];
-
-export const nutrientData = [
-    { name: "Folae Equivdalent:", value: "666.13 kcal" },
-    { name: "Folte Equvsalent:", value: "666.13 kcal" },
-    { name: "Foate Equiwvalent:", value: "666.13 kcal" },
-    { name: "Foate Equivaglent:", value: "666.13 kcal" },
-    { name: "Foate Equivalenrt:", value: "666.13 kcal" },
-    { name: "Flate Equivdalent:", value: "666.13 kcal" },
-    { name: "Folate Equidvalent:", value: "666.13 kcal" },
-    { name: "Folat Ewquivalent:", value: "666.13 kcal" },
-    { name: "Flate Equivaslent:", value: "666.13 kcal" },
-    { name: "Folae Equivalegnt:", value: "666.13 kcal" },
-    { name: "Folte Equvaleent:", value: "666.13 kcal" },
-    { name: "Folat Equivflent:", value: "666.13 kcal" },
-    { name: "Folate Equifevalent:", value: "666.13 kcal" },
-    { name: "Foae Equvfalent:", value: "666.13 kcal" },
-    { name: "Foate Equeivalent:", value: "666.13 kcal" },
-    { name: "Foate Equivfalent:", value: "666.13 kcal" },
-    { name: "Folate Equivealent:", value: "666.13 kcal" },
-    { name: "Folte Equivfalent:", value: "666.13 kcal" },
-];
-
-export const dailyData = [
-    { name: "Saturatedq:", value: "47.92%" },
-    { name: "Saturatedw:", value: "47.92%" },
-    { name: "Saturatede:", value: "47.92%" },
-    { name: "Saturatedr:", value: "47.92%" },
-    { name: "Saturatedt:", value: "47.92%" },
-    { name: "Saturatedy:", value: "47.92%" },
-    { name: "Saturatedu:", value: "47.92%" },
-    { name: "Saturatedi:", value: "47.92%" },
-    { name: "Saturatedk:", value: "47.92%" },
-    { name: "Saturatedjh:", value: "47.92%" },
-    { name: "Saturatedg:", value: "47.92%" },
-    { name: "Saturatedf:", value: "47.92%" },
-    { name: "Saturated:d", value: "47.92%" },
-    { name: "Saturatedd:", value: "47.92%" },
-    { name: "Saturatesd:", value: "47.92%" },
 ];
 

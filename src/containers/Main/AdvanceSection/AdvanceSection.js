@@ -41,7 +41,7 @@ const AdvanceSection = (props) => {
                 </div>
 
                 <div className="col-6 col-md-4 col-lg-3 mr-auto">
-                    {props.dropdownData.map(data => {
+                    {props.dropdownOptions.map(data => {
                         return <DropdownSelection
                                     title={data.title}
                                     id={data.id}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import BreakdownItem from '../BreakdownItem/BreakdownItem';
 
-import { dailyData } from '../../../utils/testData';
+import { dailyData } from '../../../data/MockData';
 import classes from './DailySection.css';
 
 const DailySection = (props) => {
