@@ -1,31 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Modal } from 'reactstrap';
 
 import Recipe from './containers/Recipe/Recipe';
 import Main from './containers/Main/Main';
-
 import Aux from './utils/Aux';
 
-class App extends Component {
+import * as actions from  './store/actions/actions';
 
-  state = {
-    modal: true,
-  };
-  
-  toggle = () => {
-    this.setState({ modal: !this.state.modal });
-  }
+class App extends Component {
 
   render() {
     return (
       <Aux>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} style={{maxWidth: "900px", width: "80%"}}>
-          <Recipe toggle={this.toggle}/>
+        <Modal isOpen={this.props.modal} toggle={this.props.toggleModal} style={{maxWidth: "900px", width: "80%"}}>
+          <Recipe toggle={this.props.toggleModal}/>
         </Modal>
-        <Main toggle={this.toggle}/>
+        <Main toggle={this.props.toggleModal}/>
       </Aux>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    modal: state.redUI.modal
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleModal: () => dispatch(actions.toggleModal()) 
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
