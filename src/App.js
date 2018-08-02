@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { Modal } from 'reactstrap';
 
-import MainSearch from './components/MainSearch/MainSearch';
-import AdvanceSection from './components/AdvanceSection/AdvanceSection';
-import NutrientSection from './components/NutrientSection/NutrientSection';
-import RecipeSection from './components/RecipeSection/RecipeSection';
-import Footer from './components/Footer/Footer';
-import Recipe from './components/Recipe/Recipe';
+import Recipe from './containers/Recipe/Recipe';
+import Main from './containers/Main/Main';
 
 import Aux from './utils/Aux';
-
-import { recipeItems, nutrientOptions, healthOptions, dietOptions } from './utils/testData';
 
 class App extends Component {
 
@@ -28,15 +22,7 @@ class App extends Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} style={{maxWidth: "900px", width: "80%"}}>
           <Recipe toggle={this.toggle}/>
         </Modal>
-        <MainSearch />
-        <hr className="mx-5"/>
-        <AdvanceSection healthOptions={healthOptions} dietOptions={dietOptions} />
-        <hr className="mx-5"/>
-        <NutrientSection nutrientOptions={nutrientOptions}/>
-        <hr className="mx-5"/>
-        <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
-        <RecipeSection recipeItems={recipeItems}/>
-        <Footer />
+        <Main />
       </Aux>
     );
   }

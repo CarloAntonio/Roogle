@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './RecipeItem.css';
-import testImage from '../../img/profile.jpg'
+import testImage from '../../../../img/profile.jpg'
 
 const RecipeItem = (props) => {
     return (

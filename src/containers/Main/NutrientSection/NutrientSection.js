@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NutrientItem from '../NutrientItem/NutrientItem';
+import NutrientItem from './NutrientItem/NutrientItem';
 import classes from '../NutrientSection/NutrientSection.css';
 
 const NutrientSection = (props) => {

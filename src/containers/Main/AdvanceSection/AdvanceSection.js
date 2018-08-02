@@ -1,10 +1,10 @@
 import React from 'react';
 
-import HealthSelection from '../HealthSelection/HealthSelection';
-import DietSelection from '../DietSelection/DietSelection';
-import DropdownSelection from '../DropdownSelection/DropdownSelection';
+import HealthSelection from './HealthSelection/HealthSelection';
+import DietSelection from './DietSelection/DietSelection';
+import DropdownSelection from './DropdownSelection/DropdownSelection';
 
-import dropdownData from '../../data/dropdownData';
+import dropdownData from '../../../data/dropdownData';
 
 import classes from './AdvanceSection.css';
 

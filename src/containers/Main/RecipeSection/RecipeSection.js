@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RecipeItem from '../RecipeItem/RecipeItem';
+import RecipeItem from './RecipeItem/RecipeItem';
 
 const RecipeSection = (props) => {
     return (
