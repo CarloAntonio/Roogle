@@ -1,4 +1,5 @@
 
 export {
-    toggleModal
+    toggleModal,
+    toggleSearch
 } from './actUI';

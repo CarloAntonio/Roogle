@@ -9,6 +9,7 @@ const PrimaryButton = (props) => {
         <button 
             type="button" 
             className={classes.custom + ` btn rounded ${props.extraStrap}`}
+            onClick={props.toggleSearch}
             data-test="component-primary-button">
                 {props.name}
         </button>
