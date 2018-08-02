@@ -15,7 +15,8 @@ const NutrientSection = (props) => {
                     return <BreakdownItem 
                         key={data.name}
                         name={data.name} 
-                        value={data.value} />
+                        value={data.value} 
+                        data-test="breakdown-item" />
                 })}
                 
             </div>

@@ -35,3 +35,17 @@ describe('component', () => {
         checkProps(NutrientSection, approProps);
     });
 });
+
+describe("component's subcomponent", () => {
+    test('renders appropriate number of itself', () => {
+        const props2Items = {
+            nutrientData: [
+                { name: "Folae Equivdalent:", value: "666.13 kcal" },
+                { name: "Folte Equvsalent:", value: "666.13 kcal" },
+            ]
+        }
+        const wrapper = setup(props2Items);
+        const subcomponent = findByTestAttr(wrapper, 'breakdown-item');
+        expect(subcomponent.length).toBe(2);
+    });
+})

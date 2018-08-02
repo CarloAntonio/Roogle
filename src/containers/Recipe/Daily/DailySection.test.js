@@ -35,3 +35,20 @@ describe('component', () => {
         checkProps(DailySection, approProps);
     });
 });
+
+describe("component's subcomponent", () => {
+
+    test('renders appropriate number of itself', () => {
+        const props3Items = {
+            dailyData: [
+                { name: "Saturatedq:", value: "47.92%" },
+                { name: "Saturatedq:", value: "47.92%" },
+                { name: "Saturatedq:", value: "47.92%" },
+            ]
+        }
+        const wrapper = setup(props3Items);
+        const subcomponent = findByTestAttr(wrapper, 'daily-item');
+        expect(subcomponent.length).toBe(3);
+    });
+    
+})
