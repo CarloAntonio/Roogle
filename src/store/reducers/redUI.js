@@ -3,7 +3,9 @@ import * as actionTypes from '../actions/actTypes';
 
 const initialState = {
     modal: false,
-    search: 0
+    search: 0,
+    showNutrientDetails: false,
+    showDailyDetails: false
 }
 
 const toggleModal = (state, action) => {
@@ -28,11 +30,27 @@ const toggleSearch = (state, action) => {
     }
 }
 
+const toggleNutrientDetails = (state, action) => {
+    return {
+        ...state,
+        showNutrientDetails: !state.showNutrientDetails
+    }
+}
+
+const toggleDailyDetails = (state, action) => {
+    return {
+        ...state,
+        showDailyDetails: !state.showDailyDetails
+    }
+}
+
 const redUI = (state = initialState, action) => {
 
     switch(action.type) {
         case actionTypes.TOGGLE_MODAL: return toggleModal(state, action);
         case actionTypes.TOGGLE_SEARCH: return toggleSearch(state, action);
+        case actionTypes.TOGGLE_NUTRIENT_DETAILS: return toggleNutrientDetails(state, action);
+        case actionTypes.TOGGLE_DAILY_DETAILS: return toggleDailyDetails(state, action);
         default: return state;
     }
 

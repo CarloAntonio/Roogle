@@ -11,3 +11,15 @@ export const toggleSearch = () => {
         type: actionTypes.TOGGLE_SEARCH
     }
 }
+
+export const toggleNutrientDetails = () => {
+    return {
+        type: actionTypes.TOGGLE_NUTRIENT_DETAILS
+    }
+} 
+
+export const toggleDailyDetails = () => {
+    return {
+        type: actionTypes.TOGGLE_DAILY_DETAILS
+    }
+} 
