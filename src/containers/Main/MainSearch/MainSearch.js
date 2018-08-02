@@ -5,6 +5,10 @@ import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 import classes from './MainSearch.css';
 
 const MainSearch = (props) => {
+    let advanceButtonTitle = "Advance";
+    if(props.search === 1) advanceButtonTitle = "Advance+";
+    else if(props.search === 2) advanceButtonTitle = "Basic";
+    
     return (
         <header className="container mt-3" data-test="component-main-search">
             <div className="row">
@@ -13,7 +17,7 @@ const MainSearch = (props) => {
                 <div className="mt-2 col-6 mx-auto d-flex justify-content-center">
                     <PrimaryButton name='Search' extraStrap='mr-2'/>
                     <PrimaryButton 
-                        name='Advance' 
+                        name={advanceButtonTitle} 
                         extraStrap='ml-2'
                         toggleSearch={props.toggleSearch}/>
                 </div>

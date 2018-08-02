@@ -39,7 +39,7 @@ class Main extends Component {
         }
         return (
             <Aux>
-                <MainSearch toggleSearch={this.props.toggleSearch} />
+                <MainSearch toggleSearch={this.props.toggleSearch} search={this.props.search} />
                 <hr className="mx-5"/>
                 { advanceSearch }
                 <RecipeSection recipeItems={recipeItems} toggle={this.props.toggle}/>
