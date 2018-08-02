@@ -6,11 +6,9 @@ import AdvanceSection from './components/AdvanceSection/AdvanceSection';
 import NutrientSection from './components/NutrientSection/NutrientSection';
 import RecipeSection from './components/RecipeSection/RecipeSection';
 import Footer from './components/Footer/Footer';
-import Recipe from './components/Modal/Recipe';
+import Recipe from './components/Recipe/Recipe';
 
 import Aux from './utils/Aux';
-
-import classes from './App.css';
 
 class App extends Component {
 
@@ -25,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <Aux>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={classes.style} style={{maxWidth: "900px"}}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} style={{maxWidth: "900px", width: "80%"}}>
           <Recipe toggle={this.toggle}/>
         </Modal>
         <MainSearch />
