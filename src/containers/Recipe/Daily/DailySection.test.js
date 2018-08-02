@@ -33,5 +33,5 @@ describe('component', () => {
             ]
         }
         checkProps(DailySection, approProps);
-    })
-})
+    });
+});

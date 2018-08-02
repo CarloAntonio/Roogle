@@ -6,6 +6,9 @@ import NutrientSection from './NutrientSection/NutrientSection';
 import DailySection from './Daily/DailySection';
 import Aux from '../../utils/Aux';
 
+//mock data
+import { dailyData, nutrientData } from '../../data/MockData';
+
 class Recipe extends Component {
     render () {
         return (
@@ -13,9 +16,9 @@ class Recipe extends Component {
                 <ModalBody>
                     <DetailSection />
                     <hr/>
-                    <NutrientSection />
+                    <NutrientSection nutrientData={nutrientData} />
                     <hr/>
-                    <DailySection />
+                    <DailySection dailyData={ dailyData }/>
                 </ModalBody>
                 <ModalFooter className="d-flex flex-column flex-sm-row justify-content-center">
                     <Button 
