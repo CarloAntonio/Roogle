@@ -6,14 +6,6 @@ import { findByTestAttr, checkProps } from '../../utils/testUtils';
 
 import PrimaryButton from './PrimaryButton';
 
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ 
-    adapter: new EnzymeAdapter()
-});
-
-
 const setup = (props={}) => {
     return shallow(<PrimaryButton {...props}/>);
 }

@@ -5,14 +5,6 @@ import AdvanceSection from './AdvanceSection';
 
 import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ 
-    adapter: new EnzymeAdapter()
-});
-
-
 const defaultProps = {
     healthOptions: [],
     dietOptions: [],

@@ -5,13 +5,6 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 
 import NutrientSection from './NutrientSection';
 
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ 
-    adapter: new EnzymeAdapter()
-});
-
 const defaultProps = {
     nutrientOptions: []
 }

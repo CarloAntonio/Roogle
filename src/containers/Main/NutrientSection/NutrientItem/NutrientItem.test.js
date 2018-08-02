@@ -5,13 +5,6 @@ import { findByTestAttr, checkProps } from '../../../../utils/testUtils';
 
 import NutrientItem from './NutrientItem';
 
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ 
-    adapter: new EnzymeAdapter()
-});
-
 const defaultProps = {
     placeholder: "Calcium (mg)"
 }

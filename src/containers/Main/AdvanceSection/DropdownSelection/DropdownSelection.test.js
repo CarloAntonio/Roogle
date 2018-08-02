@@ -5,13 +5,6 @@ import { findByTestAttr, checkProps } from '../../../../utils/testUtils';
 
 import DropdownSelection from './DropdownSelection';
 
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ 
-    adapter: new EnzymeAdapter()
-});
-
 const defaultProps = {
     title: "Max Time:",
     options: [
