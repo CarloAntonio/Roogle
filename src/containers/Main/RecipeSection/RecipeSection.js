@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import RecipeItem from './RecipeItem/RecipeItem';
 
 const RecipeSection = (props) => {
     return (
-        <section className="container my-5">
+        <section className="container my-5" data-test="component-recipe-section">
             <div className="row justify-content-center">
 
                 {props.recipeItems.map(item => {
@@ -13,12 +14,23 @@ const RecipeSection = (props) => {
                                 title={item.title} 
                                 serving={item.serving} 
                                 time={item.time}
-                                toggle={props.toggle}/>
+                                toggle={props.toggle}
+                                data-test="recipe-item"/>
                 })}
                 
             </div>
 
         </section>
+    )
+}
+
+RecipeSection.propTypes = {
+    recipeItems: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            serving: PropTypes.string.isRequired,
+            time: PropTypes.string.isRequired
+        })
     )
 }
 
