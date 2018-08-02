@@ -12,7 +12,8 @@ const RecipeSection = (props) => {
                                 key={item.title}
                                 title={item.title} 
                                 serving={item.serving} 
-                                time={item.time}/>
+                                time={item.time}
+                                toggle={props.toggle}/>
                 })}
                 
             </div>

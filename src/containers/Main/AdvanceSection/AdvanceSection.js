@@ -1,16 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import HealthSelection from './HealthSelection/HealthSelection';
 import DietSelection from './DietSelection/DietSelection';
 import DropdownSelection from './DropdownSelection/DropdownSelection';
 
-import dropdownData from '../../../data/dropdownData';
-
 import classes from './AdvanceSection.css';
 
 const AdvanceSection = (props) => {
     return (
-        <section className="container mx-auto">
+        <section className="container mx-auto" data-test="component-advance-section">
         
             <div className="row">
                 <div className="col-12 d-flex justify-content-center">
@@ -21,7 +20,8 @@ const AdvanceSection = (props) => {
                     return <HealthSelection 
                                 value={healthOption.value} 
                                 label={healthOption.label} 
-                                key={healthOption.label}/>
+                                key={healthOption.label}
+                                data-test="health-selection-item"/>
                 })}
             </div>
 
@@ -35,23 +35,30 @@ const AdvanceSection = (props) => {
                         return <DietSelection 
                                     value={dietOption.value} 
                                     label={dietOption.label}
-                                    key={dietOption.value} />
+                                    key={dietOption.value} 
+                                    data-test="diet-selection-item"/>
                     })}
                 </div>
 
-                <div className="dropdownOptions col-6 col-md-4 col-lg-3 mr-auto">
-                    {dropdownData.map(data => {
+                <div className="col-6 col-md-4 col-lg-3 mr-auto">
+                    {props.dropdownData.map(data => {
                         return <DropdownSelection
                                     title={data.title}
                                     id={data.id}
                                     options={data.options} 
-                                    key={data.id}/>
+                                    key={data.id}
+                                    data-test="dropdown-selection-item"/>
                     })}
                 </div>
             </div>
 
         </section>
     );
+}
+
+AdvanceSection.propTypes = {
+    healthOptions: PropTypes.array.isRequired,
+    dietOptions: PropTypes.array.isRequired
 }
 
 export default AdvanceSection;

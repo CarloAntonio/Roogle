@@ -22,7 +22,7 @@ class App extends Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} style={{maxWidth: "900px", width: "80%"}}>
           <Recipe toggle={this.toggle}/>
         </Modal>
-        <Main />
+        <Main toggle={this.toggle}/>
       </Aux>
     );
   }
