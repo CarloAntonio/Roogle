@@ -1,0 +1,12 @@
+
+.nutrient {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00695C;
+}
+
+@media (min-width: 360px) {
+    .nutrient {
+        flex-direction: row;
+    }
+}

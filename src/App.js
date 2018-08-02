@@ -1,15 +1,33 @@
 import React, { Component } from 'react';
+import { Modal } from 'reactstrap';
 
 import MainSearch from './components/MainSearch/MainSearch';
 import AdvanceSection from './components/AdvanceSection/AdvanceSection';
 import NutrientSection from './components/NutrientSection/NutrientSection';
 import RecipeSection from './components/RecipeSection/RecipeSection';
 import Footer from './components/Footer/Footer';
+import Recipe from './components/Modal/Recipe';
+
+import Aux from './utils/Aux';
+
+import classes from './App.css';
 
 class App extends Component {
+
+  state = {
+    modal: true
+  };
+  
+  toggle = () => {
+    this.setState({ modal: !this.state.modal });
+  }
+
   render() {
     return (
-      <div>
+      <Aux>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={classes.style} style={{maxWidth: "900px"}}>
+          <Recipe toggle={this.toggle}/>
+        </Modal>
         <MainSearch />
         <hr className="mx-5"/>
         <AdvanceSection />
@@ -19,7 +37,7 @@ class App extends Component {
         <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
         <RecipeSection />
         <Footer />
-      </div>
+      </Aux>
     );
   }
 }

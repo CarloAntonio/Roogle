@@ -6,7 +6,11 @@ import testImage from '../../img/profile.jpg'
 
 const RecipeItem = (props) => {
     return (
-        <div className={classes.cardStyles + " card m-2"} data-test="component-recipe-item">
+        <div 
+            id="recipeItem"
+            className={classes.cardStyles + " card m-2"} 
+            onClick={props.openModal}
+            data-test="component-recipe-item">
             <img className="card-img-top" src={testImage} alt={props.title} />
             <div className="card-body recipe-body p-0 p-sm-1">
                 <h6 className={classes.subtitleStyles + " card-title text-center"}>{props.title}</h6>
