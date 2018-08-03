@@ -14,7 +14,7 @@ const RecipeSection = (props) => {
                                 title={item.title} 
                                 serving={item.serving} 
                                 time={item.time}
-                                toggle={props.toggle}
+                                toggleModal={props.toggleModal}
                                 data-test="recipe-item"/>
                 })}
                 
@@ -31,7 +31,7 @@ RecipeSection.propTypes = {
             serving: PropTypes.string.isRequired,
             time: PropTypes.string.isRequired
         })
-    )
+    ),
 }
 
 export default RecipeSection;

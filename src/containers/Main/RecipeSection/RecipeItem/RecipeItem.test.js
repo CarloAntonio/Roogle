@@ -5,18 +5,11 @@ import { findByTestAttr, checkProps } from '../../../../utils/testUtils';
 
 import RecipeItem from './RecipeItem';
 
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ 
-    adapter: new EnzymeAdapter()
-});
-
 const defaultProps = {
     title: "Cooking with Chicken Raddish",
     serving: "Serves 4 People",
     time: "45 minutes",
-    toggle: jest.fn()
+    toggleModal: jest.fn()
 }
 
 const setup = (props={}) => {
@@ -38,7 +31,7 @@ describe('component', () => {
             title: "Cooking with Chicken Raddish",
             serving: "Serves 4 People",
             time: "45 minutes",
-            toggle: jest.fn()
+            toggleModal: jest.fn()
         }
         checkProps(RecipeItem, expectedProps);
     });
@@ -49,7 +42,7 @@ test("'toggle' is called when component is clicked", () => {
     //create a mock function and add it to setup
     const mockFxn = jest.fn();
     const props = {
-        toggle: mockFxn
+        toggleModal: mockFxn
     }
     const wrapper = setup(props);
 

@@ -9,7 +9,7 @@ const RecipeItem = (props) => {
         <div 
             id="recipeItem"
             className={classes.cardStyles + " card m-2"} 
-            onClick={props.toggle}
+            onClick={props.toggleModal}
             data-test="component-recipe-item">
             <img className="card-img-top" src={testImage} alt={props.title} />
             <div className="card-body recipe-body p-0 p-sm-1">
@@ -25,7 +25,7 @@ RecipeItem.propTypes = {
     title: PropTypes.string.isRequired,
     serving: PropTypes.string.isRequired,
     time: PropTypes.string.isRequired,
-    toggle: PropTypes.func.isRequired
+    toggleModal: PropTypes.func.isRequired
 }
 
 export default RecipeItem;

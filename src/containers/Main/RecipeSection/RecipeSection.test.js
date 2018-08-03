@@ -6,7 +6,8 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 import RecipeSection from './RecipeSection';
 
 const defaultProps = {
-    recipeItems: []
+    recipeItems: [],
+    toggleModal: jest.fn()
 }
 const setup = (props={}) => {
     const setupProps = { ...defaultProps, ...props };
@@ -33,7 +34,8 @@ describe('component', ()=> {
                     serving: "360/Serving", 
                     time: "45 minutes"
                 },
-            ]
+            ],
+            toggleModal: jest.fn()
         };
         checkProps(RecipeSection, expectedProps);
     });
@@ -56,7 +58,7 @@ describe("component's subcomponents", () => {
                     serving: "360/Serving", 
                     time: "45 minutes"
                 },
-            ]
+            ],
         };
         wrapper = setup(inputProps);
     });

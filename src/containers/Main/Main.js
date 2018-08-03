@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import MainSearch from './MainSearch/MainSearch';
@@ -54,11 +55,15 @@ export class UnconnectedMain extends Component {
                 <hr className="mx-5"/>
                 { advanceSection }
                 { nutrientSection }
-                <RecipeSection recipeItems={recipeItems} toggle={this.props.toggle} data-test="recipe-section"/>
+                <RecipeSection recipeItems={recipeItems} toggleModal={this.props.toggleModal} data-test="recipe-section"/>
                 <Footer data-test="footer"/>
             </Aux>
         )
     }
+}
+
+UnconnectedMain.propTypes = {
+    toggleModal: propTypes.func
 }
 
 const mapStateToProps = state => {
