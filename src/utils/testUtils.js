@@ -1,5 +1,9 @@
 
 import CheckPropTypes from 'check-prop-types';
+import { createStore, applyMiddleware } from 'redux';
+
+import rootReducer from '../store/reducers/redCombiner';
+import { middlewares } from '../utils/configureStore';
 
 /**
  * Return node(s) with the given data-test attribute
@@ -21,3 +25,17 @@ export const checkProps = (component, conformingProps) => {
 
     expect(propError).toBeUndefined();
 }
+
+/**
+ * Create a testing store with imported reduceres, middleware, and intial state
+ * @param {object} initialState - Initial state for store
+ * @function storeFactory
+ * @returns {Store} - Redux store
+ */
+export const storeFactory = (initialState) => {
+    const store = applyMiddleware(...middlewares)(createStore);
+    return store(rootReducer, initialState);
+}
+
+
+
