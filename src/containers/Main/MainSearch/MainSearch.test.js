@@ -1,16 +1,34 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { findByTestAttr } from '../../../utils/testUtils';
+import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 
 import MainSearch from './MainSearch';
 
+const defaultProps = {
+    toggleSearch: jest.fn()
+}
 const setup =(props={}) => {
-    return shallow(<MainSearch {...props} />);
+    const setupProps = { ...defaultProps, ...props }
+    return shallow(<MainSearch {...setupProps} />);
 }
 
-test('renders without error', () => {
-    const wrapper = setup();
-    const component = findByTestAttr(wrapper, 'component-main-search');
-    expect(component.length).toBe(1);
-});
+describe('component', () => {
+    let component;
+    beforeEach(() => {
+        const wrapper = setup();
+        component = findByTestAttr(wrapper, 'component-main-search');
+    })
+    test('renders without error', () => {
+        expect(component.length).toBe(1);
+    });
+    test('renders without error given appropriate props', () => {
+        const approProps = {
+            toggleSearch: jest.fn()
+        }
+
+        checkProps(MainSearch, approProps);
+    })
+})
+
+

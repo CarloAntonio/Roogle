@@ -1,14 +1,16 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
 import classes from './MainSearch.css';
+import Main from '../Main';
 
 const MainSearch = (props) => {
     let advanceButtonTitle = "Advance";
     if(props.search === 1) advanceButtonTitle = "Advance+";
     else if(props.search === 2) advanceButtonTitle = "Basic";
-    
+
     return (
         <header className="container mt-3" data-test="component-main-search">
             <div className="row">
@@ -17,15 +19,20 @@ const MainSearch = (props) => {
                 <div className="mt-2 col-6 mx-auto d-flex justify-content-center">
                     <PrimaryButton 
                         name='Search' 
-                        extraStrap='mr-2'/>
+                        extraStrap='mr-2'
+                        primaryFxn={props.toggleSearch}/>
                     <PrimaryButton 
                         name={advanceButtonTitle} 
                         extraStrap='ml-2'
-                        toggleSearch={props.toggleSearch}/>
+                        primaryFxn={props.toggleSearch}/>
                 </div>
             </div>
         </header>
     );
+}
+
+MainSearch.propTypes = {
+    toggleSearch: propTypes.func
 }
 
 export default MainSearch;
