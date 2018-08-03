@@ -137,4 +137,23 @@ describe("when container's", () => {
             expect(component.length).toBe(1);
         });
     });
-})
+});
+
+describe('redux', () => {
+
+    test("has 'search' prop piece of state from reducers", () => {
+        const search = 0; 
+        const wrapper = setup({
+            redUI: { search }
+        });
+        const searchProp = wrapper.instance().props.search;
+        expect(searchProp).toBe(search);
+    });
+
+    test("has 'toggleSearch' action prop", () => {
+        const wrapper = setup();
+        const toggleSearchProp = wrapper.instance().props.toggleSearch;
+        expect(toggleSearchProp).toBeInstanceOf(Function);
+    });
+
+});
