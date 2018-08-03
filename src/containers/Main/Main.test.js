@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { findByTestAttr, storeFactory } from '../../utils/testUtils';
-import Main from './Main';
+import Main, { UnconnectedMain } from './Main';
 
 const setup = (initialState = {}) => {
     const store = storeFactory(initialState);
