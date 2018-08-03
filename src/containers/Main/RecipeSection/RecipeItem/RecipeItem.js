@@ -24,7 +24,8 @@ const RecipeItem = (props) => {
 RecipeItem.propTypes = {
     title: PropTypes.string.isRequired,
     serving: PropTypes.string.isRequired,
-    time: PropTypes.string.isRequired
+    time: PropTypes.string.isRequired,
+    toggle: PropTypes.func.isRequired
 }
 
 export default RecipeItem;

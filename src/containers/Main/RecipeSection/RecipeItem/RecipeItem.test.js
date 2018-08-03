@@ -15,7 +15,8 @@ Enzyme.configure({
 const defaultProps = {
     title: "Cooking with Chicken Raddish",
     serving: "Serves 4 People",
-    time: "45 minutes"
+    time: "45 minutes",
+    toggle: jest.fn()
 }
 
 const setup = (props={}) => {
@@ -36,8 +37,27 @@ describe('component', () => {
         const expectedProps = {
             title: "Cooking with Chicken Raddish",
             serving: "Serves 4 People",
-            time: "45 minutes"
+            time: "45 minutes",
+            toggle: jest.fn()
         }
         checkProps(RecipeItem, expectedProps);
     });
+});
+
+test("'toggle' is called when component is clicked", () => {
+
+    //create a mock function and add it to setup
+    const mockFxn = jest.fn();
+    const props = {
+        toggle: mockFxn
+    }
+    const wrapper = setup(props);
+
+    //click button
+    const button = findByTestAttr(wrapper, 'component-recipe-item');
+    button.simulate('click');
+
+    //count number of calls
+    const mockCount = mockFxn.mock.calls.length;
+    expect(mockCount).toBe(1);
 });
