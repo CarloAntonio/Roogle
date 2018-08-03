@@ -32,6 +32,7 @@ RecipeSection.propTypes = {
             time: PropTypes.string.isRequired
         })
     ),
+    toggleModal: PropTypes.func.isRequired
 }
 
 export default RecipeSection;
