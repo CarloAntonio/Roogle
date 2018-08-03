@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 
 import { findByTestAttr, checkProps } from '../../utils/testUtils';
 
+import { toggleSearch } from '../../store/reducers/redUI';
 import PrimaryButton from './PrimaryButton';
 
 const setup = (props={}) => {
@@ -13,8 +14,10 @@ const setup = (props={}) => {
 describe('component', () => {
 
     let component;
+
     const props = {
-        name: "Search"
+        name: "Search",
+        primaryFxn: jest.fn()
     }
     beforeEach(() => {
         const wrapper = setup(props);
@@ -28,7 +31,8 @@ describe('component', () => {
     test('does not throw warning with expected props', () => {
         const expectedProps = {
             name: "Search",
-            extraStrap: "mx-1"
+            extraStrap: "mx-1",
+            primaryFxn: jest.fn()
         }
 
         checkProps(PrimaryButton, expectedProps);

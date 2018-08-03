@@ -9,7 +9,7 @@ const PrimaryButton = (props) => {
         <button 
             type="button" 
             className={classes.custom + ` btn rounded ${props.extraStrap}`}
-            onClick={props.toggleSearch}
+            onClick={props.primaryFxn}
             data-test="component-primary-button">
                 {props.name}
         </button>
@@ -18,7 +18,8 @@ const PrimaryButton = (props) => {
 
 PrimaryButton.propTypes = {
     name: propTypes.string.isRequired,
-    extraStrap: propTypes.string
+    extraStrap: propTypes.string,
+    primaryFxn: propTypes.func.isRequired
 }
 
 export default PrimaryButton;
