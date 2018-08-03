@@ -13,37 +13,47 @@ import * as actions from '../../store/actions/actions';
 import { recipeItems } from '../../data/MockData'
 import { nutrientOptions, healthOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
 
-class Main extends Component {
+export class UnconnectedMain extends Component {
     render() {
 
-        let advanceSearch = null
-
-        if(this.props.search === 1) {
-            advanceSearch = (
+        let advanceSection = null
+        if(this.props.search === 1 || this.props.search === 2) {
+            advanceSection = (
                 <Aux>
-                    <AdvanceSection healthOptions={healthOptions} dietOptions={dietOptions} dropdownOptions={dropdownOptions}/>
+                    <AdvanceSection 
+                        healthOptions={healthOptions} 
+                        dietOptions={dietOptions} 
+                        dropdownOptions={dropdownOptions}
+                        data-test="advance-section"/>
                     <hr className="mx-5"/>
-                    <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
+                    { this.props.search === 1 
+                        ? <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
+                        : null
+                    }
                 </Aux>
             )
-        } else if (this.props.search === 2) {
-            advanceSearch = (
+        } 
+        
+        let nutrientSection = null
+        if (this.props.search === 2) {
+            nutrientSection = (
                 <Aux>
-                    <AdvanceSection healthOptions={healthOptions} dietOptions={dietOptions} dropdownOptions={dropdownOptions}/>
-                    <hr className="mx-5"/>
-                    <NutrientSection nutrientOptions={nutrientOptions}/>
+                    <NutrientSection 
+                        nutrientOptions={nutrientOptions}
+                        data-test="nutrient-section"/>
                     <hr className="mx-5"/>
                     <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
                 </Aux>
             )
         }
         return (
-            <Aux>
-                <MainSearch toggleSearch={this.props.toggleSearch} search={this.props.search} />
+            <Aux data-test="component-main">
+                <MainSearch toggleSearch={this.props.toggleSearch} search={this.props.search} data-test="main-search"/>
                 <hr className="mx-5"/>
-                { advanceSearch }
-                <RecipeSection recipeItems={recipeItems} toggle={this.props.toggle}/>
-                <Footer />
+                { advanceSection }
+                { nutrientSection }
+                <RecipeSection recipeItems={recipeItems} toggle={this.props.toggle} data-test="recipe-section"/>
+                <Footer data-test="footer"/>
             </Aux>
         )
     }
@@ -61,4 +71,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedMain);

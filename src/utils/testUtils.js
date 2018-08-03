@@ -34,7 +34,7 @@ export const checkProps = (component, conformingProps) => {
  */
 export const storeFactory = (initialState) => {
     const store = applyMiddleware(...middlewares)(createStore);
-    return store(rootReducer, initialState);
+    return createStore(rootReducer, initialState);
 }
 
 
