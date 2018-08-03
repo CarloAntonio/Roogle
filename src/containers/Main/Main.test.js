@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { findByTestAttr, storeFactory } from '../../utils/testUtils';
+import { toggleSearch } from '../../store/actions/actUI';
 import Main, { UnconnectedMain } from './Main';
 
 const setup = (initialState = {}) => {
@@ -15,12 +16,12 @@ describe("when container's", () => {
 
         let wrapper;
         beforeEach(() => {
-            const test = { 
+            const props = { 
                 redUI: {
                     search: 0,
                 } 
             };
-            wrapper = setup(test);
+            wrapper = setup(props);
         });
 
         test('it renders container without errors', () => {
@@ -57,12 +58,12 @@ describe("when container's", () => {
     describe('search state equals 1', () => {
         let wrapper;
         beforeEach(() => {
-            const test1 = { 
+            const props = { 
                 redUI: {
                     search: 1,
                 } 
             };
-            wrapper = setup(test1);
+            wrapper = setup(props);
         });
 
         test('it renders container without errors', () => {
@@ -99,12 +100,12 @@ describe("when container's", () => {
     describe('search state equals 2', () => {
         let wrapper;
         beforeEach(() => {
-            const test1 = { 
+            const props = { 
                 redUI: {
                     search: 2,
                 } 
             };
-            wrapper = setup(test1);
+            wrapper = setup(props);
         });
 
         test('it renders container without errors', () => {
@@ -157,3 +158,63 @@ describe('redux', () => {
     });
 
 });
+
+describe("'toggleSearch' action creator called", () => {
+
+    let store;
+    let wrapper;
+    const initialState = {
+        redUI: {
+            search: 0,
+        } 
+    }
+    beforeEach(() => {
+        store = storeFactory(initialState);
+        wrapper = shallow(<Main store={store} />).dive();
+        store.dispatch(toggleSearch());
+    });
+
+    test('updates states correctly', () => {
+        const newState = store.getState();
+
+        const expectedState = {
+            ...initialState,
+            redUI: {
+                search: 1
+            }
+        }
+
+        expect(newState).toEqual(expectedState);
+    });
+
+    test('renders advance section when search state change from 0 to 1', () => {
+        //get store state
+        const newState = store.getState();
+
+        //update props with new state
+        wrapper.setProps(newState.redUI);
+
+        //check action component
+        const component = findByTestAttr(wrapper, 'advance-section');
+        expect(component.length).toBe(1);
+    });
+
+    test('renders advance and nutrition section when search state change from 1 to 2', () => {
+        //call action create a second time
+        store.dispatch(toggleSearch());
+
+        //get store state
+        const newState = store.getState();
+
+        //update props with new state
+        wrapper.setProps(newState.redUI);
+
+        //check action component
+        const advanceComponent = findByTestAttr(wrapper, 'advance-section');
+        expect(advanceComponent.length).toBe(1);
+
+        //check action component
+        const nutrietComponent = findByTestAttr(wrapper, 'advance-section');
+        expect(nutrietComponent.length).toBe(1);
+    });
+})
