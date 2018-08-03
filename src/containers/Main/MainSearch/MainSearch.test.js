@@ -7,7 +7,8 @@ import MainSearch from './MainSearch';
 
 const defaultProps = {
     searchType: 0,
-    toggleSearch: jest.fn()
+    toggleSearch: jest.fn(),
+    fetchRecipes: jest.fn()
 }
 const setup =(props={}) => {
     const setupProps = { ...defaultProps, ...props }
@@ -26,7 +27,8 @@ describe('component', () => {
     test('renders without error given appropriate props', () => {
         const approProps = {
             searchType: 0,
-            toggleSearch: jest.fn()
+            toggleSearch: jest.fn(),
+            fetchRecipes: jest.fn()
         }
 
         checkProps(MainSearch, approProps);

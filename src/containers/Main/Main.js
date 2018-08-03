@@ -53,7 +53,7 @@ export class UnconnectedMain extends Component {
                 <MainSearch 
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
-
+                    fetchRecipes={this.props.fetchRecipes}
                     data-test="main-search"/>
                 <hr className="mx-5"/>
                 { advanceSection }

@@ -19,7 +19,7 @@ const MainSearch = (props) => {
                     <PrimaryButton 
                         name='Search' 
                         extraStrap='mr-2'
-                        primaryFxn={props.toggleSearch}/>
+                        primaryFxn={props.fetchRecipes}/>
                     <PrimaryButton 
                         name={advanceButtonTitle} 
                         extraStrap='ml-2'
@@ -32,7 +32,8 @@ const MainSearch = (props) => {
 
 MainSearch.propTypes = {
     searchType: propTypes.number.isRequired,
-    toggleSearch: propTypes.func.isRequired
+    toggleSearch: propTypes.func.isRequired,
+    fetchRecipes: propTypes.func.isRequired
 }
 
 export default MainSearch;

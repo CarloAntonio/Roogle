@@ -1,6 +1,7 @@
 
 const initialState = {
     fetchRecipesStart: false,
+    fetchRecipesFailed: false,
 }
 
 const redAPI = (state = initialState, action) => {
