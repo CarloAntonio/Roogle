@@ -29,7 +29,8 @@ describe('component', () => {
     test('renders with appropriate props', () => {
         const expectedProps = {
             healthOptions: [],
-            dietOptions: []
+            dietOptions: [],
+            dropdownOptions: []
         }
         checkProps(AdvanceSection, expectedProps);
     });
