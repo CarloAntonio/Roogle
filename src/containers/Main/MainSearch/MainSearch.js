@@ -7,8 +7,8 @@ import classes from './MainSearch.css';
 
 const MainSearch = (props) => {
     let advanceButtonTitle = "Advance";
-    if(props.search === 1) advanceButtonTitle = "Advance+";
-    else if(props.search === 2) advanceButtonTitle = "Basic";
+    if(props.searchType === 1) advanceButtonTitle = "Advance+";
+    else if(props.searchType === 2) advanceButtonTitle = "Basic";
 
     return (
         <header className="container mt-3" data-test="component-main-search">
@@ -31,7 +31,7 @@ const MainSearch = (props) => {
 }
 
 MainSearch.propTypes = {
-    search: propTypes.number.isRequired,
+    searchType: propTypes.number.isRequired,
     toggleSearch: propTypes.func.isRequired
 }
 

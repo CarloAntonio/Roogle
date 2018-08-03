@@ -5,3 +5,7 @@ export {
     toggleNutrientDetails,
     toggleDailyDetails
 } from './actUI';
+
+export {
+    fetchRecipes
+} from './actAPI';

@@ -3,7 +3,7 @@ import * as actionTypes from '../actions/actTypes';
 
 const initialState = {
     modal: false,
-    search: 0,
+    searchType: 0,
     showNutrientDetails: false,
     showDailyDetails: false
 }
@@ -19,14 +19,14 @@ const toggleSearch = (state, action) => {
 
     let newSearchState = 0;
 
-    if (state.search === 0) newSearchState = 1;
-    else if (state.search === 1) newSearchState = 2;
-    else if (state.search === 2) newSearchState = 0;
+    if (state.searchType === 0) newSearchState = 1;
+    else if (state.searchType === 1) newSearchState = 2;
+    else if (state.searchType === 2) newSearchState = 0;
     else newSearchState = 0;
 
     return {
         ...state,
-        search: newSearchState
+        searchType: newSearchState
     }
 }
 

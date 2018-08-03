@@ -18,8 +18,8 @@ import classes from './Main.css';
 export class UnconnectedMain extends Component {
     render() {
 
-        let advanceSection = null
-        if(this.props.search === 1 || this.props.search === 2) {
+        let advanceSection = null;
+        if(this.props.searchType === 1 || this.props.searchType === 2) {
             advanceSection = (
                 <Aux>
                     <AdvanceSection 
@@ -28,7 +28,7 @@ export class UnconnectedMain extends Component {
                         dropdownOptions={dropdownOptions}
                         data-test="advance-section"/>
                     <hr className="mx-5"/>
-                    { this.props.search === 1 
+                    { this.props.searchType === 1 
                         ? <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
                         : null
                     }
@@ -36,8 +36,8 @@ export class UnconnectedMain extends Component {
             )
         } 
         
-        let nutrientSection = null
-        if (this.props.search === 2) {
+        let nutrientSection = null;
+        if (this.props.searchType === 2) {
             nutrientSection = (
                 <Aux>
                     <NutrientSection 
@@ -50,7 +50,11 @@ export class UnconnectedMain extends Component {
         }
         return (
             <Aux data-test="component-main">
-                <MainSearch toggleSearch={this.props.toggleSearch} search={this.props.search} data-test="main-search"/>
+                <MainSearch 
+                    toggleSearch={this.props.toggleSearch} 
+                    searchType={this.props.searchType}
+
+                    data-test="main-search"/>
                 <hr className="mx-5"/>
                 { advanceSection }
                 { nutrientSection }
@@ -63,14 +67,15 @@ export class UnconnectedMain extends Component {
 
 const mapStateToProps = state => {
     return {
-        search: state.redUI.search
+        searchType: state.redUI.searchType
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         toggleSearch: () => dispatch(actions.toggleSearch()),
-        toggleModal: () => dispatch(actions.toggleModal()) 
+        toggleModal: () => dispatch(actions.toggleModal()) ,
+        fetchRecipes: () => dispatch(action.fetchRecipes())
     }
 }
 

@@ -18,7 +18,7 @@ describe("when container's", () => {
         beforeEach(() => {
             const props = { 
                 redUI: {
-                    search: 0,
+                    searchType: 0,
                 } 
             };
             wrapper = setup(props);
@@ -60,7 +60,7 @@ describe("when container's", () => {
         beforeEach(() => {
             const props = { 
                 redUI: {
-                    search: 1,
+                    searchType: 1,
                 } 
             };
             wrapper = setup(props);
@@ -102,7 +102,7 @@ describe("when container's", () => {
         beforeEach(() => {
             const props = { 
                 redUI: {
-                    search: 2,
+                    searchType: 2,
                 } 
             };
             wrapper = setup(props);
@@ -143,12 +143,12 @@ describe("when container's", () => {
 describe('redux', () => {
 
     test("has 'search' prop piece of state from reducers", () => {
-        const search = 0; 
+        const searchType = 0; 
         const wrapper = setup({
-            redUI: { search }
+            redUI: { searchType }
         });
-        const searchProp = wrapper.instance().props.search;
-        expect(searchProp).toBe(search);
+        const searchProp = wrapper.instance().props.searchType;
+        expect(searchProp).toBe(searchType);
     });
 
     test("has 'toggleSearch' action prop", () => {
@@ -171,7 +171,7 @@ describe("'toggleSearch' action creator called", () => {
     let wrapper;
     const initialState = {
         redUI: {
-            search: 0,
+            searchType: 0,
         } 
     }
     beforeEach(() => {
@@ -186,7 +186,7 @@ describe("'toggleSearch' action creator called", () => {
         const expectedState = {
             ...initialState,
             redUI: {
-                search: 1
+                searchType: 1
             }
         }
 

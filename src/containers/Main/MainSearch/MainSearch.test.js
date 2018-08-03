@@ -6,7 +6,7 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 import MainSearch from './MainSearch';
 
 const defaultProps = {
-    search: 0,
+    searchType: 0,
     toggleSearch: jest.fn()
 }
 const setup =(props={}) => {
@@ -25,7 +25,7 @@ describe('component', () => {
     });
     test('renders without error given appropriate props', () => {
         const approProps = {
-            search: 0,
+            searchType: 0,
             toggleSearch: jest.fn()
         }
 
@@ -36,7 +36,7 @@ describe('component', () => {
 
 test('component renders correct button title based on search prop', () => {
     const props = {
-        search: 1
+        searchType: 1
     }
     const wrapper = setup(props);
     const container = wrapper.find(`[name="Advance+"]`);
