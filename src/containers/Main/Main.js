@@ -13,6 +13,8 @@ import * as actions from '../../store/actions/actions';
 import { recipeItems } from '../../data/MockData'
 import { nutrientOptions, healthOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
 
+import classes from './Main.css';
+
 export class UnconnectedMain extends Component {
     render() {
 
@@ -27,7 +29,7 @@ export class UnconnectedMain extends Component {
                         data-test="advance-section"/>
                     <hr className="mx-5"/>
                     { this.props.search === 1 
-                        ? <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
+                        ? <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
                         : null
                     }
                 </Aux>
@@ -42,7 +44,7 @@ export class UnconnectedMain extends Component {
                         nutrientOptions={nutrientOptions}
                         data-test="nutrient-section"/>
                     <hr className="mx-5"/>
-                    <button type="button" className="btn d-block mx-auto rounded c-bg-primary text-color-white text-stack-one">Search</button>
+                    <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
                 </Aux>
             )
         }
