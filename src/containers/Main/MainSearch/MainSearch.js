@@ -4,7 +4,6 @@ import propTypes from 'prop-types';
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
 import classes from './MainSearch.css';
-import Main from '../Main';
 
 const MainSearch = (props) => {
     let advanceButtonTitle = "Advance";

@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Aux>
         <Modal isOpen={this.props.modal} toggle={this.props.toggleModal} style={{maxWidth: "900px", width: "80%"}}>
-          <Recipe toggle={this.props.toggleModal}/>
+          <Recipe/>
         </Modal>
         <Main/>
       </Aux>

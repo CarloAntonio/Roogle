@@ -17,7 +17,7 @@ class Recipe extends Component {
         let nutrientsSection = null;
         if(this.props.showNutrientDetails) {
             nutrientsSection = (
-                <Aux>
+                <Aux data-test="nutrient-section">
                     <hr/>
                     <NutrientSection nutrientData={nutrientData} />
                 </Aux>
@@ -27,7 +27,7 @@ class Recipe extends Component {
         let dailySection = null;
         if(this.props.showDailyDetails) {
             dailySection = (
-                <Aux>
+                <Aux data-test="daily-section">
                     <hr/>
                     <DailySection dailyData={ dailyData }/>
                 </Aux>
@@ -84,7 +84,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         toggleNutrientDetails: () => dispatch(actions.toggleNutrientDetails()),
-        toggleDailyDetails: () => dispatch(actions.toggleDailyDetails())
+        toggleDailyDetails: () => dispatch(actions.toggleDailyDetails()),
+        toggleModal: () => dispatch(actions.toggleModal()) 
     }
 }
 
