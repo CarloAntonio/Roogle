@@ -54,6 +54,8 @@ export class UnconnectedMain extends Component {
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
                     fetchRecipes={this.props.fetchRecipes}
+                    searchText={this.props.searchText}
+                    mainSearchTextChange={this.props.mainSearchTextChange}
                     data-test="main-search"/>
                 <hr className="mx-5"/>
                 { advanceSection }
@@ -67,15 +69,16 @@ export class UnconnectedMain extends Component {
 
 const mapStateToProps = state => {
     return {
-        searchType: state.redUI.searchType
+        searchType: state.redUI.searchType,
+        searchText: state.redAPI.searchText
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         toggleSearch: () => dispatch(actions.toggleSearch()),
-        toggleModal: () => dispatch(actions.toggleModal()) ,
-        fetchRecipes: () => dispatch(action.fetchRecipes())
+        toggleModal: () => dispatch(actions.toggleModal()),
+        mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value))
     }
 }
 

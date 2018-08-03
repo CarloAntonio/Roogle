@@ -7,5 +7,6 @@ export {
 } from './actUI';
 
 export {
+    mainSearchTextChange,
     fetchRecipes
 } from './actAPI';
