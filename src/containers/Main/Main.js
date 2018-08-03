@@ -62,10 +62,6 @@ export class UnconnectedMain extends Component {
     }
 }
 
-UnconnectedMain.propTypes = {
-    toggleModal: propTypes.func
-}
-
 const mapStateToProps = state => {
     return {
         search: state.redUI.search
@@ -74,7 +70,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        toggleSearch: () => dispatch(actions.toggleSearch())
+        toggleSearch: () => dispatch(actions.toggleSearch()),
+        toggleModal: () => dispatch(actions.toggleModal()) 
     }
 }
 

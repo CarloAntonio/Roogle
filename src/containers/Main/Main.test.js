@@ -157,6 +157,12 @@ describe('redux', () => {
         expect(toggleSearchProp).toBeInstanceOf(Function);
     });
 
+    test("has 'toggleModal' action prop", () => {
+        const wrapper = setup();
+        const toggleModalProp = wrapper.instance().props.toggleModal;
+        expect(toggleModalProp).toBeInstanceOf(Function);
+    });
+
 });
 
 describe("'toggleSearch' action creator called", () => {
