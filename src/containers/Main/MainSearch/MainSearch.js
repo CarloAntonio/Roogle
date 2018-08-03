@@ -32,7 +32,8 @@ const MainSearch = (props) => {
 }
 
 MainSearch.propTypes = {
-    toggleSearch: propTypes.func
+    search: propTypes.number.isRequired,
+    toggleSearch: propTypes.func.isRequired
 }
 
 export default MainSearch;
