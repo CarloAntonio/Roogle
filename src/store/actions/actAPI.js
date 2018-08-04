@@ -3,6 +3,8 @@ import * as actionTypes from '../actions/actTypes';
 import { axiosInstance } from '../../utils/helpers';
 import { apiKey, appId } from './keys';
 
+import { healthParamsFinder } from '../../utils/helpers';
+
 export const fetchRecipesSuccess = (fetchedRecipes) => {
     return {
         type: actionTypes.FETCH_RECIPES_SUCCESS,
@@ -11,29 +13,19 @@ export const fetchRecipesSuccess = (fetchedRecipes) => {
 }
 
 export const fetchRecipes = (searchText, healthItems) => {
-    console.log(healthItems);
+    //starting query params
+    let queryParams = '&app_id=' + appId + '&app_key=' + apiKey + '&from=0&to=8';
 
-    const healthItemsArr = [];
-    for(let key in healthItems) {
-        healthQParams.push({
-            ...healthItems[key],
-            id: key
-        });
-    }
-
-    let healthQParams = [];
-    healthItemsArr.forEach(element => {
-        if(element.value === true) healthQParams.push(element.id); 
-    });
-
-
+    //parse health params
+    queryParams = healthParamsFinder(healthItems, queryParams);
+    
 
     return dispatch => {
         //start loading ui
         // dispatch(fetchRecipesStart());
 
-        //https://api.edamam.com/search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3
-        axiosInstance.get('search?q=' + searchText + '&app_id=' + appId + '&app_key=' + apiKey + '&from=0&to=8')
+        //https://api.edamam.com/search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3&calories=591-722&health=alcohol-free&nutrients[FAT]=40-42
+        axiosInstance.get('search?q=' + searchText + queryParams)
         
         .then(res => {
             //initialize an array
