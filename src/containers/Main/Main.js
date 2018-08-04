@@ -10,7 +10,7 @@ import Aux from '../../utils/Aux';
 
 import * as actions from '../../store/actions/actions';
 
-import { nutrientOptions, healthOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
+import { nutrientOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
 
 import classes from './Main.css';
 
@@ -27,7 +27,8 @@ export class UnconnectedMain extends Component {
             advanceSection = (
                 <Aux>
                     <AdvanceSection 
-                        healthOptions={healthOptions} 
+                        healthItems={this.props.healthItems} 
+                        healthItemChange={this.props.healthItemChange}
                         dietOptions={dietOptions} 
                         dropdownOptions={dropdownOptions}
                         data-test="advance-section"/>
@@ -77,8 +78,9 @@ export class UnconnectedMain extends Component {
 const mapStateToProps = state => {
     return {
         searchType: state.redUI.searchType,
-        searchText: state.redAPI.searchText,
-        recipeItems: state.redAPI.recipeItems
+        recipeItems: state.redAPI.recipeItems,
+        searchText: state.redOptions.searchText,
+        healthItems: state.redOptions.healthItems
     }
 }
 
@@ -88,6 +90,7 @@ const mapDispatchToProps = dispatch => {
         toggleModal: () => dispatch(actions.toggleModal()),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
         fetchRecipes: (searchText) => dispatch(actions.fetchRecipes(searchText)),
+        healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName))
     }
 }
 

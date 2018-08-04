@@ -3,13 +3,6 @@ import * as actionTypes from '../actions/actTypes';
 import { axiosInstance } from '../../utils/helpers';
 import { apiKey, appId } from './keys';
 
-export const mainSearchTextChange = (text) => {
-    return {
-        type: actionTypes.MAIN_SEARCH_TEXT_CHANGE,
-        text: text
-    }
-}
-
 export const fetchRecipesSuccess = (fetchedRecipes) => {
     return {
         type: actionTypes.FETCH_RECIPES_SUCCESS,

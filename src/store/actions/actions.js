@@ -7,7 +7,11 @@ export {
 } from './actUI';
 
 export {
-    mainSearchTextChange,
     fetchRecipes,
     fetchRecipesSuccess,
 } from './actAPI';
+
+export {
+    mainSearchTextChange,
+    healthItemChange
+} from './actOptions';

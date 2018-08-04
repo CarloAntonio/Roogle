@@ -8,6 +8,15 @@ import DropdownSelection from './DropdownSelection/DropdownSelection';
 import classes from './AdvanceSection.css';
 
 const AdvanceSection = (props) => {
+
+    let healthOptions = [];
+    for(let key in props.healthItems) {
+        healthOptions.push({
+            ...props.healthItems[key],
+            id: key
+        });
+    }
+
     return (
         <section className="container mx-auto" data-test="component-advance-section">
         
@@ -16,11 +25,13 @@ const AdvanceSection = (props) => {
                     <h4 className={classes.subtitle + " px-4 border-bottom"}>Health</h4>
                 </div>
 
-                {props.healthOptions.map(healthOption => {
+                {healthOptions.map(healthOption => {
                     return <HealthSelection 
-                                value={healthOption.value} 
-                                label={healthOption.label} 
-                                key={healthOption.label}
+                                value={healthOption.id} 
+                                label={healthOption.label}
+                                isChecked={healthOption.value}
+                                healthItemChange={props.healthItemChange} 
+                                key={healthOption.id}
                                 data-test="health-selection-item"/>
                 })}
             </div>
@@ -57,7 +68,7 @@ const AdvanceSection = (props) => {
 }
 
 AdvanceSection.propTypes = {
-    healthOptions: PropTypes.array.isRequired,
+    healthItems: PropTypes.object.isRequired,
     dietOptions: PropTypes.array.isRequired,
     dropdownOptions: PropTypes.array.isRequired
 }
