@@ -142,10 +142,150 @@ const initialState = {
         maxTime: "0",
         maxProduce: "0",
         maxCal: "0"
+    },
+    nutrientItems: {
+        calcium: {
+            placeholder: "Calcium (mg)",
+            code: "CA",
+            value: "",
+        },
+        carbs: {
+            placeholder: "Carbs (g)",
+            code: "CHOCDF",
+            value: "",
+        },
+        cholesterol: {
+            placeholder: "Cholesterol (mg)",
+            code: "CHOLE",
+            value: "",
+        },
+        monounsaturated: {
+            placeholder: "Monounsat (g)",
+            code: "FAMS",
+            value: "",
+        },
+        polyunsaturated: {
+            placeholder: "Polyunsat (g)",
+            code: "FAPU",
+            value: "",
+        },
+        saturated: {
+            placeholder: "Saturated (g)",
+            code: "FASAT",
+            value: "",
+        },
+        fat: {
+            placeholder: "Fat (g)",
+            code: "FAT",
+            value: "",
+        },
+        trans: {
+            placeholder: "Trans Fat (g)",
+            code: "FATRN",
+            value: "",
+        },
+        iron: {
+            placeholder: "Iron (mg)",
+            code: "FE",
+            value: "",
+        },
+        fiber: {
+            placeholder: "Fiber (g)",
+            code: "FIBTG",
+            value: "",
+        },
+        folate: {
+            placeholder: "Folate (ug)",
+            code: "FOLDFE",
+            value: "",
+        },
+        potassium: {
+            placeholder: "Potassium (mg)",
+            code: "K",
+            value: "",
+        },
+        magnesium: {
+            placeholder: "Magnesium (mg)",
+            code: "MG",
+            value: "",
+        },
+        sodium: {
+            placeholder: "Sodium (mg)",
+            code: "NA",
+            value: "",
+        },
+        energy: {
+            placeholder: "Energy (kcal)",
+            code: "ENERC_KCAL",
+            value: "",
+        },
+        niacin: {
+            placeholder: "Niacin (mg)",
+            code: "NIA",
+            value: "",
+        },
+        Phosphorus: {
+            placeholder: "Phosp (mg)",
+            code: "P",
+            value: "",
+        },
+        protein: {
+            placeholder: "Protein (g)",
+            code: "PROCNT",
+            value: "",
+        },
+        riboflavin: {
+            placeholder: "Riboflavin (mg)",
+            code: "RIBF",
+            value: "",
+        },
+        sugars: {
+            placeholder: "Sugars (g)",
+            code: "SUGAR",
+            value: "",
+        },
+        thiamin: {
+            placeholder: "Thiamin (mg)",
+            code: "THIA",
+            value: "",
+        },
+        vitaminE: {
+            placeholder: "Vitamin E (mg)",
+            code: "TOCPHA",
+            value: "",
+        },
+        vitaminA: {
+            placeholder: "Vitamin A (ug)",
+            code: "VITA_RAE",
+            value: "",
+        },
+        vitaminB12: {
+            placeholder: "Vitamin B12 (ug)",
+            code: "VITB12",
+            value: "",
+        },
+        vitaminB6: {
+            placeholder: "Vitamin B6 (mg)",
+            code: "VITB6A",
+            value: "",
+        },
+        vitaminC: {
+            placeholder: "Vitamin C (mg)",
+            code: "VITC",
+            value: "",
+        },
+        vitaminD: {
+            placeholder: "Vitamin D (ug)",
+            code: "",
+            value: "VITD",
+        },
+        vitaminK: {
+            placeholder: "Vitamin K (ug)",
+            code: "VITK1",
+            value: "",
+        }
     }
 }
-
-
 
 const mainSearchTextChange = (state, action) => {
     return {

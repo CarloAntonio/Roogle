@@ -10,7 +10,7 @@ import Aux from '../../utils/Aux';
 
 import * as actions from '../../store/actions/actions';
 
-import { nutrientOptions, dropdownOptions } from '../../data/SelectionData';
+import { dropdownOptions } from '../../data/SelectionData';
 
 import classes from './Main.css';
 
@@ -48,7 +48,7 @@ export class UnconnectedMain extends Component {
             nutrientSection = (
                 <Aux>
                     <NutrientSection 
-                        nutrientOptions={nutrientOptions}
+                        nutrientItems={this.props.nutrientItems}
                         data-test="nutrient-section"/>
                     <hr className="mx-5"/>
                     <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
@@ -84,7 +84,8 @@ const mapStateToProps = state => {
         searchText: state.redOptions.searchText,
         healthItems: state.redOptions.healthItems,
         dietItems: state.redOptions.dietItems,
-        dropdownItems: state.redOptions.dropdownItems
+        dropdownItems: state.redOptions.dropdownItems,
+        nutrientItems: state.redOptions.nutrientItems
     }
 }
 

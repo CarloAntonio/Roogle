@@ -5,6 +5,15 @@ import NutrientItem from './NutrientItem/NutrientItem';
 import classes from '../NutrientSection/NutrientSection.css';
 
 const NutrientSection = (props) => {
+
+    let nutrientOptions = [];
+    for(let key in props.nutrientItems) {
+        nutrientOptions.push({
+            ...props.nutrientItems[key],
+            id: key
+        });
+    }
+
     return (
         <section className="container" data-test="component-nutrient-section">
 
@@ -14,9 +23,9 @@ const NutrientSection = (props) => {
 
             <div className="row mx-auto d-flex justify-content-center">
 
-                {props.nutrientOptions.map(option => {
+                {nutrientOptions.map(option => {
                     return <NutrientItem 
-                        key={option.placeholder}
+                        key={option.id}
                         placeholder={option.placeholder}
                         data-test="nutrient-option"/>
                 })}
