@@ -479,13 +479,29 @@ const dropdownChange = (state, action) => {
 }
 
 const nutrientChange = (state, action) => {
+    //input validation
+    if(action.itemValue === "") {
+        return {
+            ...state,
+            nutrientItems: {
+                ...state.nutrientItems,
+                [action.itemName]: {
+                    ...state.nutrientItems[action.itemName],
+                    value: action.itemValue
+                }
+            }
+        }
+    }
+    else if(!parseInt(action.itemValue, 10)) return state;
+    else if(parseInt(action.itemValue, 10) < 0) return state;
+
     return {
         ...state,
         nutrientItems: {
             ...state.nutrientItems,
             [action.itemName]: {
                 ...state.nutrientItems[action.itemName],
-                value: action.itemValue
+                value: parseInt(action.itemValue, 10)
             }
         }
     }
