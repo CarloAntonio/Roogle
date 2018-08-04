@@ -58,7 +58,7 @@ export class UnconnectedMain extends Component {
                 <MainSearch 
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
-                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText)}
+                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems)}
                     searchText={this.props.searchText}
                     mainSearchTextChange={this.props.mainSearchTextChange}
                     data-test="main-search"/>
@@ -89,7 +89,7 @@ const mapDispatchToProps = dispatch => {
         toggleSearch: () => dispatch(actions.toggleSearch()),
         toggleModal: () => dispatch(actions.toggleModal()),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
-        fetchRecipes: (searchText) => dispatch(actions.fetchRecipes(searchText)),
+        fetchRecipes: (searchText, healthItems) => dispatch(actions.fetchRecipes(searchText, healthItems)),
         healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName))
     }
 }

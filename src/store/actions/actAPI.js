@@ -10,7 +10,24 @@ export const fetchRecipesSuccess = (fetchedRecipes) => {
     }
 }
 
-export const fetchRecipes = (searchText) => {
+export const fetchRecipes = (searchText, healthItems) => {
+    console.log(healthItems);
+
+    const healthItemsArr = [];
+    for(let key in healthItems) {
+        healthQParams.push({
+            ...healthItems[key],
+            id: key
+        });
+    }
+
+    let healthQParams = [];
+    healthItemsArr.forEach(element => {
+        if(element.value === true) healthQParams.push(element.id); 
+    });
+
+
+
     return dispatch => {
         //start loading ui
         // dispatch(fetchRecipesStart());
