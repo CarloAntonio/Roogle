@@ -5,11 +5,11 @@
 }
 
 .cardStyles img {
-    display: none;
+    display: block;
 }
 
 .cardStyles h6 {
-    margin-top: 0.25rem;
+    margin: 3rem;
 }
 
 .cardStyles:hover {
@@ -22,6 +22,7 @@
 }
 
 .pStyles {
+    display: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
@@ -36,7 +37,11 @@
     }
     
     .cardStyles h6 {
-        margin-top: 1rem;
+        margin: 1rem;
+    }
+
+    .pStyles {
+        display: block;
     }
 }
 
