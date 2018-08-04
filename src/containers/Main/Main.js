@@ -49,6 +49,7 @@ export class UnconnectedMain extends Component {
                 <Aux>
                     <NutrientSection 
                         nutrientItems={this.props.nutrientItems}
+                        nutrientItemChange={this.props.nutrientItemChange}
                         data-test="nutrient-section"/>
                     <hr className="mx-5"/>
                     <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
@@ -98,6 +99,7 @@ const mapDispatchToProps = dispatch => {
         healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName)),
         dietItemChange: (itemName) => dispatch(actions.dietItemChange(itemName)),
         dropdownItemChange: (itemName, itemValue) => dispatch(actions.dropdownChange(itemName, itemValue)),
+        nutrientItemChange: (itemName, itemValue) => dispatch(actions.nutrientChange(itemName, itemValue)),
     }
 }
 

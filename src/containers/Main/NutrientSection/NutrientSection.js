@@ -27,6 +27,8 @@ const NutrientSection = (props) => {
                     return <NutrientItem 
                         key={option.id}
                         placeholder={option.placeholder}
+                        id={option.id}
+                        nutrientItemChange={props.nutrientItemChange}
                         data-test="nutrient-option"/>
                 })}
 

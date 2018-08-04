@@ -55,3 +55,11 @@ export const dropdownChange = (itemName, itemValue) => {
         itemValue: itemValue
     }
 }
+
+export const nutrientChange = (itemName, itemValue) => {
+    return {
+        type: actionTypes.NUTRIENT_CHANGE,
+        itemName: itemName,
+        itemValue: itemValue
+    }
+}

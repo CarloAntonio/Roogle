@@ -478,6 +478,18 @@ const dropdownChange = (state, action) => {
     }
 }
 
+const nutrientChange = (state, action) => {
+    return {
+        ...state,
+        nutrientItems: {
+            ...state.nutrientItems,
+            [action.itemName]: {
+                ...state.nutrientItems[action.itemName],
+                value: action.itemValue
+            }
+        }
+    }
+}
 
 const redOptions = (state = initialState, action) => {
     switch(action.type) {
@@ -487,6 +499,7 @@ const redOptions = (state = initialState, action) => {
         case actionTypes.ORIGINAL_DIET_STATE: return originalDietState(state, action);
         case actionTypes.UPDATE_DIET_STATE: return updateDietState(state, action);
         case actionTypes.DROPDOWN_CHANGE: return dropdownChange(state, action);
+        case actionTypes.NUTRIENT_CHANGE: return nutrientChange(state, action);
         default: return state;
     }
 } 
