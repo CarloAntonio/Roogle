@@ -6,8 +6,16 @@ import classes from './DietSelection.css';
 const DietSelection = (props) => {
     return (
         <div data-test="component-diet-selection">
-            <input className={classes.input} type="checkbox" id={props.value} name="feature" value={props.value}/>
-            <label className={classes.label + " ml-1 my-1"} htmlFor="{props.value}">{props.label}</label>
+            <input 
+                className={classes.input} 
+                type="checkbox" 
+                id={props.value} 
+                name="feature" 
+                readOnly
+                value={props.value}
+                checked={props.isChecked}
+                onClick={() => props.dietItemChange(props.value)}/>
+            <label className={classes.label + " ml-1 my-1"} htmlFor={props.value}>{props.label}</label>
         </div>
     );
 }

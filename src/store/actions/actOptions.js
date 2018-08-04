@@ -27,3 +27,23 @@ export const healthItemChange = (itemName) => {
         dispatch(updateHealthState(itemName));
     }
 }
+
+export const originalDietState = () => {
+    return {
+        type: actionTypes.ORIGINAL_DIET_STATE
+    }
+}
+
+export const updateDietState = (itemName) => {
+    return {
+        type: actionTypes.UPDATE_DIET_STATE,
+        itemName: itemName
+    }
+}
+
+export const dietItemChange = (itemName) => {
+    return dispatch => {
+        dispatch(originalDietState());
+        dispatch(updateDietState(itemName));
+    }
+}

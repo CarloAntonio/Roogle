@@ -112,7 +112,34 @@ const initialState = {
             label: "Vegetarian"
         },
     },
+    dietItems: {
+        "balanced": {
+            value: false,
+            label: "Balanced"
+        },
+        "high-fiber": {
+            value: false,
+            label: "High-Fiber"
+        },
+        "high-protein": {
+            value: false,
+            label: "High-Protein"
+        },
+        "low-carb": {
+            value: false,
+            label: "Low-Carb"
+        },
+        "low-fat": {
+            value: false,
+            label: "Low-Fat"
+        },
+        "low-sodium": {
+            value: false,
+            label: "Low-Sodium"
+        },
+    }
 }
+
 
 
 const mainSearchTextChange = (state, action) => {
@@ -251,12 +278,59 @@ const updateHealthState = (state, action) => {
     }
 }
 
+const originalDietState = (state, action) => {
+    return {
+        ...state,
+        dietItems: {
+            "balanced": {
+                value: false,
+                label: "Balanced"
+            },
+            "high-fiber": {
+                value: false,
+                label: "High-Fiber"
+            },
+            "high-protein": {
+                value: false,
+                label: "High-Protein"
+            },
+            "low-carb": {
+                value: false,
+                label: "Low-Carb"
+            },
+            "low-fat": {
+                value: false,
+                label: "Low-Fat"
+            },
+            "low-sodium": {
+                value: false,
+                label: "Low-Sodium"
+            },
+        }
+    }
+}
+
+const updateDietState = (state, action) => {
+    return {
+        ...state,
+        dietItems: {
+            ...state.dietItems,
+            [action.itemName]: {
+                ...state.dietItems[action.itemName],
+                value: !state.dietItems[action.itemName].value
+            }
+        }
+    }
+}
+
 
 const redOptions = (state = initialState, action) => {
     switch(action.type) {
         case actionTypes.MAIN_SEARCH_TEXT_CHANGE: return mainSearchTextChange(state, action);
         case actionTypes.ORIGINAL_HEALTH_STATE: return originalHealthState(state, action);
         case actionTypes.UPDATE_HEALTH_STATE: return updateHealthState(state, action);
+        case actionTypes.ORIGINAL_DIET_STATE: return originalDietState(state, action);
+        case actionTypes.UPDATE_DIET_STATE: return updateDietState(state, action);
         default: return state;
     }
 } 

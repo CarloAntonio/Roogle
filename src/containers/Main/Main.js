@@ -10,7 +10,7 @@ import Aux from '../../utils/Aux';
 
 import * as actions from '../../store/actions/actions';
 
-import { nutrientOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
+import { nutrientOptions, dropdownOptions } from '../../data/SelectionData';
 
 import classes from './Main.css';
 
@@ -29,7 +29,8 @@ export class UnconnectedMain extends Component {
                     <AdvanceSection 
                         healthItems={this.props.healthItems} 
                         healthItemChange={this.props.healthItemChange}
-                        dietOptions={dietOptions} 
+                        dietItems={this.props.dietItems} 
+                        dietItemChange={this.props.dietItemChange}
                         dropdownOptions={dropdownOptions}
                         data-test="advance-section"/>
                     <hr className="mx-5"/>
@@ -58,7 +59,7 @@ export class UnconnectedMain extends Component {
                 <MainSearch 
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
-                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems)}
+                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems)}
                     searchText={this.props.searchText}
                     mainSearchTextChange={this.props.mainSearchTextChange}
                     data-test="main-search"/>
@@ -80,7 +81,8 @@ const mapStateToProps = state => {
         searchType: state.redUI.searchType,
         recipeItems: state.redAPI.recipeItems,
         searchText: state.redOptions.searchText,
-        healthItems: state.redOptions.healthItems
+        healthItems: state.redOptions.healthItems,
+        dietItems: state.redOptions.dietItems
     }
 }
 
@@ -89,8 +91,9 @@ const mapDispatchToProps = dispatch => {
         toggleSearch: () => dispatch(actions.toggleSearch()),
         toggleModal: () => dispatch(actions.toggleModal()),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
-        fetchRecipes: (searchText, healthItems) => dispatch(actions.fetchRecipes(searchText, healthItems)),
-        healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName))
+        fetchRecipes: (searchText, healthItems, dietItems) => dispatch(actions.fetchRecipes(searchText, healthItems, dietItems)),
+        healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName)),
+        dietItemChange: (itemName) => dispatch(actions.dietItemChange(itemName)),
     }
 }
 

@@ -9,10 +9,20 @@ import classes from './AdvanceSection.css';
 
 const AdvanceSection = (props) => {
 
+    //convert health options into an array
     let healthOptions = [];
     for(let key in props.healthItems) {
         healthOptions.push({
             ...props.healthItems[key],
+            id: key
+        });
+    }
+
+    //convert diet options into an array
+    let dietOptions = [];
+    for(let key in props.dietItems) {
+        dietOptions.push({
+            ...props.dietItems[key],
             id: key
         });
     }
@@ -42,11 +52,13 @@ const AdvanceSection = (props) => {
                         <h4 className={classes.subtitle + " px-4 border-bottom"}>Diet</h4>
                     </div>
                     
-                    {props.dietOptions.map(dietOption => {
+                    {dietOptions.map(dietOption => {
                         return <DietSelection 
-                                    value={dietOption.value} 
+                                    value={dietOption.id} 
                                     label={dietOption.label}
-                                    key={dietOption.value} 
+                                    isChecked={dietOption.value}
+                                    dietItemChange={props.dietItemChange}
+                                    key={dietOption.id} 
                                     data-test="diet-selection-item"/>
                     })}
                 </div>
@@ -69,7 +81,7 @@ const AdvanceSection = (props) => {
 
 AdvanceSection.propTypes = {
     healthItems: PropTypes.object.isRequired,
-    dietOptions: PropTypes.array.isRequired,
+    dietItems: PropTypes.object.isRequired,
     dropdownOptions: PropTypes.array.isRequired
 }
 

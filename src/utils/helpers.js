@@ -26,3 +26,26 @@ export const healthParamsFinder = (healthItems, queryParams) => {
     
     return queryParams;
 }
+
+export const dietParamsFinder = (dietItems, queryParams) => {
+    //iterate through all health items and find the checked param
+    const dietItemsArr = [];
+    for(let key in dietItems) {
+        dietItemsArr.push({
+            ...dietItems[key],
+            id: key
+        });
+    }
+    let dietQParam = [];
+    dietItemsArr.forEach(element => {
+        if(element.value === true) dietQParam.push(element.id); 
+    });
+
+    //if health param exist, add it to the main query param
+    if(dietQParam.length === 1) {
+        queryParams += "&diet=";
+        queryParams += dietQParam[0];
+    }
+    
+    return queryParams;
+}

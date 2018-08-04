@@ -13,5 +13,6 @@ export {
 
 export {
     mainSearchTextChange,
-    healthItemChange
+    healthItemChange,
+    dietItemChange
 } from './actOptions';
