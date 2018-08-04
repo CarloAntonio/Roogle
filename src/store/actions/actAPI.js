@@ -16,13 +16,13 @@ export const fetchRecipesSuccess = (fetchedRecipes) => {
     }
 }
 
-export const fetchRecipes = () => {
+export const fetchRecipes = (searchText) => {
     return dispatch => {
         //start loading ui
         // dispatch(fetchRecipesStart());
 
         //https://api.edamam.com/search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3
-        axiosInstance.get('search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3')
+        axiosInstance.get('search?q=' + searchText + '&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=8')
         
         .then(res => {
             //initialize an array

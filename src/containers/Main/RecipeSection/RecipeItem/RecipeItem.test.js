@@ -8,7 +8,7 @@ import RecipeItem from './RecipeItem';
 const defaultProps = {
     title: "Cooking with Chicken Raddish",
     serving: "Serves 4 People",
-    time: "45 minutes",
+    calories: 45,
     toggleModal: jest.fn()
 }
 

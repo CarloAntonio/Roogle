@@ -15,6 +15,11 @@ import { nutrientOptions, healthOptions, dietOptions, dropdownOptions } from '..
 import classes from './Main.css';
 
 export class UnconnectedMain extends Component {
+
+    componentDidMount() {
+        //this.props.fetchRecipes();
+    }
+
     render() {
 
         let advanceSection = null;
@@ -52,7 +57,7 @@ export class UnconnectedMain extends Component {
                 <MainSearch 
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
-                    fetchRecipes={this.props.fetchRecipes}
+                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText)}
                     searchText={this.props.searchText}
                     mainSearchTextChange={this.props.mainSearchTextChange}
                     data-test="main-search"/>
@@ -82,7 +87,7 @@ const mapDispatchToProps = dispatch => {
         toggleSearch: () => dispatch(actions.toggleSearch()),
         toggleModal: () => dispatch(actions.toggleModal()),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
-        fetchRecipes: () => dispatch(actions.fetchRecipes()),
+        fetchRecipes: (searchText) => dispatch(actions.fetchRecipes(searchText)),
     }
 }
 
