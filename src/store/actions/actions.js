@@ -14,5 +14,6 @@ export {
 export {
     mainSearchTextChange,
     healthItemChange,
-    dietItemChange
+    dietItemChange,
+    dropdownChange
 } from './actOptions';

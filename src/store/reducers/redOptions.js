@@ -137,6 +137,11 @@ const initialState = {
             value: false,
             label: "Low-Sodium"
         },
+    },
+    dropdownItems: {
+        maxTime: "0",
+        maxProduce: "0",
+        maxCal: "0"
     }
 }
 
@@ -323,6 +328,16 @@ const updateDietState = (state, action) => {
     }
 }
 
+const dropdownChange = (state, action) => {
+    return {
+        ...state,
+        dropdownItems: {
+            ...state.dropdownItems,
+            [action.itemName]: action.itemValue
+        }
+    }
+}
+
 
 const redOptions = (state = initialState, action) => {
     switch(action.type) {
@@ -331,6 +346,7 @@ const redOptions = (state = initialState, action) => {
         case actionTypes.UPDATE_HEALTH_STATE: return updateHealthState(state, action);
         case actionTypes.ORIGINAL_DIET_STATE: return originalDietState(state, action);
         case actionTypes.UPDATE_DIET_STATE: return updateDietState(state, action);
+        case actionTypes.DROPDOWN_CHANGE: return dropdownChange(state, action);
         default: return state;
     }
 } 

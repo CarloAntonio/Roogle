@@ -32,6 +32,7 @@ export class UnconnectedMain extends Component {
                         dietItems={this.props.dietItems} 
                         dietItemChange={this.props.dietItemChange}
                         dropdownOptions={dropdownOptions}
+                        dropdownItemChange={this.props.dropdownItemChange}
                         data-test="advance-section"/>
                     <hr className="mx-5"/>
                     { this.props.searchType === 1 
@@ -59,7 +60,7 @@ export class UnconnectedMain extends Component {
                 <MainSearch 
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
-                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems)}
+                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems)}
                     searchText={this.props.searchText}
                     mainSearchTextChange={this.props.mainSearchTextChange}
                     data-test="main-search"/>
@@ -82,7 +83,8 @@ const mapStateToProps = state => {
         recipeItems: state.redAPI.recipeItems,
         searchText: state.redOptions.searchText,
         healthItems: state.redOptions.healthItems,
-        dietItems: state.redOptions.dietItems
+        dietItems: state.redOptions.dietItems,
+        dropdownItems: state.redOptions.dropdownItems
     }
 }
 
@@ -91,9 +93,10 @@ const mapDispatchToProps = dispatch => {
         toggleSearch: () => dispatch(actions.toggleSearch()),
         toggleModal: () => dispatch(actions.toggleModal()),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
-        fetchRecipes: (searchText, healthItems, dietItems) => dispatch(actions.fetchRecipes(searchText, healthItems, dietItems)),
+        fetchRecipes: (searchText, healthItems, dietItems, dropdownItems) => dispatch(actions.fetchRecipes(searchText, healthItems, dietItems, dropdownItems)),
         healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName)),
         dietItemChange: (itemName) => dispatch(actions.dietItemChange(itemName)),
+        dropdownItemChange: (itemName, itemValue) => dispatch(actions.dropdownChange(itemName, itemValue)),
     }
 }
 

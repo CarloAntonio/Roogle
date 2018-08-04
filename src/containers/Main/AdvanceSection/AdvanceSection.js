@@ -69,6 +69,7 @@ const AdvanceSection = (props) => {
                                     title={data.title}
                                     id={data.id}
                                     options={data.options} 
+                                    dropdownItemChange={props.dropdownItemChange}
                                     key={data.id}
                                     data-test="dropdown-selection-item"/>
                     })}

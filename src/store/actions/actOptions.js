@@ -47,3 +47,11 @@ export const dietItemChange = (itemName) => {
         dispatch(updateDietState(itemName));
     }
 }
+
+export const dropdownChange = (itemName, itemValue) => {
+    return {
+        type: actionTypes.DROPDOWN_CHANGE,
+        itemName: itemName,
+        itemValue: itemValue
+    }
+}

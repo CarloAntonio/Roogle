@@ -12,7 +12,10 @@ const DropdownSelection = (props) => {
                 <h4 className={classes.title + " border-bottom"}>{props.title}</h4>
             </div>
             <div className="input-group mb-3">
-                <select className="custom-select" id={props.id}>
+                <select 
+                    className="custom-select" 
+                    id={props.id} 
+                    onChange={(event) => props.dropdownItemChange(props.id, event.target.value)} >
                     {props.options.map(option => {
                         return <option 
                             value={option.value}

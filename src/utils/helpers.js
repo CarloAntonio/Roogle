@@ -49,3 +49,25 @@ export const dietParamsFinder = (dietItems, queryParams) => {
     
     return queryParams;
 }
+
+export const dropdownParamsFinder = (dropdownItems, queryParams) => {
+    //check for max time
+    if(dropdownItems.maxTime !== "0") {
+        queryParams += "&time=";
+        queryParams += dropdownItems.maxTime
+    }
+
+    //check for max produce
+    if(dropdownItems.maxProduce !== "0") {
+        queryParams += "&ingr=";
+        queryParams += dropdownItems.maxProduce
+    }
+        
+    //check for max cal
+    if(dropdownItems.maxCal !== "0") {
+        queryParams += "&calories=";
+        queryParams += dropdownItems.maxCal
+    }
+
+    return queryParams;
+}
