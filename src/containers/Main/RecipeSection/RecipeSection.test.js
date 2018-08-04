@@ -31,7 +31,7 @@ describe('component', ()=> {
             recipeItems: [
                 { 
                     title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-                    serving: "360/Serving", 
+                    serving: 8, 
                     time: "45 minutes"
                 },
             ],
@@ -50,12 +50,12 @@ describe("component's subcomponents", () => {
             recipeItems: [
                 { 
                     title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-                    serving: "360/Serving", 
+                    serving: 8, 
                     time: "45 minutes"
                 },
                 { 
                     title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-                    serving: "360/Serving", 
+                    serving: 8, 
                     time: "45 minutes"
                 },
             ],

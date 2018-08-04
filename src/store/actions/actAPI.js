@@ -1,5 +1,6 @@
 
 import * as actionTypes from '../actions/actTypes';
+import { axiosInstance } from '../../utils/helpers';
 
 export const mainSearchTextChange = (text) => {
     return {
@@ -8,33 +9,40 @@ export const mainSearchTextChange = (text) => {
     }
 }
 
-// export const fetchRecipes = () => {
-//     return dispatch => {
-//         //start loading ui
-//         dispatch(fetchRecipesStart());
+export const fetchRecipesSuccess = (fetchedRecipes) => {
+    return {
+        type: actionTypes.FETCH_RECIPES_SUCCESS,
+        recipeItems: fetchedRecipes
+    }
+}
 
-//         //"https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
-//         axiosInstance.get('questions.json')
+export const fetchRecipes = () => {
+    return dispatch => {
+        //start loading ui
+        // dispatch(fetchRecipesStart());
+
+        //https://api.edamam.com/search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3
+        axiosInstance.get('search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3')
         
-//         .then(res => {
-//             //initialize an array
-//             let fetchedRecipes = [];
+        .then(res => {
+            //initialize an array
+            let fetchedRecipes = [];
     
-//             //push each question object into array
-//             for(let key in res.data) {
-//                 fetchedRecipes.push({
-//                     ...res.data[key],
-//                     id: key
-//                 });
-//             }
+            //push each question object into array
+            for(let key in res.data.hits) {
+                fetchedRecipes.push({
+                    ...res.data.hits[key],
+                    id: key
+                });
+            }
 
-//             //handle successful fetch
-//             dispatch(fetchRecipesSuccess(fetchedRecipes));
-//         })
-//         .catch(err => {
-//             //handle errors
-//             dispatch(fetchRecipesFail(err));
-//         })
-//     }
-// }
+            //handle successful fetch
+            dispatch(fetchRecipesSuccess(fetchedRecipes));
+        })
+        .catch(err => {
+            //handle errors
+            // dispatch(fetchRecipesFail(err));
+        })
+    }
+}
 

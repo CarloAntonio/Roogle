@@ -10,10 +10,11 @@ const RecipeSection = (props) => {
 
                 {props.recipeItems.map(item => {
                     return <RecipeItem 
-                                key={item.title}
-                                title={item.title} 
-                                serving={item.serving} 
-                                time={item.time}
+                                key={item.id}
+                                title={item.recipe.label} 
+                                img={item.recipe.image}
+                                serving={"Serves about " + item.recipe.yield} 
+                                calories={item.recipe.calories/item.recipe.yield}
                                 toggleModal={props.toggleModal}
                                 data-test="recipe-item"/>
                 })}
@@ -25,13 +26,7 @@ const RecipeSection = (props) => {
 }
 
 RecipeSection.propTypes = {
-    recipeItems: PropTypes.arrayOf(
-        PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            serving: PropTypes.string.isRequired,
-            time: PropTypes.string.isRequired
-        })
-    ),
+    recipeItems: PropTypes.array,
     toggleModal: PropTypes.func.isRequired
 }
 

@@ -8,5 +8,6 @@ export {
 
 export {
     mainSearchTextChange,
-    fetchRecipes
+    fetchRecipes,
+    fetchRecipesSuccess,
 } from './actAPI';

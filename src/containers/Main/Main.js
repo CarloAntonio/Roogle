@@ -10,7 +10,6 @@ import Aux from '../../utils/Aux';
 
 import * as actions from '../../store/actions/actions';
 
-import { recipeItems } from '../../data/MockData'
 import { nutrientOptions, healthOptions, dietOptions, dropdownOptions } from '../../data/SelectionData';
 
 import classes from './Main.css';
@@ -60,7 +59,10 @@ export class UnconnectedMain extends Component {
                 <hr className="mx-5"/>
                 { advanceSection }
                 { nutrientSection }
-                <RecipeSection recipeItems={recipeItems} toggleModal={this.props.toggleModal} data-test="recipe-section"/>
+                <RecipeSection 
+                    recipeItems={this.props.recipeItems} 
+                    toggleModal={this.props.toggleModal} 
+                    data-test="recipe-section"/>
                 <Footer data-test="footer"/>
             </Aux>
         )
@@ -70,7 +72,8 @@ export class UnconnectedMain extends Component {
 const mapStateToProps = state => {
     return {
         searchType: state.redUI.searchType,
-        searchText: state.redAPI.searchText
+        searchText: state.redAPI.searchText,
+        recipeItems: state.redAPI.recipeItems
     }
 }
 
@@ -78,7 +81,8 @@ const mapDispatchToProps = dispatch => {
     return {
         toggleSearch: () => dispatch(actions.toggleSearch()),
         toggleModal: () => dispatch(actions.toggleModal()),
-        mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value))
+        mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
+        fetchRecipes: () => dispatch(actions.fetchRecipes()),
     }
 }
 
