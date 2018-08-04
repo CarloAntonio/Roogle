@@ -276,8 +276,8 @@ const initialState = {
         },
         vitaminD: {
             placeholder: "Vitamin D (ug)",
-            code: "",
-            value: "VITD",
+            code: "VITD",
+            value: "",
         },
         vitaminK: {
             placeholder: "Vitamin K (ug)",

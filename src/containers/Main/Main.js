@@ -61,7 +61,7 @@ export class UnconnectedMain extends Component {
                 <MainSearch 
                     toggleSearch={this.props.toggleSearch} 
                     searchType={this.props.searchType}
-                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems)}
+                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
                     searchText={this.props.searchText}
                     mainSearchTextChange={this.props.mainSearchTextChange}
                     data-test="main-search"/>
@@ -95,7 +95,7 @@ const mapDispatchToProps = dispatch => {
         toggleSearch: () => dispatch(actions.toggleSearch()),
         toggleModal: () => dispatch(actions.toggleModal()),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
-        fetchRecipes: (searchText, healthItems, dietItems, dropdownItems) => dispatch(actions.fetchRecipes(searchText, healthItems, dietItems, dropdownItems)),
+        fetchRecipes: (searchText, healthItems, dietItems, dropdownItems, nutrientItems) => dispatch(actions.fetchRecipes(searchText, healthItems, dietItems, dropdownItems, nutrientItems)),
         healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName)),
         dietItemChange: (itemName) => dispatch(actions.dietItemChange(itemName)),
         dropdownItemChange: (itemName, itemValue) => dispatch(actions.dropdownChange(itemName, itemValue)),

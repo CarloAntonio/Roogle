@@ -39,11 +39,7 @@ const NutrientSection = (props) => {
 }
 
 NutrientSection.propTypes = {
-    nutrientOptions: PropTypes.arrayOf(
-        PropTypes.shape({
-            placeholder: PropTypes.string.isRequired
-        })
-    ).isRequired
+    nutrientItems: PropTypes.object.isRequired
 }
 
 export default NutrientSection;

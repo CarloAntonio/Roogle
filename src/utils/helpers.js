@@ -71,3 +71,17 @@ export const dropdownParamsFinder = (dropdownItems, queryParams) => {
 
     return queryParams;
 }
+
+export const nutrientParamsFinder = (nutrientItems, queryParams) => {
+    
+    let nutrientsParamsArr = [];
+    for(let key in nutrientItems) {
+        if(nutrientItems[key].value !== "") {
+            nutrientsParamsArr.push("&nutrients["+ nutrientItems[key].code + "]=" + nutrientItems[key].value);
+        }
+    }
+
+    queryParams = queryParams + nutrientsParamsArr.join('');
+    console.log(queryParams);
+    return queryParams
+}

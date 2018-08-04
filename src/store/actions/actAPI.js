@@ -3,7 +3,7 @@ import * as actionTypes from '../actions/actTypes';
 import { axiosInstance } from '../../utils/helpers';
 import { apiKey, appId } from './keys';
 
-import { healthParamsFinder, dietParamsFinder, dropdownParamsFinder } from '../../utils/helpers';
+import { healthParamsFinder, dietParamsFinder, dropdownParamsFinder, nutrientParamsFinder } from '../../utils/helpers';
 
 export const fetchRecipesSuccess = (fetchedRecipes) => {
     return {
@@ -12,7 +12,7 @@ export const fetchRecipesSuccess = (fetchedRecipes) => {
     }
 }
 
-export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems) => {
+export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems, nutrientItems) => {
     //starting query params
     let queryParams = '&app_id=' + appId + '&app_key=' + apiKey + '&from=0&to=8';
 
@@ -24,6 +24,9 @@ export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems) 
 
     //parse dropdown params
     queryParams = dropdownParamsFinder(dropdownItems, queryParams);
+
+    //parse nutrient params
+    queryParams = nutrientParamsFinder(nutrientItems, queryParams);
     
     console.log(queryParams);
     return dispatch => {
