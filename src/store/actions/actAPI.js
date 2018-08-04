@@ -1,6 +1,7 @@
 
 import * as actionTypes from '../actions/actTypes';
 import { axiosInstance } from '../../utils/helpers';
+import { apiKey, appId } from './keys';
 
 export const mainSearchTextChange = (text) => {
     return {
@@ -22,7 +23,7 @@ export const fetchRecipes = (searchText) => {
         // dispatch(fetchRecipesStart());
 
         //https://api.edamam.com/search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3
-        axiosInstance.get('search?q=' + searchText + '&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=8')
+        axiosInstance.get('search?q=' + searchText + '&app_id=' + appId + '&app_key=' + apiKey + '&from=0&to=8')
         
         .then(res => {
             //initialize an array

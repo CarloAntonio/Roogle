@@ -9,6 +9,7 @@
 # production
 /build
 .sass-cache
+/src/store/actions/keys.js
 
 /sass/dist/css
 /sass/dist/img
