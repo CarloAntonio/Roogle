@@ -36,7 +36,10 @@ export class UnconnectedMain extends Component {
                         data-test="advance-section"/>
                     <hr className="mx-5"/>
                     { this.props.searchType === 1 
-                        ? <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
+                        ? <button 
+                            type="button" 
+                            onClick={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
+                            className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
                         : null
                     }
                 </Aux>
@@ -52,7 +55,10 @@ export class UnconnectedMain extends Component {
                         nutrientItemChange={this.props.nutrientItemChange}
                         data-test="nutrient-section"/>
                     <hr className="mx-5"/>
-                    <button type="button" className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
+                    <button 
+                        type="button" 
+                        onClick={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
+                        className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
                 </Aux>
             )
         }
