@@ -1,6 +1,5 @@
 import React from 'react';
 
-import testImg from '../../../img/profile.jpg'
 import classes from './DetailSection.css';
 
 const DetailSection = (props) => {
@@ -8,11 +7,11 @@ const DetailSection = (props) => {
             <section className="container">
                 <div className="row">
                     <div className="col-12 mt-4 mb-sm-2 d-flex flex-column">
-                        <h5 className={classes.headerStyle + " text-center"}>Choosing a quality cookware set</h5>
+                        <h5 className={classes.headerStyle + " text-center"}>{props.recipe.label}</h5>
                     </div>
 
                     <div className="col-12 col-sm-6 order-sm-3 mb-4 d-flex flex-column">
-                        <img src={testImg} alt="test profile" className="img-fluid mx-auto rounded" style={{ width: 80 + "%", maxWidth: 16 + "rem", height: "auto"}} />
+                        <img src={props.recipe.image} alt="test profile" className="img-fluid mx-auto rounded" style={{ width: 80 + "%", maxWidth: 16 + "rem", height: "auto"}} />
                     </div>
 
                     <div className="col-12 col-sm-6 order-sm-2">
@@ -20,62 +19,69 @@ const DetailSection = (props) => {
                             <div className="col-12">
                                 <h6 className={ classes.weight }>Full Directions List:</h6>
                                 <p style={{overflowWrap: "break-word"}}>
-                                    <a href="http://www.marthastewart.com/340242/chicken-curry" target="_blank" rel="noopener noreferrer" className={classes.link}>http://www.marthastewart.com/340242/chicken-curry</a>
+                                    <a href={props.recipe.url} target="_blank" rel="noopener noreferrer" className={classes.link}>{props.recipe.url}</a>
                                 </p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Original Source:</h6>
-                                <p>Martha Stewart</p>
+                                <p>{props.recipe.source}</p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Social Media:</h6>
-                                <p>Share this recipe!</p>
+                                <p style={{overflowWrap: "break-word"}}>
+                                    <a href={props.recipe.shareAs} target="_blank" rel="noopener noreferrer" className={classes.link}>Share this recipe!</a>
+                                </p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Cook Time:</h6>
-                                <p>45 Minutes</p>
+                                <p>{
+                                    props.recipe.totalTime / 60 < 1 
+                                    ? (props.recipe.totalTime / 60).toFixed(2) + " minutes"
+                                    : (props.recipe.totalTime / 60).toFixed(2) + " hour(s)"
+                                    }</p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Cal Per Serving:</h6>
-                                <p>450 Calories</p>
+                                <p>{(props.recipe.calories/props.recipe.yield).toFixed(2)}</p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Total Servings:</h6>
-                                <p>Serves 6</p>
+                                <p>{"Serves " + props.recipe.yield }</p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Cautions:</h6>
-                                <p>None</p>
+                                <p>{props.recipe.cautions.length === 0
+                                    ? "None"
+                                    : props.recipe.cautions.join(", ")}</p>
                             </div>
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Diet Labels:</h6>
-                                <p>None</p>
+                                <p>{props.recipe.dietLabels.length === 0
+                                    ? "None"
+                                    : props.recipe.dietLabels.join(", ")}</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="col-12 order-sm-4">
                         <h6 className={ classes.weight }>Health Labels:</h6>
-                        <p>Peanut-free, Tree-nut-free, Alcohol-free, Test-free</p>
+                        <p>{props.recipe.healthLabels.length === 0
+                                    ? "None"
+                                    : props.recipe.healthLabels.join(", ")}</p>
                     </div>
 
                     <div className="col-12 order-sm-4">
                         <h6 className={ classes.weight }>Ingredients:</h6>
-                        <p>1 Cinnamon stick, broken into 10inch pieces</p>
-                        <p>2 whole cloves</p>
-                        <p>1 tablespoon coriander seeds</p>
-                        <p>1 tablespoon fennel seeds</p>
-                        <p>1/2 teaspoon whole allspice</p>
-                        <p>3 medium-size yellow onions, peeled and coarsely chopped (2 1/2 cups)</p>
-                        <p>10 to 12 garlic cloves, peeled and thinly sliced</p>
-                        <p>1 piece (4 ounces) fresh ginger, peeled and coarsely chopped</p>
+                        {props.recipe.ingredientLines.map((line, index) => {
+                            return <p key={index}>{line}</p>
+                        })}
                     </div>
                 </div>
             </section>
