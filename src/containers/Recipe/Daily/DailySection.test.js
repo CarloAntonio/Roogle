@@ -6,10 +6,13 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 import DailySection from './DailySection';
 
 const defaultProps = {
-    dailyData: [{    
-        name: 'testname',
-        value: 'testvalue'
-    }]
+    totalDaily: {    
+        ENERC_KCAL: {
+            label: "Energy",
+            quantity: 342.134,
+            unit: "%"
+        }
+    }
 }
 
 const setup = (props={}) => {
@@ -27,12 +30,7 @@ describe('component', () => {
         expect(component.length).toBe(1);
     });
     test('renders when given appropriate props', () => {
-        const approProps =  { 
-            dailyData: [
-                { name: "Saturatedq:", value: "47.92%" },
-            ]
-        }
-        checkProps(DailySection, approProps);
+        checkProps(DailySection, defaultProps);
     });
 });
 
@@ -40,11 +38,23 @@ describe("component's subcomponent", () => {
 
     test('renders appropriate number of itself', () => {
         const props3Items = {
-            dailyData: [
-                { name: "Saturatedq:", value: "47.92%" },
-                { name: "Saturatedq:", value: "47.92%" },
-                { name: "Saturatedq:", value: "47.92%" },
-            ]
+            totalDaily: {    
+                ENERC_KCAL: {
+                    label: "Energy",
+                    quantity: 342.134,
+                    unit: "%"
+                },
+                ENER_KCAL: {
+                    label: "Energyy",
+                    quantity: 342.134,
+                    unit: "%"
+                },
+                ENE_KCAL: {
+                    label: "Energyyy",
+                    quantity: 342.134,
+                    unit: "%"
+                },
+            }
         }
         const wrapper = setup(props3Items);
         const subcomponent = findByTestAttr(wrapper, 'daily-item');

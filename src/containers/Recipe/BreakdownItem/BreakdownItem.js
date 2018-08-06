@@ -15,8 +15,8 @@ const BreakdownItem = (props) => {
 }
 
 BreakdownItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired
+    name: PropTypes.string,
+    value: PropTypes.number
 }
 
 export default BreakdownItem;

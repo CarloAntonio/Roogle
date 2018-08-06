@@ -7,7 +7,7 @@ import RecipeSection from './RecipeSection';
 
 const defaultProps = {
     recipeItems: [],
-    toggleModal: jest.fn()
+    showDetails: jest.fn()
 }
 const setup = (props={}) => {
     const setupProps = { ...defaultProps, ...props };
@@ -28,14 +28,8 @@ describe('component', ()=> {
 
     test('renders without error with appropriate props', () => {
         const expectedProps = { 
-            recipeItems: [
-                { 
-                    title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-                    serving: 8, 
-                    time: "45 minutes"
-                },
-            ],
-            toggleModal: jest.fn()
+            recipeItems: [],
+            showDetails: jest.fn()
         };
         checkProps(RecipeSection, expectedProps);
     });
@@ -49,14 +43,13 @@ describe("component's subcomponents", () => {
         const inputProps = { 
             recipeItems: [
                 { 
-                    title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-                    serving: 8, 
-                    time: "45 minutes"
-                },
-                { 
-                    title: "Lorem ipsum dolor sit amet dsfasfs sffss.", 
-                    serving: 8, 
-                    time: "45 minutes"
+                    recipe: {
+                        label: "Recipe Title",
+                        img: "https://www.edamam.com/web-img/3f3/3f3db9cd446edf1680eab304b32f576d.jpg",
+                        source: "Food52",
+                        calories: 23590.628179017596,
+                        totalTime: 392
+                    }
                 },
             ],
         };
@@ -64,6 +57,6 @@ describe("component's subcomponents", () => {
     });
     test('renders correct number of recipe items', () => {
         const component = findByTestAttr(wrapper, 'recipe-item');
-        expect(component.length).toBe(2);
+        expect(component.length).toBe(1);
     });
 });

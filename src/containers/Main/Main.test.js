@@ -157,9 +157,9 @@ describe('redux', () => {
         expect(toggleSearchProp).toBeInstanceOf(Function);
     });
 
-    test("has 'toggleModal' action prop", () => {
+    test("has 'showDetails' action prop", () => {
         const wrapper = setup();
-        const toggleModalProp = wrapper.instance().props.toggleModal;
+        const toggleModalProp = wrapper.instance().props.showDetails;
         expect(toggleModalProp).toBeInstanceOf(Function);
     });
 
@@ -169,14 +169,22 @@ describe("'toggleSearch' action creator called", () => {
 
     let store;
     let wrapper;
-    const initialState = {
-        redUI: {
-            searchType: 0,
-        } 
-    }
+    let initialState;
+    let startState;
     beforeEach(() => {
-        store = storeFactory(initialState);
+        store = storeFactory();
         wrapper = shallow(<Main store={store} />).dive();
+
+        initialState = store.getState();
+    
+        startState = {
+            ...initialState,
+            redUI: {
+                ...initialState.redUI,
+                searchType: 0,
+            } 
+        }
+
         store.dispatch(toggleSearch());
     });
 
@@ -184,8 +192,9 @@ describe("'toggleSearch' action creator called", () => {
         const newState = store.getState();
 
         const expectedState = {
-            ...initialState,
+            ...startState,
             redUI: {
+                ...startState.redUI,
                 searchType: 1
             }
         }

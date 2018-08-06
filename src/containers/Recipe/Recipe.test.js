@@ -12,8 +12,6 @@ const setup = (initialState = {}) => {
     return shallow(<Recipe store={store} />).dive();
 }
 
-
-
 describe("nutrient section should", () => {
     test("render, when container's showNutrient state is true", () => {
         const props = { 
@@ -25,7 +23,7 @@ describe("nutrient section should", () => {
         const section = findByTestAttr(wrapper, 'nutrient-section');
         expect(section.length).toBe(1);
     });
-    test("render, when container's showNutrient state is true", () => {
+    test("not render, when container's showNutrient state is false", () => {
         const props = { 
             redUI: {
                 showNutrientDetails: false,

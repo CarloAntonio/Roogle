@@ -12,7 +12,7 @@ import * as actions from '../../store/actions/actions';
 //mock data
 //import { dailyData, nutrientData } from '../../data/MockData';
 
-class Recipe extends Component {
+export class UnconnectedRecipe extends Component {
     render () {
 
         const selectedRecipe = this.props.recipeItems[this.props.recipeIndex].recipe;
@@ -95,4 +95,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recipe);
+export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedRecipe);

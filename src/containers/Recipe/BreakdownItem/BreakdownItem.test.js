@@ -7,7 +7,7 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 
 const defaultProps = {
     name: "TestName",
-    value: "TestValue"
+    value: 45364
 }
 
 const setup = (props={}) => {
@@ -26,11 +26,7 @@ describe('component', () => {
         expect(component.length).toBe(1);
     });
     test('renders when given appropriate props', () => {
-        const expectedProps = { 
-            name: "Folae Equivdalent:", 
-            value: "666.13 kcal" 
-        };
-        checkProps(BreakdownItem, expectedProps);
+        checkProps(BreakdownItem, defaultProps);
     });
     
 });

@@ -6,10 +6,11 @@ import { findByTestAttr, checkProps } from '../../../../utils/testUtils';
 import RecipeItem from './RecipeItem';
 
 const defaultProps = {
+    img: "http:somelink",
     title: "Cooking with Chicken Raddish",
     serving: "Serves 4 People",
     calories: 45,
-    toggleModal: jest.fn()
+    showDetails: jest.fn()
 }
 
 const setup = (props={}) => {
@@ -27,13 +28,7 @@ describe('component', () => {
         expect(component.length).toBe(1);
     });
     test('renders without error with approprate props', () => {
-        const expectedProps = {
-            title: "Cooking with Chicken Raddish",
-            serving: "Serves 4 People",
-            time: "45 minutes",
-            toggleModal: jest.fn()
-        }
-        checkProps(RecipeItem, expectedProps);
+        checkProps(RecipeItem, defaultProps);
     });
 });
 
@@ -42,7 +37,7 @@ test("'toggle' is called when component is clicked", () => {
     //create a mock function and add it to setup
     const mockFxn = jest.fn();
     const props = {
-        toggleModal: mockFxn
+        showDetails: mockFxn
     }
     const wrapper = setup(props);
 

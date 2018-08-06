@@ -10,7 +10,7 @@ const RecipeSection = (props) => {
 
                 {props.recipeItems.map((item, index) => {
                     return <RecipeItem 
-                                key={item.id}
+                                key={index}
                                 title={item.recipe.label} 
                                 img={item.recipe.image}
                                 serving={"Serves about " + item.recipe.yield} 

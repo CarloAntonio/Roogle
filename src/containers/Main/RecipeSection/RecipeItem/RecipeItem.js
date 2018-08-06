@@ -21,6 +21,7 @@ const RecipeItem = (props) => {
 }
 
 RecipeItem.propTypes = {
+    img: PropTypes.string,
     title: PropTypes.string.isRequired,
     serving: PropTypes.string.isRequired,
     calories: PropTypes.number.isRequired,

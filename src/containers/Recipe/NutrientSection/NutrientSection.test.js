@@ -6,10 +6,26 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 import NutrientSection from './NutrientSection';
 
 const defaultProps = {
-    nutrientData: [{    
-        name: 'testname',
-        value: 'testvalue'
-    }]
+    totalNutrients: {
+        calcium: {
+            placeholder: "Calcium (mg)",
+            code: "CA",
+            value: "",
+            size: "mg",
+        },
+        carbs: {
+            placeholder: "Carbs (g)",
+            code: "CHOCDF",
+            value: "",
+            size: "g",
+        },
+        cholesterol: {
+            placeholder: "Cholesterol (mg)",
+            code: "CHOLE",
+            value: "",
+            size: "mg",
+        },
+    }
 }
 
 const setup = (props={}) => {
@@ -27,22 +43,27 @@ describe('component', () => {
         expect(component.length).toBe(1);
     });
     test('renders when given appropriate props', () => {
-        const approProps =  { 
-            nutrientData: [
-                { name: "Folae Equivdalent:", value: "666.13 kcal" },
-            ]
-        }
-        checkProps(NutrientSection, approProps);
+        checkProps(NutrientSection, defaultProps);
     });
 });
 
 describe("component's subcomponent", () => {
     test('renders appropriate number of itself', () => {
         const props2Items = {
-            nutrientData: [
-                { name: "Folae Equivdalent:", value: "666.13 kcal" },
-                { name: "Folte Equvsalent:", value: "666.13 kcal" },
-            ]
+            totalNutrients: {
+                calcium: {
+                    placeholder: "Calcium (mg)",
+                    code: "CA",
+                    value: "",
+                    size: "mg",
+                },
+                carbs: {
+                    placeholder: "Carbs (g)",
+                    code: "CHOCDF",
+                    value: "",
+                    size: "g",
+                },
+            }
         }
         const wrapper = setup(props2Items);
         const subcomponent = findByTestAttr(wrapper, 'breakdown-item');

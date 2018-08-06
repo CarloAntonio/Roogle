@@ -6,7 +6,7 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 import NutrientSection from './NutrientSection';
 
 const defaultProps = {
-    nutrientOptions: []
+    nutrientItems: {}
 }
 const setup = (props={}) => {
     const setupProps = { ...defaultProps, ...props };
@@ -26,9 +26,22 @@ describe('component', ()=> {
     });
 
     test('renders without error with appropriate props', () => {
-        const expectedProps = { 
-            nutrientOptions: [{ placeholder: "Lithium" }]
-        };
+        const expectedProps = {
+            nutrientItems: {
+                calcium: {
+                    placeholder: "Calcium (mg)",
+                    code: "CA",
+                    value: "",
+                    size: "mg",
+                },
+                carbs: {
+                    placeholder: "Carbs (g)",
+                    code: "CHOCDF",
+                    value: "",
+                    size: "g",
+                },
+            }
+        }
         checkProps(NutrientSection, expectedProps);
     });
 
@@ -38,17 +51,26 @@ describe("component's subcomponents", () => {
 
     let wrapper;
     beforeEach(() => {
-        const inputProps = { 
-            nutrientOptions: [
-                { placeholder: "Lithium" }, 
-                { placeholder: "Lithium" },
-                { placeholder: "Lithium" },
-            ]
-        };
+        const inputProps = {
+            nutrientItems: {
+                calcium: {
+                    placeholder: "Calcium (mg)",
+                    code: "CA",
+                    value: "",
+                    size: "mg",
+                },
+                carbs: {
+                    placeholder: "Carbs (g)",
+                    code: "CHOCDF",
+                    value: "",
+                    size: "g",
+                },
+            }
+        }
         wrapper = setup(inputProps);
     });
     test('renders correct number of health selection items', () => {
         const component = findByTestAttr(wrapper, 'nutrient-option');
-        expect(component.length).toBe(3);
+        expect(component.length).toBe(2);
     });
 });
