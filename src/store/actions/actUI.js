@@ -23,3 +23,17 @@ export const toggleDailyDetails = () => {
         type: actionTypes.TOGGLE_DAILY_DETAILS
     }
 } 
+
+export const updateRecipeIndex = (index) => {
+    return {
+        type: actionTypes.UPDATE_RECIPE_INDEX,
+        index: index
+    }
+}
+
+export const showDetails = (index) => {
+    return dispatch => {
+        dispatch(updateRecipeIndex(index));
+        dispatch(toggleModal());
+    }
+}

@@ -82,6 +82,6 @@ export const nutrientParamsFinder = (nutrientItems, queryParams) => {
     }
 
     queryParams = queryParams + nutrientsParamsArr.join('');
-    console.log(queryParams);
+
     return queryParams
 }

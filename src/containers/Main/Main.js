@@ -76,7 +76,7 @@ export class UnconnectedMain extends Component {
                 { nutrientSection }
                 <RecipeSection 
                     recipeItems={this.props.recipeItems} 
-                    toggleModal={this.props.toggleModal} 
+                    showDetails={this.props.showDetails} 
                     data-test="recipe-section"/>
                 <Footer data-test="footer"/>
             </Aux>
@@ -99,7 +99,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         toggleSearch: () => dispatch(actions.toggleSearch()),
-        toggleModal: () => dispatch(actions.toggleModal()),
+        showDetails: (index) => dispatch(actions.showDetails(index)),
         mainSearchTextChange: (event) => dispatch(actions.mainSearchTextChange(event.target.value)),
         fetchRecipes: (searchText, healthItems, dietItems, dropdownItems, nutrientItems) => dispatch(actions.fetchRecipes(searchText, healthItems, dietItems, dropdownItems, nutrientItems)),
         healthItemChange: (itemName) => dispatch(actions.healthItemChange(itemName)),

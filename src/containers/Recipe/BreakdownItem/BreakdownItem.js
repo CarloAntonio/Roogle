@@ -8,7 +8,7 @@ const BreakdownItem = (props) => {
         <div className="col-12 col-sm-6 col-md-3 my-1 px-1" data-test="component-breakdown-item">
             <div className={classes.nutrient + " flex-sm-column align-items-center justify-content-center rounded"}>
                 <h6 className="d-inline-block m-2">{props.name}</h6>
-                <p className="d-inline-block m-2">{props.value}</p>
+                <p className="d-inline-block m-2">{props.value.toFixed(2) + props.unit}</p>
             </div>
         </div>
     );
@@ -16,7 +16,7 @@ const BreakdownItem = (props) => {
 
 BreakdownItem.propTypes = {
     name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired
+    value: PropTypes.number.isRequired
 }
 
 export default BreakdownItem;

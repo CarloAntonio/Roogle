@@ -8,14 +8,14 @@ const RecipeSection = (props) => {
         <section className="container my-5" data-test="component-recipe-section">
             <div className="row justify-content-center">
 
-                {props.recipeItems.map(item => {
+                {props.recipeItems.map((item, index) => {
                     return <RecipeItem 
                                 key={item.id}
                                 title={item.recipe.label} 
                                 img={item.recipe.image}
                                 serving={"Serves about " + item.recipe.yield} 
                                 calories={item.recipe.calories/item.recipe.yield}
-                                toggleModal={props.toggleModal}
+                                showDetails={() => props.showDetails(index)}
                                 data-test="recipe-item"/>
                 })}
                 
@@ -27,7 +27,7 @@ const RecipeSection = (props) => {
 
 RecipeSection.propTypes = {
     recipeItems: PropTypes.array,
-    toggleModal: PropTypes.func.isRequired
+    showDetails: PropTypes.func.isRequired
 }
 
 export default RecipeSection;

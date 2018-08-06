@@ -28,7 +28,6 @@ export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems, 
     //parse nutrient params
     queryParams = nutrientParamsFinder(nutrientItems, queryParams);
     
-    console.log(queryParams);
     return dispatch => {
         //start loading ui
         // dispatch(fetchRecipesStart());

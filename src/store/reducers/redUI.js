@@ -5,7 +5,8 @@ const initialState = {
     modal: false,
     searchType: 0,
     showNutrientDetails: false,
-    showDailyDetails: false
+    showDailyDetails: false,
+    recipeIndex: 0
 }
 
 const toggleModal = (state, action) => {
@@ -44,6 +45,13 @@ const toggleDailyDetails = (state, action) => {
     }
 }
 
+const updateRecipeIndex = (state, action) => {
+    return {
+        ...state,
+        recipeIndex: action.index
+    }
+}
+
 const redUI = (state = initialState, action) => {
 
     switch(action.type) {
@@ -51,6 +59,7 @@ const redUI = (state = initialState, action) => {
         case actionTypes.TOGGLE_SEARCH: return toggleSearch(state, action);
         case actionTypes.TOGGLE_NUTRIENT_DETAILS: return toggleNutrientDetails(state, action);
         case actionTypes.TOGGLE_DAILY_DETAILS: return toggleDailyDetails(state, action);
+        case actionTypes.UPDATE_RECIPE_INDEX: return updateRecipeIndex(state, action);
         default: return state;
     }
 

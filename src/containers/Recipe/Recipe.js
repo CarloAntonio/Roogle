@@ -10,16 +10,20 @@ import Aux from '../../utils/Aux';
 import * as actions from '../../store/actions/actions';
 
 //mock data
-import { dailyData, nutrientData } from '../../data/MockData';
+//import { dailyData, nutrientData } from '../../data/MockData';
 
 class Recipe extends Component {
     render () {
+
+        const selectedRecipe = this.props.recipeItems[this.props.recipeIndex].recipe;
+
+
         let nutrientsSection = null;
         if(this.props.showNutrientDetails) {
             nutrientsSection = (
                 <Aux data-test="nutrient-section">
                     <hr/>
-                    <NutrientSection nutrientData={nutrientData} />
+                    <NutrientSection totalNutrients={ selectedRecipe.totalNutrients } />
                 </Aux>
             )
         }
@@ -29,7 +33,7 @@ class Recipe extends Component {
             dailySection = (
                 <Aux data-test="daily-section">
                     <hr/>
-                    <DailySection dailyData={ dailyData }/>
+                    <DailySection totalDaily={ selectedRecipe.totalDaily }/>
                 </Aux>
             )
         }
@@ -37,7 +41,7 @@ class Recipe extends Component {
         return (
             <Aux>
                 <ModalBody>
-                    <DetailSection />
+                    <DetailSection recipe={ selectedRecipe } />
                     {nutrientsSection}
                     {dailySection}
                 </ModalBody>
@@ -76,6 +80,8 @@ class Recipe extends Component {
 
 const mapStateToProps = state => {
     return {
+        recipeItems: state.redAPI.recipeItems,
+        recipeIndex: state.redUI.recipeIndex,
         showNutrientDetails: state.redUI.showNutrientDetails,
         showDailyDetails: state.redUI.showDailyDetails
     }

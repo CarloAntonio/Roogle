@@ -3,7 +3,9 @@ export {
     toggleModal,
     toggleSearch,
     toggleNutrientDetails,
-    toggleDailyDetails
+    toggleDailyDetails,
+    updateDetailIndex,
+    showDetails
 } from './actUI';
 
 export {
