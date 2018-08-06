@@ -5,8 +5,25 @@ import { findByTestAttr, storeFactory } from '../../utils/testUtils';
 import { toggleSearch } from '../../store/actions/actUI';
 import Main, { UnconnectedMain } from './Main';
 
+const defaultState = {
+    redUI: {
+        modal: false,
+        searchType: 0,
+        showNutrientDetails: false,
+        showDailyDetails: false,
+        recipeIndex: 0
+    }
+}
+
 const setup = (initialState = {}) => {
-    const store = storeFactory(initialState);
+    const setupState = { 
+        ...defaultState, 
+        redUI: {
+            ...defaultState.redUI,
+            ...initialState
+        }
+    }
+    const store = storeFactory(setupState);
     return shallow(<Main store={store} />).dive();
 }
 
@@ -16,12 +33,7 @@ describe("when container's", () => {
 
         let wrapper;
         beforeEach(() => {
-            const props = { 
-                redUI: {
-                    searchType: 0,
-                } 
-            };
-            wrapper = setup(props);
+            wrapper = setup();
         });
 
         test('it renders container without errors', () => {
@@ -58,11 +70,7 @@ describe("when container's", () => {
     describe('search state equals 1', () => {
         let wrapper;
         beforeEach(() => {
-            const props = { 
-                redUI: {
-                    searchType: 1,
-                } 
-            };
+            const props = { searchType: 1 };
             wrapper = setup(props);
         });
 
@@ -100,11 +108,7 @@ describe("when container's", () => {
     describe('search state equals 2', () => {
         let wrapper;
         beforeEach(() => {
-            const props = { 
-                redUI: {
-                    searchType: 2,
-                } 
-            };
+            const props = { searchType: 2 };
             wrapper = setup(props);
         });
 
@@ -144,9 +148,7 @@ describe('redux', () => {
 
     test("has 'search' prop piece of state from reducers", () => {
         const searchType = 0; 
-        const wrapper = setup({
-            redUI: { searchType }
-        });
+        const wrapper = setup({ searchType });
         const searchProp = wrapper.instance().props.searchType;
         expect(searchProp).toBe(searchType);
     });

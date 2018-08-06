@@ -17,7 +17,7 @@ import classes from './Main.css';
 export class UnconnectedMain extends Component {
 
     componentDidMount() {
-        //this.props.fetchRecipes();
+        this.props.fetchRecipes();
     }
 
     render() {

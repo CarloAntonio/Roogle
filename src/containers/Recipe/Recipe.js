@@ -9,9 +9,6 @@ import Aux from '../../utils/Aux';
 
 import * as actions from '../../store/actions/actions';
 
-//mock data
-//import { dailyData, nutrientData } from '../../data/MockData';
-
 export class UnconnectedRecipe extends Component {
     render () {
 
