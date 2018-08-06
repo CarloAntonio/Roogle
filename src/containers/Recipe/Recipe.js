@@ -17,7 +17,6 @@ export class UnconnectedRecipe extends Component {
 
         const selectedRecipe = this.props.recipeItems[this.props.recipeIndex].recipe;
 
-
         let nutrientsSection = null;
         if(this.props.showNutrientDetails) {
             nutrientsSection = (
