@@ -22,11 +22,23 @@ const defaultProps = {
             label: "High-Fiber"
         },
     },
-    dropdownItems: {
-        maxTime: "0",
-        maxProduce: "0",
-        maxCal: "0"
-    },
+    dropdownOptions: [
+        {
+            title: "Max Time:",
+            options: [
+                {value: "0", display: "none"},
+                {value: "15", display: "15 minutes"},
+                {value: "30", display: "30 minutes"},
+                {value: "45", display: "45 minutes"},
+                {value: "60", display: "1 hour"},
+                {value: "90", display: "1.5 hours"},
+                {value: "120", display: "2 hours"},
+                {value: "150", display: "2.5 hours"},
+            ],
+            id: "maxTime",
+            selected: 0
+        },
+    ]
 }
 
 const setup = (props={}) => {
@@ -71,21 +83,33 @@ describe("component's subcomponents", () => {
                     label: "High-Fiber"
                 },
             },
-            dropdownItems: {
-                maxTime: "0",
-                maxProduce: "0",
-                maxCal: "0"
-            },
+            dropdownItems: [
+                {
+                    title: "Max Time:",
+                    options: [
+                        {value: "0", display: "none"},
+                        {value: "15", display: "15 minutes"},
+                        {value: "30", display: "30 minutes"},
+                        {value: "45", display: "45 minutes"},
+                        {value: "60", display: "1 hour"},
+                        {value: "90", display: "1.5 hours"},
+                        {value: "120", display: "2 hours"},
+                        {value: "150", display: "2.5 hours"},
+                    ],
+                    id: "maxTime",
+                    selected: 0
+                },
+            ]
         }
         wrapper = setup(inputProps);
     });
     test('renders correct number of health selection items', () => {
         const component = findByTestAttr(wrapper, 'health-selection-item');
-        expect(component.length).toBe(4);
+        expect(component.length).toBe(1);
     });
     test('renders correct number of diet selection items', () => {
         const component = findByTestAttr(wrapper, 'diet-selection-item');
-        expect(component.length).toBe(3);
+        expect(component.length).toBe(2);
     });
     test('renders correct number of dropdown selection items', () => {
         const component = findByTestAttr(wrapper, 'dropdown-selection-item');
