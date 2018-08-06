@@ -24,6 +24,7 @@ const DailySection = (props) => {
                 {dailyData.map(data => {
                     return <BreakdownItem 
                         key={data.id}
+                        id={data.id}
                         name={data.label} 
                         value={data.quantity} 
                         unit={data.unit}
