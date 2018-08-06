@@ -70,7 +70,7 @@ class Recipe extends Component {
                     </Button>
                     <Button 
                         color="secondary" 
-                        onClick={this.props.toggle}
+                        onClick={this.props.toggleModal}
                         className="btn mt-1 mt-sm-0">Close</Button>
                 </ModalFooter>
             </Aux>
