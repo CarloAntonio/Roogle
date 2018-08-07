@@ -1,4 +1,4 @@
-# Roogle.com
+# Roogle.site
 This application lets users interact with the [Edamam](https://www.edamam.com/) API to search for food recipes. Recipe sources, links to full recipes directions, and nutrient information is presented in an organized way. Users can click individual recipies to show expanded recipe information such as nutrient breakdown, daily percent breakdown, and other relevant information.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
