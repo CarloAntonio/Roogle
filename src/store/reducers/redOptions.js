@@ -7,94 +7,94 @@ const initialState = {
             value: false,
             label: "Alcohol-Free"
         },
-        "gluten-free": {
-            value: false,
-            label: "Gluten-Free"
-        },
-        "celery-free": {
-            value: false,
-            label: "Celery-Free"
-        },
-        "kidney-friendly": {
-            value: false,
-            label: "Kidney-Friendly"
-        },
-        "crustacean-free": {
-            value: false,
-            label: "Crustacean-Free"
-        },
-        "kosher": {
-            value: false,
-            label: "Kosher"
-        },
-        "dairy-free": {
-            value: false,
-            label: "Dairy-Free"
-        },
-        "low-potassium": {
-            value: false,
-            label: "Low-Potassium"
-        },
-        "egg-free": {
-            value: false,
-            label: "Egg-Free"
-        },
-        "lupine-free": {
-            value: false,
-            label: "Lupine-Free"
-        },
-        "fish-free": {
-            value: false,
-            label: "Fish-Free"
-        },
-        "mustard-free": {
-            value: false,
-            label: "Mustard-Free"
-        },
-        "No-oil-added": {
-            value: false,
-            label: "No-Oil-Added"
-        },
-        "red-meat-free": {
-            value: false,
-            label: "Red-Meat-Free"
-        },
-        "low-sugar": {
-            value: false,
-            label: "Low-Sugar"
-        },
-        "sesame-free": {
-            value: false,
-            label: "Sesame-Free"
-        },
-        "paleo": {
-            value: false,
-            label: "Paleo"
-        },
-        "shellfish-free": {
-            value: false,
-            label: "Shellfish-Free"
-        },
+        // "gluten-free": {
+        //     value: false,
+        //     label: "Gluten-Free"
+        // },
+        // "celery-free": {
+        //     value: false,
+        //     label: "Celery-Free"
+        // },
+        // "kidney-friendly": {
+        //     value: false,
+        //     label: "Kidney-Friendly"
+        // },
+        // "crustacean-free": {
+        //     value: false,
+        //     label: "Crustacean-Free"
+        // },
+        // "kosher": {
+        //     value: false,
+        //     label: "Kosher"
+        // },
+        // "dairy-free": {
+        //     value: false,
+        //     label: "Dairy-Free"
+        // },
+        // "low-potassium": {
+        //     value: false,
+        //     label: "Low-Potassium"
+        // },
+        // "egg-free": {
+        //     value: false,
+        //     label: "Egg-Free"
+        // },
+        // "lupine-free": {
+        //     value: false,
+        //     label: "Lupine-Free"
+        // },
+        // "fish-free": {
+        //     value: false,
+        //     label: "Fish-Free"
+        // },
+        // "mustard-free": {
+        //     value: false,
+        //     label: "Mustard-Free"
+        // },
+        // "No-oil-added": {
+        //     value: false,
+        //     label: "No-Oil-Added"
+        // },
+        // "red-meat-free": {
+        //     value: false,
+        //     label: "Red-Meat-Free"
+        // },
+        // "low-sugar": {
+        //     value: false,
+        //     label: "Low-Sugar"
+        // },
+        // "sesame-free": {
+        //     value: false,
+        //     label: "Sesame-Free"
+        // },
+        // "paleo": {
+        //     value: false,
+        //     label: "Paleo"
+        // },
+        // "shellfish-free": {
+        //     value: false,
+        //     label: "Shellfish-Free"
+        // },
         "peanut-free": {
             value: false,
             label: "Peanut-Free"
         },
-        "soy-free": {
-            value: false,
-            label: "Soy-Free"
-        },
-        "pescatarian": {
-            value: false,
-            label: "Pescatarian"
-        },
+        // "soy-free": {
+        //     value: false,
+        //     label: "Soy-Free"
+        // },
+        // "pescatarian": {
+        //     value: false,
+        //     label: "Pescatarian"
+        // },
         "sugar-conscious": {
             value: false,
             label: "Sugar-Conscious"
         },
-        "pork-free": {
-            value: false,
-            label: "Pork-Free"
-        },
+        // "pork-free": {
+        //     value: false,
+        //     label: "Pork-Free"
+        // },
         "tree-nut-free": {
             value: false,
             label: "Tree-Nut-Free"
@@ -103,10 +103,10 @@ const initialState = {
             value: false,
             label: "Vegan"
         },
-        "wheat-free": {
-            value: false,
-            label: "Wheat-Free"
-        },
+        // "wheat-free": {
+        //     value: false,
+        //     label: "Wheat-Free"
+        // },
         "vegetarian": {
             value: false,
             label: "Vegetarian"
@@ -117,10 +117,10 @@ const initialState = {
             value: false,
             label: "Balanced"
         },
-        "high-fiber": {
-            value: false,
-            label: "High-Fiber"
-        },
+        // "high-fiber": {
+        //     value: false,
+        //     label: "High-Fiber"
+        // },
         "high-protein": {
             value: false,
             label: "High-Protein"
@@ -133,10 +133,10 @@ const initialState = {
             value: false,
             label: "Low-Fat"
         },
-        "low-sodium": {
-            value: false,
-            label: "Low-Sodium"
-        },
+        // "low-sodium": {
+        //     value: false,
+        //     label: "Low-Sodium"
+        // },
     },
     dropdownItems: {
         maxTime: "0",
@@ -330,94 +330,94 @@ const originalHealthState = (state, action) => {
                 value: false,
                 label: "Alcohol-Free"
             },
-            "gluten-free": {
-                value: false,
-                label: "Gluten-Free"
-            },
-            "celery-free": {
-                value: false,
-                label: "Celery-Free"
-            },
-            "kidney-friendly": {
-                value: false,
-                label: "Kidney-Friendly"
-            },
-            "crustacean-free": {
-                value: false,
-                label: "Crustacean-Free"
-            },
-            "kosher": {
-                value: false,
-                label: "Kosher"
-            },
-            "dairy-free": {
-                value: false,
-                label: "Dairy-Free"
-            },
-            "low-Potassium": {
-                value: false,
-                label: "Low-Potassium"
-            },
-            "eggs-free": {
-                value: false,
-                label: "Eggs-Free"
-            },
-            "lupine-free": {
-                value: false,
-                label: "Lupine-Free"
-            },
-            "fish-free": {
-                value: false,
-                label: "Fish-Free"
-            },
-            "mustard-free": {
-                value: false,
-                label: "Mustard-Free"
-            },
-            "no-added-oil": {
-                value: false,
-                label: "No-Added-Oil"
-            },
-            "red-meat-free": {
-                value: false,
-                label: "Red-Meat-Free"
-            },
-            "low-sugar": {
-                value: false,
-                label: "Low-Sugar"
-            },
-            "sesame-free": {
-                value: false,
-                label: "Sesame-Free"
-            },
-            "paleo": {
-                value: false,
-                label: "Paleo"
-            },
-            "shellfish-free": {
-                value: false,
-                label: "Shellfish-Free"
-            },
+            // "gluten-free": {
+            //     value: false,
+            //     label: "Gluten-Free"
+            // },
+            // "celery-free": {
+            //     value: false,
+            //     label: "Celery-Free"
+            // },
+            // "kidney-friendly": {
+            //     value: false,
+            //     label: "Kidney-Friendly"
+            // },
+            // "crustacean-free": {
+            //     value: false,
+            //     label: "Crustacean-Free"
+            // },
+            // "kosher": {
+            //     value: false,
+            //     label: "Kosher"
+            // },
+            // "dairy-free": {
+            //     value: false,
+            //     label: "Dairy-Free"
+            // },
+            // "low-Potassium": {
+            //     value: false,
+            //     label: "Low-Potassium"
+            // },
+            // "egg-free": {
+            //     value: false,
+            //     label: "Egg-Free"
+            // },
+            // "lupine-free": {
+            //     value: false,
+            //     label: "Lupine-Free"
+            // },
+            // "fish-free": {
+            //     value: false,
+            //     label: "Fish-Free"
+            // },
+            // "mustard-free": {
+            //     value: false,
+            //     label: "Mustard-Free"
+            // },
+            // "No-oil-added": {
+            //     value: false,
+            //     label: "No-Oil-Added"
+            // },
+            // "red-meat-free": {
+            //     value: false,
+            //     label: "Red-Meat-Free"
+            // },
+            // "low-sugar": {
+            //     value: false,
+            //     label: "Low-Sugar"
+            // },
+            // "sesame-free": {
+            //     value: false,
+            //     label: "Sesame-Free"
+            // },
+            // "paleo": {
+            //     value: false,
+            //     label: "Paleo"
+            // },
+            // "shellfish-free": {
+            //     value: false,
+            //     label: "Shellfish-Free"
+            // },
             "peanut-free": {
                 value: false,
                 label: "Peanut-Free"
             },
-            "soy-free": {
-                value: false,
-                label: "Soy-Free"
-            },
-            "pescatarian": {
-                value: false,
-                label: "Pescatarian"
-            },
+            // "soy-free": {
+            //     value: false,
+            //     label: "Soy-Free"
+            // },
+            // "pescatarian": {
+            //     value: false,
+            //     label: "Pescatarian"
+            // },
             "sugar-conscious": {
                 value: false,
                 label: "Sugar-Conscious"
             },
-            "pork-free": {
-                value: false,
-                label: "Pork-Free"
-            },
+            // "pork-free": {
+            //     value: false,
+            //     label: "Pork-Free"
+            // },
             "tree-nut-free": {
                 value: false,
                 label: "Tree-Nut-Free"
@@ -426,10 +426,10 @@ const originalHealthState = (state, action) => {
                 value: false,
                 label: "Vegan"
             },
-            "wheat-free": {
-                value: false,
-                label: "Wheat-Free"
-            },
+            // "wheat-free": {
+            //     value: false,
+            //     label: "Wheat-Free"
+            // },
             "vegetarian": {
                 value: false,
                 label: "Vegetarian"
@@ -459,10 +459,10 @@ const originalDietState = (state, action) => {
                 value: false,
                 label: "Balanced"
             },
-            "high-fiber": {
-                value: false,
-                label: "High-Fiber"
-            },
+            // "high-fiber": {
+            //     value: false,
+            //     label: "High-Fiber"
+            // },
             "high-protein": {
                 value: false,
                 label: "High-Protein"
@@ -475,10 +475,10 @@ const originalDietState = (state, action) => {
                 value: false,
                 label: "Low-Fat"
             },
-            "low-sodium": {
-                value: false,
-                label: "Low-Sodium"
-            },
+            // "low-sodium": {
+            //     value: false,
+            //     label: "Low-Sodium"
+            // },
         }
     }
 }

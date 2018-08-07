@@ -17,7 +17,7 @@ import classes from './Main.css';
 class Main extends Component {
 
     componentDidMount() {
-        this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems);
+        //this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems);
     }
 
     render() {
