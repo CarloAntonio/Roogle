@@ -31,24 +31,25 @@ const AdvanceSection = (props) => {
         <section className="container mx-auto" data-test="component-advance-section">
         
             <div className="row">
-                <div className="col-12 d-flex justify-content-center">
-                    <h4 className={classes.subtitle + " px-4 border-bottom"}>Health</h4>
+
+                <div className="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                    <div className="d-flex justify-content-center">
+                        <h4 className={classes.subtitle + " px-4 border-bottom"}>Health</h4>
+                    </div>
+
+                    {healthOptions.map(healthOption => {
+                        return <HealthSelection 
+                                    value={healthOption.id} 
+                                    label={healthOption.label}
+                                    isChecked={healthOption.value}
+                                    healthItemChange={props.healthItemChange} 
+                                    key={healthOption.id}
+                                    data-test="health-selection-item"/>
+                    })}
                 </div>
 
-                {healthOptions.map(healthOption => {
-                    return <HealthSelection 
-                                value={healthOption.id} 
-                                label={healthOption.label}
-                                isChecked={healthOption.value}
-                                healthItemChange={props.healthItemChange} 
-                                key={healthOption.id}
-                                data-test="health-selection-item"/>
-                })}
-            </div>
-
-            <div className="row pt-4">
-                <div className="col-6 col-md-4 col-lg-3 ml-auto">
-                    <div className="d-flex justify-content-start">
+                <div className="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                    <div className="d-flex justify-content-center">
                         <h4 className={classes.subtitle + " px-4 border-bottom"}>Diet</h4>
                     </div>
                     
@@ -63,7 +64,7 @@ const AdvanceSection = (props) => {
                     })}
                 </div>
 
-                <div className="col-6 col-md-4 col-lg-3 mr-auto">
+                <div className="col-10 col-sm-5 col-md-4 mx-auto mt-5 mt-lg-0">
                     {props.dropdownOptions.map(data => {
                         return <DropdownSelection
                                     title={data.title}
@@ -74,6 +75,7 @@ const AdvanceSection = (props) => {
                                     data-test="dropdown-selection-item"/>
                     })}
                 </div>
+                
             </div>
 
         </section>

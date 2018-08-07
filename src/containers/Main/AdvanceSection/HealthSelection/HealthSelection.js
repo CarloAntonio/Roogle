@@ -6,7 +6,7 @@ import classes from './HealthSelection.css';
 const HealthSelection = (props) => {
 
     return (
-        <div className="col-6 col-md-4 col-lg-3 col-xl-2" data-test="component-health-selection">
+        <div className="d-flex justify-content-center align-items-center" data-test="component-health-selection">
             <input 
                 className={classes.input} 
                 type="checkbox" 

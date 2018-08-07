@@ -5,7 +5,7 @@ import classes from './DietSelection.css';
 
 const DietSelection = (props) => {
     return (
-        <div data-test="component-diet-selection">
+        <div className="d-flex justify-content-center align-items-center" data-test="component-diet-selection">
             <input 
                 className={classes.input} 
                 type="checkbox" 

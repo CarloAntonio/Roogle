@@ -8,7 +8,7 @@ import classes from './DropdownSelection.css';
 const DropdownSelection = (props) => {
     return (
         <Aux data-test="component-dropdown-selecton">
-            <div className="d-flex justify-content-start">
+            <div className="d-flex justify-content-center">
                 <h4 className={classes.title + " border-bottom"}>{props.title}</h4>
             </div>
             <div className="input-group mb-3">
