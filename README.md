@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The purpose of this project, aside from creating a recipe search application, is to highlight my web design and front end development skills. I will show my methodology for creating a web application from conception to production. To learn more about my work history and goals, feel free to visit my [linkedin](https://www.linkedin.com/in/carlo-bilbao/)
 
 ### General Notes:
+* During the development of this application, it was found out that certain query parameters were restricted in the free version of GET request to the Edamam API, it wasn't clearly described in the documentation, but only appeared in the purchasing page. Therefore, the Sketch Wireframes, SASS example, and the Bootstrap example (all of which, do not make web calls) show the entirety of the list of query paramaters, while the live version has a much more limited set.
+* During the development of this application, the design for small phones in Sketch, I came to realize, were simply ugly, I made the choice to highlight the pictures instead of ommiting it completely. I believe doing so made the UX better.
 * If you have any feedback to improve my code, feel free to drop me a line on my [linkedin](https://www.linkedin.com/in/carlo-bilbao/), I'm always interested in learning a better way!
 
 ### Skills used:
@@ -34,15 +36,13 @@ The purpose of this project, aside from creating a recipe search application, is
   * UIs via HTML/Bootstrap, Bootstrap Grids, jQuery, SCSS/SASS -> CSS for custom design changes, Grunt (as a task runner - SCSS to CSS)
   * Can be found in the "bootstrap" folder, section "UI via HTML/Bootstrap" provides instructions for running code on your machine
   * Note: Production application will use [CSS modules](https://github.com/css-modules/css-modules), however, I included this folder, called 'bootstrap' located in the root directory, in this project to show my ability to develop in this capacity as well.
-6. Create UI using HTML/CSS Modules
-7. Test Driven Development (TDD)
-  * Use Jest and Enzyme to perform tdd
-8. React
+6. Complete Application via React
+  * Use Jest and Enzyme to perform Test Driven Development (TDD)
   * Use React as a front-end frameword and Redux for state management
+  * Use Bootstrap 4 to get the design 80% of the way there, Use ReactStrap for Components
+  * Use CSS Modules to add the custom design
 9. Deployment
   * Use AWS for hosting responsibilites
-
-
 
 ## Understanding the information
 The information source will come from the [Edamam](https://www.edamam.com/) API. Sign up [here](https://developer.edamam.com/) for an api key, note: sign up for "Recipe Search". Here is a sample endpoint you can plug into your browser to see the general JSON structure: https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free
