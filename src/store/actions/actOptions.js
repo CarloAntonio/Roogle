@@ -63,3 +63,16 @@ export const nutrientChange = (itemName, itemValue) => {
         itemValue: itemValue
     }
 }
+
+export const clearSelections = () => {
+    return dispatch => {
+        dispatch(originalHealthState());
+        dispatch(originalDietState());
+    }
+}
+
+export const originalNutrientState = () => {
+    return {
+        type: actionTypes.ORIGINAL_NUTRIENT_STATE
+    }
+}

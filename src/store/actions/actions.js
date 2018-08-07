@@ -18,5 +18,7 @@ export {
     healthItemChange,
     dietItemChange,
     dropdownChange,
-    nutrientChange
+    nutrientChange,
+    clearSelections,
+    originalNutrientState
 } from './actOptions';

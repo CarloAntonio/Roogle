@@ -1,8 +1,14 @@
 
-.buttonStyles {
+.buttonSearch {
     font-family: 'Merienda', cursive;
     color: #fff;
     background-color: #00695C;
+}
+
+.buttonClear {
+    font-family: 'Merienda', cursive;
+    color: #fff;
+    background-color: #AC645A;
 }
 
 .body {

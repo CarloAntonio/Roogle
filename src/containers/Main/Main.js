@@ -34,14 +34,31 @@ class Main extends Component {
                         dropdownOptions={dropdownOptions}
                         dropdownItemChange={this.props.dropdownItemChange}
                         data-test="advance-section"/>
-                    <hr className="mx-5"/>
+
                     { this.props.searchType === 1 
-                        ? <button 
-                            type="button" 
-                            onClick={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
-                            className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
-                        : null
+                        ? (
+                            <div className="d-flex justify-content-center my-5">
+                                <button 
+                                    type="button" 
+                                    onClick={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
+                                    className={classes.buttonSearch + " btn d-block rounded mr-1"}>Search</button>
+                                <button 
+                                    type="button" 
+                                    onClick={this.props.clearSelections}
+                                    className={classes.buttonClear + " btn d-block rounded ml-1"}>Clear Checks</button>
+                            </div>
+                        )
+                        : (
+                            <div className="d-flex justify-content-center my-5">
+                                <button 
+                                    type="button" 
+                                    onClick={this.props.clearSelections}
+                                    className={classes.buttonClear + " btn d-block rounded"}>Clear Checks</button>
+                            </div>
+                        )
                     }
+
+                    <hr className="mx-5"/>
                 </Aux>
             )
         } 
@@ -54,11 +71,19 @@ class Main extends Component {
                         nutrientItems={this.props.nutrientItems}
                         nutrientItemChange={this.props.nutrientItemChange}
                         data-test="nutrient-section"/>
+            
+                    <div className="d-flex justify-content-center my-5">
+                        <button 
+                            type="button" 
+                            onClick={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
+                            className={classes.buttonSearch + " btn d-block rounded mr-1"}>Search</button>
+                        <button 
+                            type="button" 
+                            onClick={this.props.originalNutrientState}
+                            className={classes.buttonClear + " btn d-block rounded ml-1"}>Clear Values</button>
+                    </div>
+
                     <hr className="mx-5"/>
-                    <button 
-                        type="button" 
-                        onClick={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
-                        className={classes.buttonStyles + " btn d-block mx-auto rounded"}>Search</button>
                 </Aux>
             )
         }
@@ -108,6 +133,8 @@ const mapDispatchToProps = dispatch => {
         dietItemChange: (itemName) => dispatch(actions.dietItemChange(itemName)),
         dropdownItemChange: (itemName, itemValue) => dispatch(actions.dropdownChange(itemName, itemValue)),
         nutrientItemChange: (itemName, itemValue) => dispatch(actions.nutrientChange(itemName, itemValue)),
+        clearSelections: () => dispatch(actions.clearSelections()),
+        originalNutrientState: () => dispatch(actions.originalNutrientState()),
     }
 }
 
