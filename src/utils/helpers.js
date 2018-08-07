@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-    baseURL: 'http://api.edamam.com/'
+    baseURL: 'https://api.edamam.com/'
 });
 
 export const healthParamsFinder = (healthItems, queryParams) => {
