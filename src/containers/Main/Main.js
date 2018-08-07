@@ -21,9 +21,7 @@ class Main extends Component {
     }
 
     render() {
-
-        console.log(this.props.dropdownItems);
-
+        
         let advanceSection = null;
         if(this.props.searchType === 1 || this.props.searchType === 2) {
             advanceSection = (
