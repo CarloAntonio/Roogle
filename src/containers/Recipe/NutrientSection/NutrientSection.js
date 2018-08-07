@@ -26,6 +26,7 @@ const NutrientSection = (props) => {
                         id={data.id}
                         name={data.label} 
                         value={data.quantity}
+                        yield={props.yield}
                         unit={data.unit} 
                         data-test="breakdown-item" />
                 })}

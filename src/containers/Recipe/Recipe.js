@@ -19,7 +19,9 @@ export class UnconnectedRecipe extends Component {
             nutrientsSection = (
                 <Aux data-test="nutrient-section">
                     <hr/>
-                    <NutrientSection totalNutrients={ selectedRecipe.totalNutrients } />
+                    <NutrientSection 
+                        totalNutrients={ selectedRecipe.totalNutrients } 
+                        yield={ selectedRecipe.yield }/>
                 </Aux>
             )
         }
@@ -29,7 +31,9 @@ export class UnconnectedRecipe extends Component {
             dailySection = (
                 <Aux data-test="daily-section">
                     <hr/>
-                    <DailySection totalDaily={ selectedRecipe.totalDaily }/>
+                    <DailySection 
+                        totalDaily={ selectedRecipe.totalDaily }
+                        yield={ selectedRecipe.yield } />
                 </Aux>
             )
         }
