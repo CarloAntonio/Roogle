@@ -42,6 +42,8 @@ The purpose of this project, aside from creating a recipe search application, is
 9. Deployment
   * Use AWS for hosting responsibilites
 
+
+
 ## Understanding the information
 The information source will come from the [Edamam](https://www.edamam.com/) API. Sign up [here](https://developer.edamam.com/) for an api key, note: sign up for "Recipe Search". Here is a sample endpoint you can plug into your browser to see the general JSON structure: https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free
 
@@ -67,6 +69,8 @@ The following keys and key discription pairs will be used in the app. Informatio
 
 4. Daily Percent
   * all 25 daily percent categories
+
+
 
 ## Pen-Paper Wireframe
 __**Main Screen**__ </br>
@@ -100,6 +104,8 @@ __**Phone Main State: SearchLvl=0**__  </br>
 __**Phone Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
 
+
+
 ## UI via HTML/SCSS
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS 
@@ -124,6 +130,8 @@ Note: The purpose of creating this seperate folder is to highlight the aformenti
 7. Go to "sass" folder -> "dist" folder
 8. Open either "index.html" or "modal.html"
 
+
+
 ## UI via HTML/Bootstrap
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS
@@ -147,8 +155,30 @@ Note: The purpose of creating this seperate folder is to highlight the aformenti
 7. Go to "bootstrap" folder
 8. Open "index.html"
 
+
+
 ## Complete Application via React
-....
+This section demonstrates my capacity to develop with the following technologies:
+* HTML/CSS/JavaScript
+* React/Redux/Redux-Thunk/Prop-Types/
+* Bootstrap 4 / [ReactStrap](https://reactstrap.github.io/) (Component) / CSS Modules
+* NPM, Git, GitHub, AWS
+* Axios (ReST API Call) / JSON Parsing
+* Test Driven Development (TDD) / Jest (Unit/Integration Test) / Enzyme (Mock)
+
+### Context
+The UI uses bootstrap 4 for general styling like spacing, media queries, and layout to take the design 80% of the way. CSS modules is used to add custom styles that couldn't be achieved using bootstrap. The React framework was used to handle the logic, while state management was achieved using Redux. Redux-Thunk was used to handle async calls and dispatching multiple action creators. Axios is used to make an api call to Edamam to retrieve recipes. Jest and Ezyme are used to perform unit and integration testing.
+
+### How to use
+1. [Download the project](https://help.github.com/articles/cloning-a-repository/)
+2. [Install Grunt](https://gruntjs.com/installing-grunt)
+3. [Intall Npm](https://www.npmjs.com/get-npm)
+4. Open terminal, [go to the root project folder](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+5. Run "npm install", this installs the necessary dependencies
+6. Run "npm start"
+7. Open browser at port 3000
+
+
 
 ## Complete Sketch Wireframe Images
 __**Desktop HD Main State: SearchLvl=0**__  </br>
