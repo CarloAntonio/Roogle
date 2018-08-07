@@ -63,23 +63,25 @@ class Main extends Component {
             )
         }
         return (
-            <Aux data-test="component-main">
-                <MainSearch 
-                    toggleSearch={this.props.toggleSearch} 
-                    searchType={this.props.searchType}
-                    fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
-                    searchText={this.props.searchText}
-                    mainSearchTextChange={this.props.mainSearchTextChange}
-                    data-test="main-search"/>
-                <hr className="mx-5"/>
-                { advanceSection }
-                { nutrientSection }
-                <RecipeSection 
-                    recipeItems={this.props.recipeItems} 
-                    showDetails={this.props.showDetails} 
-                    data-test="recipe-section"/>
+            <div className={classes.main} data-test="component-main">
+                <div className={classes.body}>
+                    <MainSearch 
+                        toggleSearch={this.props.toggleSearch} 
+                        searchType={this.props.searchType}
+                        fetchRecipes={() => this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems)}
+                        searchText={this.props.searchText}
+                        mainSearchTextChange={this.props.mainSearchTextChange}
+                        data-test="main-search"/>
+                    <hr className="mx-5"/>
+                    { advanceSection }
+                    { nutrientSection }
+                    <RecipeSection 
+                        recipeItems={this.props.recipeItems} 
+                        showDetails={this.props.showDetails} 
+                        data-test="recipe-section"/>
+                </div> 
                 <Footer data-test="footer"/>
-            </Aux>
+            </div>
         )
     }
 }

@@ -4,3 +4,13 @@
     color: #fff;
     background-color: #00695C;
 }
+
+.body {
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
