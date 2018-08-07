@@ -5,6 +5,10 @@
     border: 1px solid #00695C;
 }
 
+.subtitle {
+    font-weight: 600;
+}
+
 @media (min-width: 360px) {
     .nutrient {
         flex-direction: row;

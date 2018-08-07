@@ -14,7 +14,7 @@ export const fetchRecipesSuccess = (fetchedRecipes) => {
 
 export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems, nutrientItems) => {
     //starting query params
-    let queryParams = '&app_id=' + appId + '&app_key=' + apiKey + '&from=0&to=8';
+    let queryParams = '&app_id=' + appId + '&app_key=' + apiKey + '&from=0&to=60';
 
     //parse health params
     queryParams = healthParamsFinder(healthItems, queryParams);
