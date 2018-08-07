@@ -70,8 +70,6 @@ The following keys and key discription pairs will be used in the app. Informatio
 4. Daily Percent
   * all 25 daily percent categories
 
-
-
 ## Pen-Paper Wireframe
 __**Main Screen**__ </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115809-e84b6ec6-8eb9-11e8-8b1c-4d400e5066fb.JPG" width="400">
@@ -104,8 +102,6 @@ __**Phone Main State: SearchLvl=0**__  </br>
 __**Phone Main State: SearchLvl=2**__  </br>
 <img src="https://user-images.githubusercontent.com/25759516/43115976-72cc9dcc-8eba-11e8-9694-242811fda600.png" width="200">
 
-
-
 ## UI via HTML/SCSS
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS 
@@ -130,8 +126,6 @@ Note: The purpose of creating this seperate folder is to highlight the aformenti
 7. Go to "sass" folder -> "dist" folder
 8. Open either "index.html" or "modal.html"
 
-
-
 ## UI via HTML/Bootstrap
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS
@@ -155,8 +149,6 @@ Note: The purpose of creating this seperate folder is to highlight the aformenti
 7. Go to "bootstrap" folder
 8. Open "index.html"
 
-
-
 ## Complete Application via React
 This section demonstrates my capacity to develop with the following technologies:
 * HTML/CSS/JavaScript
@@ -177,8 +169,6 @@ The UI uses bootstrap 4 for general styling like spacing, media queries, and lay
 5. Run "npm install", this installs the necessary dependencies
 6. Run "npm start"
 7. Open browser at port 3000
-
-
 
 ## Complete Sketch Wireframe Images
 __**Desktop HD Main State: SearchLvl=0**__  </br>
