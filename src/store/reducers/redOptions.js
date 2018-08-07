@@ -31,13 +31,13 @@ const initialState = {
             value: false,
             label: "Dairy-Free"
         },
-        "low-Potassium": {
+        "low-potassium": {
             value: false,
             label: "Low-Potassium"
         },
-        "eggs-free": {
+        "egg-free": {
             value: false,
-            label: "Eggs-Free"
+            label: "Egg-Free"
         },
         "lupine-free": {
             value: false,
@@ -51,9 +51,9 @@ const initialState = {
             value: false,
             label: "Mustard-Free"
         },
-        "no-added-oil": {
+        "No-oil-added": {
             value: false,
-            label: "No-Added-Oil"
+            label: "No-Oil-Added"
         },
         "red-meat-free": {
             value: false,
