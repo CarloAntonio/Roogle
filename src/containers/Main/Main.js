@@ -14,13 +14,15 @@ import { dropdownOptions } from '../../data/SelectionData';
 
 import classes from './Main.css';
 
-export class UnconnectedMain extends Component {
+class Main extends Component {
 
     componentDidMount() {
-        this.props.fetchRecipes();
+        this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems);
     }
 
     render() {
+
+        console.log(this.props.dropdownItems);
 
         let advanceSection = null;
         if(this.props.searchType === 1 || this.props.searchType === 2) {
@@ -109,4 +111,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedMain);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
