@@ -3,6 +3,11 @@ import React from 'react';
 import classes from './DetailSection.css';
 
 const DetailSection = (props) => {
+
+    let cookTime = (props.recipe.totalTime / 60).toFixed(2) + " hours(s)";
+    if(props.recipe.totalTime === 0) cookTime = "Varies";
+    else if(props.recipe.totalTime / 60 < 1) cookTime = props.recipe.totalTime + " minutes";
+
     return (
             <section className="container">
                 <div className="row">
@@ -37,11 +42,7 @@ const DetailSection = (props) => {
 
                             <div className="col-12 col-sm-6">
                                 <h6 className={ classes.weight }>Cook Time:</h6>
-                                <p>{
-                                    props.recipe.totalTime / 60 < 1 
-                                    ? (props.recipe.totalTime / 60).toFixed(2) + " minutes"
-                                    : (props.recipe.totalTime / 60).toFixed(2) + " hour(s)"
-                                    }</p>
+                                <p>{cookTime}</p>
                             </div>
 
                             <div className="col-12 col-sm-6">
