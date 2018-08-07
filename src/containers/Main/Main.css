@@ -20,3 +20,11 @@
     min-height: 100vh;
     flex-direction: column;
 }
+
+.error {
+    color: #AC645A;
+}
+
+.tryAgain {
+    color: #00695C;
+}

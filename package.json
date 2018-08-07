@@ -28,6 +28,7 @@
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
     "grunt": "^1.0.3",
+    "halogenium": "^2.2.3",
     "html-webpack-plugin": "2.29.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",

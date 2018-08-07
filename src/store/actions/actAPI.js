@@ -5,10 +5,22 @@ import { apiKey, appId } from './keys';
 
 import { healthParamsFinder, dietParamsFinder, dropdownParamsFinder, nutrientParamsFinder } from '../../utils/helpers';
 
+export const fetchRecipesStart = () => {
+    return {
+        type: actionTypes.FETCH_RECIPES_START
+    }
+}
+
 export const fetchRecipesSuccess = (fetchedRecipes) => {
     return {
         type: actionTypes.FETCH_RECIPES_SUCCESS,
         recipeItems: fetchedRecipes
+    }
+}
+
+export const fetchRecipesFail = () => {
+    return {
+        type: actionTypes.FETCH_RECIPES_FAIL,
     }
 }
 
@@ -30,7 +42,7 @@ export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems, 
     
     return dispatch => {
         //start loading ui
-        // dispatch(fetchRecipesStart());
+        dispatch(fetchRecipesStart());
 
         //https://api.edamam.com/search?q=chicken-curry&app_id=3ecb29a0&app_key=d4fef1c6d56353a8d0b5896955e9e667&from=0&to=3&calories=591-722&health=alcohol-free&nutrients[FAT]=40-42
         axiosInstance.get('search?q=' + searchText + queryParams)
@@ -52,7 +64,7 @@ export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems, 
         })
         .catch(err => {
             //handle errors
-            // dispatch(fetchRecipesFail(err));
+            dispatch(fetchRecipesFail());
         })
     }
 }

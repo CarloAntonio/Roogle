@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { GridLoader } from 'halogenium';
+
 import MainSearch from './MainSearch/MainSearch';
 import AdvanceSection from './AdvanceSection/AdvanceSection';
 import NutrientSection from './NutrientSection/NutrientSection';
@@ -17,7 +19,7 @@ import classes from './Main.css';
 class Main extends Component {
 
     componentDidMount() {
-        //this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems);
+        this.props.fetchRecipes(this.props.searchText, this.props.healthItems, this.props.dietItems, this.props.dropdownItems, this.props.nutrientItems);
     }
 
     render() {
@@ -87,6 +89,33 @@ class Main extends Component {
                 </Aux>
             )
         }
+
+        let loadingSection = null;
+        if(this.props.loading) {
+            loadingSection = (
+                <div className="d-flex justify-content-center mt-5">
+                    <GridLoader color="#AC645A" size="32px" margin="4px"/>
+                </div>
+            )
+        }
+
+        let recipeSection = (
+            <RecipeSection 
+                    recipeItems={this.props.recipeItems} 
+                    showDetails={this.props.showDetails} 
+                    data-test="recipe-section"/>
+        )
+
+        if(this.props.failed) {
+            recipeSection = (
+                <div className="d-flex flex-column justify-content-center mt-5">
+                    <h4 className={classes.error + " text-center"}>Darn It..</h4>
+                    <h4 className={classes.error + " text-center"}>Something Went Wrong</h4>
+                    <h4 className={classes.tryAgain + " text-center mt-5"}>Try Searching Again</h4>
+                </div>
+            )
+        }
+
         return (
             <div className={classes.main} data-test="component-main">
                 <div className={classes.body}>
@@ -100,10 +129,8 @@ class Main extends Component {
                     <hr className="mx-5"/>
                     { advanceSection }
                     { nutrientSection }
-                    <RecipeSection 
-                        recipeItems={this.props.recipeItems} 
-                        showDetails={this.props.showDetails} 
-                        data-test="recipe-section"/>
+                    { loadingSection }
+                    { recipeSection }
                 </div> 
                 <Footer data-test="footer"/>
             </div>
@@ -114,8 +141,10 @@ class Main extends Component {
 const mapStateToProps = state => {
     return {
         searchType: state.redUI.searchType,
-        recipeItems: state.redAPI.recipeItems,
+        loading: state.redAPI.fetchRecipesStart,
+        failed: state.redAPI.fetchRecipesFail,
         searchText: state.redOptions.searchText,
+        recipeItems: state.redAPI.recipeItems,
         healthItems: state.redOptions.healthItems,
         dietItems: state.redOptions.dietItems,
         dropdownItems: state.redOptions.dropdownItems,
