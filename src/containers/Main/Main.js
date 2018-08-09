@@ -93,8 +93,8 @@ class Main extends Component {
         let loadingSection = null;
         if(this.props.loading) {
             loadingSection = (
-                <div className="d-flex justify-content-center mt-5">
-                    <GridLoader color="#AC645A" size="32px" margin="4px"/>
+                <div className="d-flex justify-content-center mt-1 mt-sm-5">
+                    <GridLoader color="#AC645A" size="12px" margin="4px"/>
                 </div>
             )
         }
