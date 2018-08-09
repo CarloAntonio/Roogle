@@ -21,13 +21,8 @@ const setup = (props={}) => {
 describe('component', () => {
 
     let component;
-
-    const props = {
-        name: "Search",
-        primaryFxn: jest.fn()
-    }
     beforeEach(() => {
-        const wrapper = setup(props);
+        const wrapper = setup();
         component = findByTestAttr(wrapper, 'component-primary-button');
     })
 
@@ -36,17 +31,11 @@ describe('component', () => {
     });
 
     test('does not throw warning with expected props', () => {
-        const expectedProps = {
-            name: "Search",
-            extraStrap: "mx-1",
-            primaryFxn: jest.fn()
-        }
-
-        checkProps(PrimaryButton, expectedProps);
+        checkProps(PrimaryButton, defaultProps);
     });
 
     test("contains props 'name'", () => {
-        expect(component.text()).toBe(props.name);
+        expect(component.text()).toBe(defaultProps.name);
     });
 
 });
@@ -54,18 +43,14 @@ describe('component', () => {
 test("'primaryFxn' is called when component is clicked", () => {
 
     //create a mock function and add it to setup
-    const mockFxn = jest.fn();
-    const props = {
-        primaryFxn: mockFxn
-    }
-    const wrapper = setup(props);
+    const wrapper = setup();
 
     //click button
     const button = findByTestAttr(wrapper, 'component-primary-button');
     button.simulate('click');
 
     //count number of calls
-    const mockCount = mockFxn.mock.calls.length;
+    const mockCount = defaultProps.primaryFxn.mock.calls.length;
     expect(mockCount).toBe(1);
 });
 
