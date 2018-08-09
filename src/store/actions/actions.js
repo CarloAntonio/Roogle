@@ -18,7 +18,9 @@ export {
 
 export {
     mainSearchTextChange,
+    updateHealthState,
     healthItemChange,
+    updateDietState,
     dietItemChange,
     dropdownChange,
     nutrientChange,

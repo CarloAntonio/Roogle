@@ -1,6 +1,7 @@
 import * as actions from './actions/actions';
 import moxios from 'moxios';
 
+import { axiosInstance } from '../utils/helpers'
 import { storeFactory } from '../utils/testUtils';
 
 describe("when redUI action creator", () => {
@@ -178,108 +179,180 @@ describe("when redAPI action creator", () => {
 
 });
 
-// describe("API call via 'fetchRecipes' action creator", () => {
-//     beforeEach(() => {
-//         moxios.install();
-//     });
+describe("API call via 'fetchRecipes' action creator", () => {
+    beforeEach(() => {
+        //add specific axios instance (if one is created), need to catch specific instance
+        moxios.install(axiosInstance);
+    });
 
-//     afterEach(() => {
-//         moxios.uninstall();
-//     });
+    afterEach(() => {
+        moxios.uninstall(axiosInstance);
+    });
 
-//     test('adds response to recipeItems state', () => {
-//         const store = storeFactory();
+    test('adds response to recipeItems state', () => {
+        const store = storeFactory();
 
-//         const searchText = store.getState().redOptions.searchText;
-//         const healthItems = store.getState().redOptions.healthItems;
-//         const dietItems = store.getState().redOptions.dietItems;
-//         const dropdownItems = store.getState().redOptions.dropdownItems;
-//         const nutrientItems = store.getState().redOptions.nutrientItems;
+        const searchText = store.getState().redOptions.searchText;
+        const healthItems = store.getState().redOptions.healthItems;
+        const dietItems = store.getState().redOptions.dietItems;
+        const dropdownItems = store.getState().redOptions.dropdownItems;
+        const nutrientItems = store.getState().redOptions.nutrientItems;
 
-//         moxios.wait(() => {
-//             const request = moxios.requests.mostRecent();
-//             request.respondWith({
-//                 hits: []
-//             });
-//         });
+        moxios.wait(() => {
+            const request = moxios.requests.mostRecent();
+            request.respondWith({
+                status: 200,
+                response: {
+                    hits: [
+                        {
+                            recipe: {
+                                uri: "http://www.edamam.com/ontologies/edamam.owl#recipe_229fb120b75c5d4e29a8b98ba43883a8",
+                                label: "Chicken Adobo",
+                                image: "https://www.edamam.com/web-img/3f3/3f3db9cd446edf1680eab304b32f576d.jpg",
+                                source: "Food52",
+                                url: "https://food52.com/recipes/17507-chicken-adobo-with-okra-and-sunchokes",
+                                shareAs: "http://www.edamam.com/recipe/chicken-adobo-229fb120b75c5d4e29a8b98ba43883a8/chicken+adobo",
+                                yield: 24,
+                                calories: 23590.628179017596,
+                                totalWeight: 13641.68500464,
+                                totalTime: 392,
+                            }
+                        }
+                    ]
+                }
+            });
+        });
 
-//         return store.dispatch(actions.fetchRecipes(searchText, healthItems, dietItems, dropdownItems, nutrientItems))
-//             .then(() => {
-//                 const newState = store.getState();
-//                 expect(newState.hits).toBeArray;
-//             });
-//     });
-//})
+        return store.dispatch(actions.fetchRecipes(searchText, healthItems, dietItems, dropdownItems, nutrientItems))
+            .then(() => {
+                const newState = store.getState();
+                expect(newState.redAPI.recipeItems).toBeArray;
+            });
+    });
+});
 
-// recipeItems: [
-//     { 
-//         recipe: {
-//             uri: "http://www.edamam.com/ontologies/edamam.owl#recipe_229fb120b75c5d4e29a8b98ba43883a8",
-//             label: "Chicken Adobo",
-//             image: "https://www.edamam.com/web-img/3f3/3f3db9cd446edf1680eab304b32f576d.jpg",
-//             source: "Food52",
-//             url: "https://food52.com/recipes/17507-chicken-adobo-with-okra-and-sunchokes",
-//             shareAs: "http://www.edamam.com/recipe/chicken-adobo-229fb120b75c5d4e29a8b98ba43883a8/chicken+adobo",
-//             yield: 24,
-//             calories: 23590.628179017596,
-//             totalWeight: 13641.68500464,
-//             totalTime: 392,
-//         }
-//     },
-// ]
+describe("when redOptions action creator", () => {
 
+    let store;
+    let initialState;
+    beforeEach(() => {
+        store = storeFactory();
+        initialState = store.getState();
+    });
 
-// recipeItems: [],
+    test("'mainSearchTextChange' is called, it updates states correctly", () => {
+        const startState = { ...initialState }
 
-// fetchRecipes,
-
-
-// describe("Action creator", () => {
-
-//     test("'toggleModal' is called, should return opposite boolean value", () => {
-//         const store = storeFactory(defaultState);
-//         const wrapper = shallow(<Recipe store={store} />).dive();
-//         store.dispatch(toggleModal());
-//         const newState = store.getState();
-//         const newRedUI = newState.redUI;
-
-//         const expectedRedUI = {
-//             ...defaultState.redUI,
-//             modal: true,
-//         }
+        store.dispatch(actions.mainSearchTextChange("Chicken"));
+        const newState = store.getState();
         
-//         expect(newRedUI).toEqual(expectedRedUI);
-//     });
+        const expectedState = {
+            ...startState,
+            redOptions: {
+                ...startState.redOptions,
+                searchText: "Chicken"
+            }
+        }
 
-//     test("'toggleNutrientDetails' is called, should return opposite boolean value", () => {
-//         const store = storeFactory(defaultState);
-//         const wrapper = shallow(<Recipe store={store} />).dive();
-//         store.dispatch(toggleNutrientDetails());
-//         const newState = store.getState();
-//         const newRedUI = newState.redUI;
+        expect(newState).toEqual(expectedState);
+    });
 
-//         const expectedRedUI = {
-//             ...defaultState.redUI,
-//             showNutrientDetails: true,
-//         }
+    test("'updateHealthState,' is called, it updates states correctly", () => {
+        const startState = { ...initialState }
 
-//         expect(newRedUI).toEqual(expectedRedUI);
-//     });
+        const name = 'alcohol-free'
 
-//     test("'toggleDailyDetails' is called, should return opposite boolean value", () => {
-//         const store = storeFactory(defaultState);
-//         const wrapper = shallow(<Recipe store={store} />).dive();
-//         store.dispatch(toggleDailyDetails());
-//         const newState = store.getState();
-//         const newRedUI = newState.redUI;
+        store.dispatch(actions.updateHealthState(name));
+        const newState = store.getState();
+        
+        const expectedState = {
+            ...startState,
+            redOptions: {
+                ...startState.redOptions,
+                healthItems: {
+                    ...startState.redOptions.healthItems,
+                    [name]: {
+                        value: true,
+                        label: "Alcohol-Free"
+                    }
+                }
+            }
+        }
 
-//         const expectedRedUI = {
-//             ...defaultState.redUI,
-//             showDailyDetails: true,
-//         }
+        expect(newState).toEqual(expectedState);
+    });
 
-//         expect(newRedUI).toEqual(expectedRedUI);
-//     });
+    test("'updateDietState' is called, it updates states correctly", () => {
+        const startState = { ...initialState }
 
-    
-// })
+        const name = 'balanced'
+
+        store.dispatch(actions.updateDietState(name));
+        const newState = store.getState();
+        
+        const expectedState = {
+            ...startState,
+            redOptions: {
+                ...startState.redOptions,
+                dietItems: {
+                    ...startState.redOptions.dietItems,
+                    [name]: {
+                        value: true,
+                        label: "Balanced"
+                    }
+                }
+            }
+        }
+
+        expect(newState).toEqual(expectedState);
+    });
+
+    test("'dropdownChange' is called, it updates states correctly", () => {
+        const startState = { ...initialState }
+
+        const name = 'maxTime'
+        const expectedValue = '30'
+
+        store.dispatch(actions.dropdownChange(name, expectedValue));
+        const newState = store.getState();
+        
+        const expectedState = {
+            ...startState,
+            redOptions: {
+                ...startState.redOptions,
+                dropdownItems: {
+                    ...startState.redOptions.dropdownItems,
+                    [name]: expectedValue,
+                }
+            }
+        }
+
+        expect(newState).toEqual(expectedState);
+    });
+
+    test("'nutrientChange' is called, it updates states correctly", () => {
+        const startState = { ...initialState }
+
+        const name = 'calcium'
+        const expectedValue = '30'
+
+        store.dispatch(actions.nutrientChange(name, expectedValue));
+        const newState = store.getState();
+        
+        const expectedState = {
+            ...startState,
+            redOptions: {
+                ...startState.redOptions,
+                nutrientItems: {
+                    ...startState.redOptions.nutrientItems,
+                    [name]: {
+                        ...startState.redOptions.nutrientItems[name],
+                        value: expectedValue
+                    }
+                }
+            }
+        }
+
+        expect(newState).toEqual(expectedState);
+    });
+});
