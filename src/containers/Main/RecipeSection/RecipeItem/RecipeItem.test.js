@@ -32,20 +32,15 @@ describe('component', () => {
     });
 });
 
-test("'toggle' is called when component is clicked", () => {
+test("'showDetails' is called when component is clicked", () => {
 
-    //create a mock function and add it to setup
-    const mockFxn = jest.fn();
-    const props = {
-        showDetails: mockFxn
-    }
-    const wrapper = setup(props);
+    const wrapper = setup();
 
     //click button
     const button = findByTestAttr(wrapper, 'component-recipe-item');
     button.simulate('click');
 
     //count number of calls
-    const mockCount = mockFxn.mock.calls.length;
+    const mockCount = defaultProps.showDetails.mock.calls.length;
     expect(mockCount).toBe(1);
 });
