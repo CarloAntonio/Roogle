@@ -7,25 +7,15 @@ import DropdownSelection from './DropdownSelection/DropdownSelection';
 
 import classes from './AdvanceSection.css';
 
+import { objToArrHelper } from '../../../utils/helpers';
+
 const AdvanceSection = (props) => {
 
     //convert health options into an array
-    let healthOptions = [];
-    for(let key in props.healthItems) {
-        healthOptions.push({
-            ...props.healthItems[key],
-            id: key
-        });
-    }
+    let healthOptions = objToArrHelper(props.healthItems);
 
     //convert diet options into an array
-    let dietOptions = [];
-    for(let key in props.dietItems) {
-        dietOptions.push({
-            ...props.dietItems[key],
-            id: key
-        });
-    }
+    let dietOptions = objToArrHelper(props.dietItems);
 
     return (
         <section className="container mx-auto" data-test="component-advance-section">

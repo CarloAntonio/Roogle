@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 
 import BreakdownItem from '../BreakdownItem/BreakdownItem';
 
+import { objToArrHelper } from '../../../utils/helpers';
+
 import classes from './DailySection.css';
 
 const DailySection = (props) => {
 
-    let dailyData = [];
-    for(let key in props.totalDaily){
-        dailyData.push({
-            ...props.totalDaily[key],
-            id: key
-        });
-    }
+    const dailyData = objToArrHelper(props.totalDaily);
 
     return (
         <section className="container" data-test="component-daily-section">

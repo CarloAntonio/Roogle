@@ -85,3 +85,14 @@ export const nutrientParamsFinder = (nutrientItems, queryParams) => {
 
     return queryParams
 }
+
+export const objToArrHelper = (obj) => {
+    let arr = [];
+    for(let key in obj) {
+        arr.push({
+            ...obj[key],
+            id: key
+        });
+    }
+    return arr;
+} 

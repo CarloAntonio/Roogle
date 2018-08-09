@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 
 import BreakdownItem from '../BreakdownItem/BreakdownItem';
 
+import { objToArrHelper } from '../../../utils/helpers';
+
 import classes from './NutrientSection.css';
 
 const NutrientSection = (props) => {
 
-    let nutrientData = [];
-    for(let key in props.totalNutrients) {
-        nutrientData.push({
-            ...props.totalNutrients[key],
-            id: key
-        })
-    }
+    const nutrientData = objToArrHelper(props.totalNutrients);
 
     return (
         <section className="container" data-test="component-nutrient-section">
