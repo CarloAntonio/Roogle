@@ -83,7 +83,6 @@ export const dropdownOptions = [
             {value: "150", display: "2.5 hours"},
         ],
         id: "maxTime",
-        selected: 0
     },
     {
         title: "Max Produce:",
@@ -98,7 +97,6 @@ export const dropdownOptions = [
             {value: "18", display: "18 items"},
         ],
         id: "maxProduce",
-        selected: 0
     },
     {
         title: "Max Cal:",
@@ -113,7 +111,6 @@ export const dropdownOptions = [
             {value: "900", display: "900 Cal"},
         ],
         id: "maxCal",
-        selected: 0
     },
 ];
 

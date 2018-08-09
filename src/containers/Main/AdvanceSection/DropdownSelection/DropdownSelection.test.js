@@ -18,7 +18,7 @@ const defaultProps = {
         {value: "999", display: "Any"},
     ],
     id: "inputGroupSelect01",
-    selected: 3
+    dropdownItemChange: jest.fn()
 };
 
 const setup = (props={}) => {
@@ -29,8 +29,9 @@ const setup = (props={}) => {
 describe('component', () => {
 
     let component;
+    let wrapper;
     beforeEach(() => {
-        const wrapper = setup();
+        wrapper = setup();
         component = findByTestAttr(wrapper, 'component-dropdown-selecton');
     })
     test('renders without error', () => {
@@ -40,4 +41,18 @@ describe('component', () => {
     test('no warning emmited with expected props', () => {
         checkProps(DropdownSelection, defaultProps);
     });
-})
+
+    test('renders the appropriate number of option elements', ()=> {
+        const optionElements = findByTestAttr(wrapper, 'option-element');
+        expect(optionElements.length).toBe(8);
+    });
+
+    test(`'dropdownItemChange' fxn is called when change occurs`, () => {
+        const selectElement = findByTestAttr(wrapper, 'select-element');
+        selectElement.simulate('change', { target: { value: "15"}});
+
+        const changeCount = defaultProps.dropdownItemChange.mock.calls.length;
+        expect(changeCount).toBe(1);
+    });
+
+});

@@ -15,11 +15,13 @@ const DropdownSelection = (props) => {
                 <select 
                     className="custom-select" 
                     id={props.id} 
-                    onChange={(event) => props.dropdownItemChange(props.id, event.target.value)} >
+                    onChange={(event) => props.dropdownItemChange(props.id, event.target.value)} 
+                    data-test="select-element">
                     {props.options.map(option => {
                         return <option 
                             value={option.value}
-                            key={option.value}>{option.display}</option>
+                            key={option.value}
+                            data-test="option-element">{option.display}</option>
                     })}
                 </select>
             </div>
@@ -38,9 +40,9 @@ DropdownSelection.propTypes = {
                 })
             ),
             id: PropTypes.string,
-            selected: PropTypes.number
         })
-    )
+    ),
+    dropdownItemChange: PropTypes.func
 }
 
 export default DropdownSelection;
