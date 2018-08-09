@@ -35,10 +35,12 @@ const defaultProps = {
                 {value: "120", display: "2 hours"},
                 {value: "150", display: "2.5 hours"},
             ],
-            id: "maxTime",
-            selected: 0
+            id: "maxTime"
         },
-    ]
+    ],
+    healthItemChange: jest.fn(),
+    dietItemChange: jest.fn(),
+    dropdownItemChange: jest.fn()
 }
 
 const setup = (props={}) => {
@@ -66,42 +68,7 @@ describe("component's subcomponents", () => {
 
     let wrapper;
     beforeEach(() => {
-        const inputProps = {
-            healthItems: {
-                "alcohol-free": {
-                    value: false,
-                    label: "Alcohol-Free"
-                },
-            },
-            dietItems: {
-                "balanced": {
-                    value: false,
-                    label: "Balanced"
-                },
-                "high-fiber": {
-                    value: false,
-                    label: "High-Fiber"
-                },
-            },
-            dropdownItems: [
-                {
-                    title: "Max Time:",
-                    options: [
-                        {value: "0", display: "none"},
-                        {value: "15", display: "15 minutes"},
-                        {value: "30", display: "30 minutes"},
-                        {value: "45", display: "45 minutes"},
-                        {value: "60", display: "1 hour"},
-                        {value: "90", display: "1.5 hours"},
-                        {value: "120", display: "2 hours"},
-                        {value: "150", display: "2.5 hours"},
-                    ],
-                    id: "maxTime",
-                    selected: 0
-                },
-            ]
-        }
-        wrapper = setup(inputProps);
+        wrapper = setup();
     });
     test('renders correct number of health selection items', () => {
         const component = findByTestAttr(wrapper, 'health-selection-item');
@@ -115,5 +82,6 @@ describe("component's subcomponents", () => {
         const component = findByTestAttr(wrapper, 'dropdown-selection-item');
         expect(component.length).toBe(1);
     });
+
 });
 

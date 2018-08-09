@@ -85,7 +85,10 @@ const AdvanceSection = (props) => {
 AdvanceSection.propTypes = {
     healthItems: PropTypes.object.isRequired,
     dietItems: PropTypes.object.isRequired,
-    dropdownOptions: PropTypes.array.isRequired
+    dropdownOptions: PropTypes.array.isRequired,
+    healthItemChange: PropTypes.func.isRequired,
+    dietItemChange: PropTypes.func.isRequired,
+    dropdownItemChange: PropTypes.func.isRequired
 }
 
 export default AdvanceSection;
