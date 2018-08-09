@@ -30,18 +30,14 @@ const DropdownSelection = (props) => {
 }
 
 DropdownSelection.propTypes = {
-    data: PropTypes.objectOf(
+    title: PropTypes.string,
+    options: PropTypes.arrayOf(
         PropTypes.shape({
-            title: PropTypes.string,
-            options: PropTypes.arrayOf(
-                PropTypes.shape({
-                    value: PropTypes.string,
-                    display: PropTypes.string
-                })
-            ),
-            id: PropTypes.string,
+            value: PropTypes.string,
+            display: PropTypes.string,
         })
     ),
+    id: PropTypes.string,
     dropdownItemChange: PropTypes.func
 }
 
