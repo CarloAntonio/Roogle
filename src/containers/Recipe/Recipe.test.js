@@ -28,22 +28,12 @@ const defaultState = {
         fetchRecipesStart: false,
         fetchRecipesFailed: false,
     },
-    redUI: {
-        modal: false,
-        searchType: 0,
-        showNutrientDetails: false,
-        showDailyDetails: false,
-        recipeIndex: 0
-    }
 }
 
 const setup = (initialState = {}) => {
     const setupState = {
         ...defaultState,
-        redUI: {
-            ...defaultState.redUI,
-            ...initialState
-        } 
+        ...initialState
     }
     const store = storeFactory(setupState);
     return shallow(<Recipe store={store} />).dive();
@@ -52,7 +42,13 @@ const setup = (initialState = {}) => {
 describe("nutrient section should", () => {
     test("render, when container's showNutrient state is true", () => {
         const props = { 
-            showNutrientDetails: true,
+            redUI: {
+                modal: false,
+                searchType: 1,
+                showNutrientDetails: true,
+                showDailyDetails: false,
+                recipeIndex: 0
+            }
         };
         const wrapper = setup(props);
         const section = findByTestAttr(wrapper, 'nutrient-section');
@@ -60,7 +56,13 @@ describe("nutrient section should", () => {
     });
     test("not render, when container's showNutrient state is false", () => {
         const props = { 
-            showNutrientDetails: false,
+            redUI: {
+                modal: false,
+                searchType: 1,
+                showNutrientDetails: false,
+                showDailyDetails: false,
+                recipeIndex: 0
+            }
         };
         const wrapper = setup(props);
         const section = findByTestAttr(wrapper, 'nutrient-section');
@@ -71,7 +73,13 @@ describe("nutrient section should", () => {
 describe("daily section should", () => {
     test("render, when container's showDaily state is true", () => {
         const props = { 
-            showDailyDetails: true,
+            redUI: {
+                modal: false,
+                searchType: 1,
+                showNutrientDetails: false,
+                showDailyDetails: true,
+                recipeIndex: 0
+            }
         };
         const wrapper = setup(props);
         const section = findByTestAttr(wrapper, 'daily-section');
@@ -79,7 +87,13 @@ describe("daily section should", () => {
     });
     test("render, when container's showDaily state is true", () => {
         const props = { 
-            showDailyDetails: false,
+            redUI: {
+                modal: false,
+                searchType: 1,
+                showNutrientDetails: false,
+                showDailyDetails: false,
+                recipeIndex: 0
+            }
         };
         const wrapper = setup(props);
         const section = findByTestAttr(wrapper, 'daily-section');
@@ -87,27 +101,59 @@ describe("daily section should", () => {
     });
 });
 
-describe('redux', () => {
+describe('component has redux state from', () => {
 
-    test("has 'showNutrientDetails' prop piece of state from reducers", () => {
-        const showNutrientDetails = true;
-        const wrapper = setup(
-            { showNutrientDetails }
-        );
+    test("redUI reducer called 'showNutrientDetails'", () => {
+        const redUI = {
+            modal: false,
+            searchType: 0,
+            showNutrientDetails: true,
+            showDailyDetails: false,
+            recipeIndex: 0
+        }; 
+        const wrapper = setup({ redUI });
         const showNutrientDetailsProp = wrapper.instance().props.showNutrientDetails;
-        expect(showNutrientDetailsProp).toBe(showNutrientDetails);
+        expect(showNutrientDetailsProp).toBe(redUI.showNutrientDetails);
         expect(showNutrientDetailsProp).toBeBoolean();
     });
 
-    test("has 'showDailyDetails' prop piece of state from reducers", () => {
-        const showDailyDetails = false; 
-        const wrapper = setup(
-            { showDailyDetails }
-        );
+    test("redUI reducer called 'showDailyDetails'", () => {
+        const redUI = {
+            modal: false,
+            searchType: 0,
+            showNutrientDetails: true,
+            showDailyDetails: false,
+            recipeIndex: 0
+        }; 
+        const wrapper = setup({ redUI });
         const showDailyDetailsProp = wrapper.instance().props.showDailyDetails;
-        expect(showDailyDetailsProp).toBe(showDailyDetails);
+        expect(showDailyDetailsProp).toBe(redUI.showDailyDetails);
         expect(showDailyDetailsProp).toBeBoolean();
     });
+
+    test("redUI reducer called 'recipeIndex'", () => {
+        const redUI = {
+            modal: false,
+            searchType: 0,
+            showNutrientDetails: true,
+            showDailyDetails: false,
+            recipeIndex: 0
+        }; 
+        const wrapper = setup({ redUI });
+        const recipeIndexProp = wrapper.instance().props.recipeIndex;
+        expect(recipeIndexProp).toBe(redUI.recipeIndex);
+        expect(recipeIndexProp).toBeNumber();
+    });
+
+    test("redAPI reducer called 'recipeItems'", () => {
+        const wrapper = setup();
+        const recipeItemsProp = wrapper.instance().props.recipeItems;
+        expect(recipeItemsProp).toEqual(defaultState.redAPI.recipeItems);
+        expect(recipeItemsProp).toBeArray();
+    });
+});
+
+describe('redux actions', () => {
 
     test("has 'toggleNutrientDetails' action prop", () => {
         const wrapper = setup();
@@ -126,55 +172,4 @@ describe('redux', () => {
         const toggleModalProp = wrapper.instance().props.toggleModal;
         expect(toggleModalProp).toBeInstanceOf(Function);
     });
-
 });
-
-describe("Action creator", () => {
-
-    test("'toggleModal' is called, should return opposite boolean value", () => {
-        const store = storeFactory(defaultState);
-        const wrapper = shallow(<Recipe store={store} />).dive();
-        store.dispatch(toggleModal());
-        const newState = store.getState();
-        const newRedUI = newState.redUI;
-
-        const expectedRedUI = {
-            ...defaultState.redUI,
-            modal: true,
-        }
-        
-        expect(newRedUI).toEqual(expectedRedUI);
-    });
-
-    test("'toggleNutrientDetails' is called, should return opposite boolean value", () => {
-        const store = storeFactory(defaultState);
-        const wrapper = shallow(<Recipe store={store} />).dive();
-        store.dispatch(toggleNutrientDetails());
-        const newState = store.getState();
-        const newRedUI = newState.redUI;
-
-        const expectedRedUI = {
-            ...defaultState.redUI,
-            showNutrientDetails: true,
-        }
-
-        expect(newRedUI).toEqual(expectedRedUI);
-    });
-
-    test("'toggleDailyDetails' is called, should return opposite boolean value", () => {
-        const store = storeFactory(defaultState);
-        const wrapper = shallow(<Recipe store={store} />).dive();
-        store.dispatch(toggleDailyDetails());
-        const newState = store.getState();
-        const newRedUI = newState.redUI;
-
-        const expectedRedUI = {
-            ...defaultState.redUI,
-            showDailyDetails: true,
-        }
-
-        expect(newRedUI).toEqual(expectedRedUI);
-    });
-
-    
-})
