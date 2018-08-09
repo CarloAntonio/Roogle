@@ -16,7 +16,9 @@ const NutrientItem = (props) => {
 }
 
 NutrientItem.propTypes = {
-    placeholder: PropTypes.string.isRequired
+    placeholder: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    nutrientItemChange: PropTypes.func
 }
 
 export default NutrientItem;

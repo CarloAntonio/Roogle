@@ -691,7 +691,7 @@ const nutrientChange = (state, action) => {
                 ...state.nutrientItems,
                 [action.itemName]: {
                     ...state.nutrientItems[action.itemName],
-                    value: action.itemValue
+                    value: action.itemValue.toString()
                 }
             }
         }
@@ -705,7 +705,7 @@ const nutrientChange = (state, action) => {
             ...state.nutrientItems,
             [action.itemName]: {
                 ...state.nutrientItems[action.itemName],
-                value: parseInt(action.itemValue, 10)
+                value: parseInt(action.itemValue, 10).toString()
             }
         }
     }

@@ -6,7 +6,9 @@ import { findByTestAttr, checkProps } from '../../../../utils/testUtils';
 import NutrientItem from './NutrientItem';
 
 const defaultProps = {
-    placeholder: "Calcium (mg)"
+    placeholder: "Calcium (mg)",
+    value: "CA",
+    nutrientItemChange: jest.fn()
 }
 
 const setup = (props={}) => {
@@ -17,8 +19,9 @@ const setup = (props={}) => {
 describe('component', ()=> {
 
     let component;
+    let wrapper;
     beforeEach(() => {
-        const wrapper = setup();
+        wrapper = setup();
         component = findByTestAttr(wrapper, 'component-nutrient-item');
     });
     test('renders without error', () => {
@@ -26,7 +29,14 @@ describe('component', ()=> {
     });
 
     test('renders without error with appropriate props', () => {
-        const expectedProps = { placeholder: "Lithium" };
-        checkProps(NutrientItem, expectedProps);
-    }) 
+        checkProps(NutrientItem, defaultProps);
+    }); 
+
+    test(`nutrientItemChange fxn is called when input changes`, () => {
+        const inputElement = findByTestAttr(wrapper, 'component-nutrient-item');
+        inputElement.simulate('change', {target: {value: 12}});
+
+        const fxnCallCount = defaultProps.nutrientItemChange.mock.calls.length;
+        expect(fxnCallCount).toBe(1);
+    });
 })
