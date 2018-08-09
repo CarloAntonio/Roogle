@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './DetailSection.css';
 
 const DetailSection = (props) => {
 
-    let cookTime = (props.recipe.totalTime / 60).toFixed(2) + " hours(s)";
+    let cookTime = (props.recipe.totalTime / 60).toFixed(2) + " hour(s)";
     if(props.recipe.totalTime === 0) cookTime = "Varies";
     else if(props.recipe.totalTime / 60 < 1) cookTime = props.recipe.totalTime + " minutes";
 
     return (
-            <section className="container">
+            <section className="container" data-test="component-detail-section">
                 <div className="row">
                     <div className="col-12 mt-4 mb-sm-2 d-flex flex-column">
                         <h5 className={classes.headerStyle + " text-center"}>{props.recipe.label}</h5>
@@ -81,12 +82,33 @@ const DetailSection = (props) => {
                     <div className="col-12 order-sm-4">
                         <h6 className={ classes.weight }>Ingredients:</h6>
                         {props.recipe.ingredientLines.map((line, index) => {
-                            return <p key={index}>{line}</p>
+                            return <p 
+                                key={index}
+                                data-test="ingredient-lines">{line}</p>
                         })}
                     </div>
                 </div>
             </section>
     )
 }
+
+DetailSection.propTypes ={
+    recipe: PropTypes.shape({
+        totalTime: PropTypes.number,
+        label: PropTypes.string,
+        image: PropTypes.string,
+        source: PropTypes.string,
+        url: PropTypes.string,
+        shareAs: PropTypes.string,
+        yield: PropTypes.number,
+        calories: PropTypes.number,
+        totalWeight: PropTypes.number,
+        cautions: PropTypes.array,
+        dietLabels: PropTypes.array,
+        ingredientLines: PropTypes.array,
+        healthLabels: PropTypes.array
+    }),
+}
+
 
 export default DetailSection;
