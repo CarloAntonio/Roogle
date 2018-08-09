@@ -6,7 +6,20 @@ import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 import NutrientSection from './NutrientSection';
 
 const defaultProps = {
-    nutrientItems: {}
+    nutrientItems: {
+        calcium: {
+            placeholder: "Calcium (mg)",
+            code: "CA",
+            value: "",
+            size: "mg",
+        },
+        carbs: {
+            placeholder: "Carbs (g)",
+            code: "CHOCDF",
+            value: "",
+            size: "g",
+        },
+    }
 }
 const setup = (props={}) => {
     const setupProps = { ...defaultProps, ...props };
@@ -16,8 +29,9 @@ const setup = (props={}) => {
 describe('component', ()=> {
 
     let component;
+    let wrapper;
     beforeEach(() => {
-        const wrapper = setup();
+        wrapper = setup();
         component = findByTestAttr(wrapper, 'component-nutrient-section');
     });
 
@@ -26,51 +40,12 @@ describe('component', ()=> {
     });
 
     test('renders without error with appropriate props', () => {
-        const expectedProps = {
-            nutrientItems: {
-                calcium: {
-                    placeholder: "Calcium (mg)",
-                    code: "CA",
-                    value: "",
-                    size: "mg",
-                },
-                carbs: {
-                    placeholder: "Carbs (g)",
-                    code: "CHOCDF",
-                    value: "",
-                    size: "g",
-                },
-            }
-        }
-        checkProps(NutrientSection, expectedProps);
+        checkProps(NutrientSection, defaultProps);
     });
 
-});
-
-describe("component's subcomponents", () => {
-
-    let wrapper;
-    beforeEach(() => {
-        const inputProps = {
-            nutrientItems: {
-                calcium: {
-                    placeholder: "Calcium (mg)",
-                    code: "CA",
-                    value: "",
-                    size: "mg",
-                },
-                carbs: {
-                    placeholder: "Carbs (g)",
-                    code: "CHOCDF",
-                    value: "",
-                    size: "g",
-                },
-            }
-        }
-        wrapper = setup(inputProps);
+    test('subcomponents renders correct number of health selection items', () => {
+        const nutrientOptions = findByTestAttr(wrapper, 'nutrient-option');
+        expect(nutrientOptions.length).toBe(2);
     });
-    test('renders correct number of health selection items', () => {
-        const component = findByTestAttr(wrapper, 'nutrient-option');
-        expect(component.length).toBe(2);
-    });
+
 });
