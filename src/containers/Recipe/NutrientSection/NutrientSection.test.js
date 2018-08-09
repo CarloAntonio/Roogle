@@ -35,8 +35,9 @@ const setup = (props={}) => {
 
 describe('component', () => {
     let component;
+    let wrapper;
     beforeEach(() => {
-        const wrapper = setup();
+        wrapper = setup();
         component = findByTestAttr(wrapper, 'component-nutrient-section');
     });
     test('renders without error', () => {
@@ -45,28 +46,8 @@ describe('component', () => {
     test('renders when given appropriate props', () => {
         checkProps(NutrientSection, defaultProps);
     });
-});
-
-describe("component's subcomponent", () => {
-    test('renders appropriate number of itself', () => {
-        const props2Items = {
-            totalNutrients: {
-                calcium: {
-                    placeholder: "Calcium (mg)",
-                    code: "CA",
-                    value: "",
-                    size: "mg",
-                },
-                carbs: {
-                    placeholder: "Carbs (g)",
-                    code: "CHOCDF",
-                    value: "",
-                    size: "g",
-                },
-            }
-        }
-        const wrapper = setup(props2Items);
-        const subcomponent = findByTestAttr(wrapper, 'breakdown-item');
-        expect(subcomponent.length).toBe(2);
+    test('subcomponents renders appropriate number of itself', () => {
+        const breakdownItem = findByTestAttr(wrapper, 'breakdown-item');
+        expect(breakdownItem.length).toBe(3);
     });
-})
+});
