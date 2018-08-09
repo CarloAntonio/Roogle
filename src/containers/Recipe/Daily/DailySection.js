@@ -39,7 +39,8 @@ const DailySection = (props) => {
 }
 
 DailySection.propTypes = {
-    dailyData: PropTypes.object
+    dailyData: PropTypes.object,
+    yield: PropTypes.number
 }
 
 export default DailySection;

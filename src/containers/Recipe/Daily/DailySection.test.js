@@ -11,8 +11,14 @@ const defaultProps = {
             label: "Energy",
             quantity: 342.134,
             unit: "%"
-        }
-    }
+        },
+        ENER_KCAL: {
+            label: "Energyy",
+            quantity: 342.134,
+            unit: "%"
+        },
+    },
+    yield: 4
 }
 
 const setup = (props={}) => {
@@ -32,33 +38,9 @@ describe('component', () => {
     test('renders when given appropriate props', () => {
         checkProps(DailySection, defaultProps);
     });
-});
-
-describe("component's subcomponent", () => {
-
-    test('renders appropriate number of itself', () => {
-        const props3Items = {
-            totalDaily: {    
-                ENERC_KCAL: {
-                    label: "Energy",
-                    quantity: 342.134,
-                    unit: "%"
-                },
-                ENER_KCAL: {
-                    label: "Energyy",
-                    quantity: 342.134,
-                    unit: "%"
-                },
-                ENE_KCAL: {
-                    label: "Energyyy",
-                    quantity: 342.134,
-                    unit: "%"
-                },
-            }
-        }
-        const wrapper = setup(props3Items);
+    test('subcomponents renders appropriate number of itself', () => {
+        const wrapper = setup();
         const subcomponent = findByTestAttr(wrapper, 'daily-item');
-        expect(subcomponent.length).toBe(3);
+        expect(subcomponent.length).toBe(2);
     });
-    
-})
+});
