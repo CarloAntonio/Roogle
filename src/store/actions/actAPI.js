@@ -48,6 +48,8 @@ export const fetchRecipes = (searchText, healthItems, dietItems, dropdownItems, 
         axiosInstance.get('search?q=' + searchText + queryParams)
         
         .then(res => {
+
+            console.log(res.data);
             //initialize an array
             let fetchedRecipes = [];
     

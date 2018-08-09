@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { findByTestAttr, storeFactory } from '../../utils/testUtils';
-import { toggleSearch } from '../../store/actions/actUI';
 import Main, { UnconnectedMain } from './Main';
 
 const setup = (initialState = {}) => {
@@ -332,39 +331,3 @@ describe('redux actions', () => {
         expect(originalNutrientStateProp).toBeInstanceOf(Function);
     });
 });
-
-//possibly move this to action creater test file
-describe("when action creator", () => {
-
-    let store;
-    let wrapper;
-    let initialState;
-    beforeEach(() => {
-        store = storeFactory();
-        wrapper = shallow(<Main store={store} />).dive();
-        initialState = store.getState();
-    });
-
-    test("'toggleSearch' is called, it updates states correctly", () => {
-        //copy initial state
-        const startState = { ...initialState }
-
-        //run fxn
-        store.dispatch(toggleSearch());
-
-        //get new state
-        const newState = store.getState();
-
-        //expected state
-        const expectedState = {
-            ...startState,
-            redUI: {
-                ...startState.redUI,
-                searchType: 1
-            }
-        }
-
-        //compare expected with new state
-        expect(newState).toEqual(expectedState);
-    });
-})

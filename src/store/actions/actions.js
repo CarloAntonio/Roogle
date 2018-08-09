@@ -5,12 +5,15 @@ export {
     toggleNutrientDetails,
     toggleDailyDetails,
     updateDetailIndex,
-    showDetails
+    showDetails,
+    updateRecipeIndex
 } from './actUI';
 
 export {
     fetchRecipes,
+    fetchRecipesStart,
     fetchRecipesSuccess,
+    fetchRecipesFail
 } from './actAPI';
 
 export {
