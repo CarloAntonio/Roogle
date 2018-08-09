@@ -6,8 +6,11 @@ import BreakdownItem from './BreakdownItem';
 import { findByTestAttr, checkProps } from '../../../utils/testUtils';
 
 const defaultProps = {
-    name: "TestName",
-    value: 45364
+    id: "FOLDE",
+    name: "Folate (total)",
+    value: 45364,
+    yield: 4,
+    unit: "mg"
 }
 
 const setup = (props={}) => {

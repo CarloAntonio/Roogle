@@ -15,8 +15,11 @@ const BreakdownItem = (props) => {
 }
 
 BreakdownItem.propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
-    value: PropTypes.number
+    value: PropTypes.number,
+    yield: PropTypes.number,
+    unit: PropTypes.string
 }
 
 export default BreakdownItem;
