@@ -1,7 +1,7 @@
 
 .cardStyles {
     background-color: #F8F8F8;
-    width: 85%;
+    width: 45%;
 }
 
 .cardStyles img {
@@ -9,7 +9,7 @@
 }
 
 .cardStyles h6 {
-    margin: 3rem;
+    margin: 0.5rem;
 }
 
 .cardStyles:hover {

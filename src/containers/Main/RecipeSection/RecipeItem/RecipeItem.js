@@ -7,7 +7,7 @@ const RecipeItem = (props) => {
     return (
         <div 
             id="recipeItem"
-            className={classes.cardStyles + " card m-2"} 
+            className={classes.cardStyles + " card m-1"} 
             onClick={props.showDetails}
             data-test="component-recipe-item">
             <img className="card-img-top" src={props.img} alt={props.title} />
