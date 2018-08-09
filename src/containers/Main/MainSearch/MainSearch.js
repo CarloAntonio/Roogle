@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
@@ -20,7 +20,8 @@ const MainSearch = (props) => {
                     value={props.searchText} 
                     onChange={(event) => props.mainSearchTextChange(event)}
                     placeholder="Chicken Adobo" 
-                    aria-label="Search Input"/>
+                    aria-label="Search Input"
+                    data-test="input-element"/>
                 <div className="mt-2 col-6 mx-auto d-flex justify-content-center">
                     <PrimaryButton 
                         name='Search' 
@@ -37,9 +38,11 @@ const MainSearch = (props) => {
 }
 
 MainSearch.propTypes = {
-    searchType: propTypes.number.isRequired,
-    toggleSearch: propTypes.func.isRequired,
-    fetchRecipes: propTypes.func.isRequired
+    searchType: PropTypes.number.isRequired,
+    searchText: PropTypes.string,
+    mainSearchTextChange: PropTypes.func.isRequired,
+    toggleSearch: PropTypes.func.isRequired,
+    fetchRecipes: PropTypes.func.isRequired
 }
 
 export default MainSearch;

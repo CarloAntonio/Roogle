@@ -7,9 +7,12 @@ import MainSearch from './MainSearch';
 
 const defaultProps = {
     searchType: 0,
+    searchText: "Chicken Adobo",
+    mainSearchTextChange: jest.fn(),
     toggleSearch: jest.fn(),
     fetchRecipes: jest.fn()
 }
+
 const setup =(props={}) => {
     const setupProps = { ...defaultProps, ...props }
     return shallow(<MainSearch {...setupProps} />);
@@ -21,28 +24,58 @@ describe('component', () => {
         const wrapper = setup();
         component = findByTestAttr(wrapper, 'component-main-search');
     })
+
     test('renders without error', () => {
         expect(component.length).toBe(1);
     });
+    
     test('renders without error given appropriate props', () => {
-        const approProps = {
-            searchType: 0,
-            toggleSearch: jest.fn(),
-            fetchRecipes: jest.fn()
-        }
-
-        checkProps(MainSearch, approProps);
+        checkProps(MainSearch, defaultProps);
     });
 
 });
 
-test('component renders correct button title based on search prop', () => {
-    const props = {
-        searchType: 1
-    }
-    const wrapper = setup(props);
-    const container = wrapper.find(`[name="Advance+"]`);
-    expect(container.length).toBe(1);
+describe('component renders correct button title based on search prop', () => {
+    
+    test('search prop is 1', () => {
+        const props = {
+            searchType: 0
+        }
+        const wrapper = setup(props);
+        const container = wrapper.find(`[name="Advance"]`);
+        expect(container.length).toBe(1);
+    });
+
+    test('search prop is 1', () => {
+        const props = {
+            searchType: 1
+        }
+        const wrapper = setup(props);
+        const container = wrapper.find(`[name="Advance+"]`);
+        expect(container.length).toBe(1);
+    });
+
+    test('search prop is 2', () => {
+        const props = {
+            searchType: 2
+        }
+        const wrapper = setup(props);
+        const container = wrapper.find(`[name="Basic"]`);
+        expect(container.length).toBe(1);
+    });
+
 });
+
+describe(`component executes `, () => {
+    test('mainSearchTextChange function at input change', () => {
+        const wrapper = setup();
+        const container = findByTestAttr(wrapper, 'input-element');
+        container.simulate('change');
+
+        const fxnCallCount = defaultProps.mainSearchTextChange.mock.calls.length;
+        expect(fxnCallCount).toBe(1);
+
+    })
+})
 
 
