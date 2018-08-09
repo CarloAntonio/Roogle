@@ -93,7 +93,9 @@ class Main extends Component {
         let loadingSection = null;
         if(this.props.loading) {
             loadingSection = (
-                <div className="d-flex justify-content-center mt-1 mt-sm-5">
+                <div 
+                    className="d-flex justify-content-center mt-1 mt-sm-5"
+                    data-test="loader">
                     <GridLoader color="#AC645A" size="12px" margin="4px"/>
                 </div>
             )
@@ -108,7 +110,9 @@ class Main extends Component {
 
         if(this.props.failed) {
             recipeSection = (
-                <div className="d-flex flex-column justify-content-center mt-5">
+                <div 
+                    className="d-flex flex-column justify-content-center mt-5"
+                    data-test="error">
                     <h4 className={classes.error + " text-center"}>Darn It..</h4>
                     <h4 className={classes.error + " text-center"}>Something Went Wrong</h4>
                     <h4 className={classes.tryAgain + " text-center mt-5"}>Try Searching Again</h4>
