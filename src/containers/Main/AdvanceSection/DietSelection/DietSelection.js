@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import classes from './DietSelection.css';
 
@@ -10,19 +10,23 @@ const DietSelection = (props) => {
                 className={classes.input} 
                 type="checkbox" 
                 id={props.value} 
-                name="feature" 
                 readOnly
-                value={props.value}
                 checked={props.isChecked}
-                onClick={() => props.dietItemChange(props.value)}/>
-            <label className={classes.label + " ml-1 my-1"} htmlFor={props.value}>{props.label}</label>
+                onClick={() => props.dietItemChange(props.value)}
+                data-test="diet-selection-input-element"/>
+            <label 
+                className={classes.label + " ml-1 my-1"} 
+                htmlFor={props.value}
+                data-test="diet-selection-label-element">{props.label}</label>
         </div>
     );
 }
 
 DietSelection.propTypes = {
-    value: propTypes.string.isRequired,
-    label: propTypes.string.isRequired
+    value: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    isChecked: PropTypes.bool.isRequired,
+    dietItemChange: PropTypes.func
 }
 
 export default DietSelection;
