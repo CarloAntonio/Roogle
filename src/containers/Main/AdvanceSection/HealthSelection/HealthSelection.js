@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import classes from './HealthSelection.css';
 
@@ -11,20 +11,24 @@ const HealthSelection = (props) => {
                 className={classes.input} 
                 type="checkbox" 
                 id={props.value} 
-                name="feature" 
                 readOnly
-                value={props.value}
                 checked={props.isChecked}
-                onClick={() => props.healthItemChange(props.value)}/>
-            <label className={classes.label + " ml-1 my-1"} htmlFor={props.value}>{props.label}</label>
+                onClick={() => props.healthItemChange(props.value)}
+                data-test="input-element"/>
+            <label 
+                className={classes.label + " ml-1 my-1"} 
+                htmlFor={props.value}
+                data-test="label-element">{props.label}</label>
         </div>
     );
 
 }
 
 HealthSelection.propTypes = {
-    value: propTypes.string.isRequired,
-    label: propTypes.string.isRequired
+    value: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    isChecked: PropTypes.bool.isRequired,
+    healthItemChange: PropTypes.func
 }
 
 export default HealthSelection;
